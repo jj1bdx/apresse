@@ -15,12 +15,15 @@ For [Kenji Rikitake's presentation at Code BEAM STO 2018](https://codesync.globa
 ## Non-goals
 
 * AX.25 raw messages will *not* be handled directly in this project
-* No NIFs - stick to native Erlang/Elixir
-* Platform agnostic (primarily targeted for macOS/FreeBSD (will be running on Linux too))
+* Minimum versions: Erlang/OTP 20.3, Elixir 1.6.4
+* No NIFs - stick to native Erlang and Elixir
+* Platform agnostic, although to be tested primarily on macOS/FreeBSD
 
 ## License
 
-MIT. See [LICENSE](LICENSE)
+Source code, and the package as a whole: MIT - See [LICENSE](LICENSE)
+
+The presentation is also licensed under: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Why calling *apresse*?
 
