@@ -2,10 +2,10 @@
 
 ## Samples
 
-APRS-IS messages sampled from a APRS-IS Tier-2 network server
-50000 messages, 60~70 messages/sec, sampled around 2018-05-11 1400UTC
-Each message ends with CR+LF
-Caution: messages are not necessarily encoded in UTF-8
+* APRS-IS messages sampled from a APRS-IS Tier-2 network server
+* 50000 messages, 60~70 messages/sec, sampled around 2018-05-11 1400UTC
+* Each message ends with CR+LF
+* Caution: messages are not necessarily encoded in UTF-8
 
 ## All messages conformed TNC-2 format
 
