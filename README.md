@@ -2,6 +2,10 @@
 
 For [Kenji Rikitake's presentation at Code BEAM STO 2018](https://codesync.global/conferences/code-beam-sto-2018/#Schedule)
 
+## Build tools
+
+This is a rebar3 project.
+
 ## Goals
 
 * APRS-IS connection middleware/API for Erlang/Elixir
