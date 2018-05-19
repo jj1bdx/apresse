@@ -26,26 +26,39 @@
 <div id="mapid" style="width: 1024px; height: 768px;"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([34.786, 135.44], 13);
-    L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
-	L.marker([34.786, 135.44]).addTo(mymap)
-        .bindPopup('example of popup<br>like this!')
-        .openPopup();
+    async function demo() {
+	    var mymap = L.map('mapid').setView([34.786, 135.44], 13);
+        L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
 
-	L.circle([34.7787, 135.5054], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
-		radius: 500
-	}).addTo(mymap);
+	    var layer = L.marker([34.786, 135.44]).addTo(mymap)
+            .bindPopup('example of popup<br>like this!')
+            .openPopup();
 
-	L.polygon([
-		[34.8082, 135.4462],
-		[34.8043, 135.4754],
-		[34.7873, 135.4617]
-	]).addTo(mymap);
+	    L.circle([34.7787, 135.5054], {
+		    color: 'red',
+		    fillColor: '#f03',
+		    fillOpacity: 0.5,
+		    radius: 500
+	    }).addTo(mymap);
 
+        await sleep(2000);
+
+	    L.polygon([
+		    [34.8082, 135.4462],
+		    [34.8043, 135.4754],
+		    [34.7873, 135.4617]
+	    ]).addTo(mymap);
+
+        await sleep(2000);
+
+        layer.remove();
+    }
+
+    demo();
 
 </script>
 
