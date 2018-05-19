@@ -30,4 +30,25 @@ This means:
 * The number of commas `,` separating relays could be zero, but all of the sampled messages had at least one comma
 * The case of callsigns must be preserved 
 
+## Top 14 data type IDs of APRS information fields
+
+(This covers 49261 or 98.562% of 50000 messages)
+
+|ID |number |
+|:-:|------:|
+| ! | 11611 |
+| ; | 8483 |
+| @ | 6677 |
+| = | 6544 |
+| ` | 4622 |
+| > | 2558 |
+| T | 2555 |
+|  | 2550 |
+| / | 1201 |
+| < | 1082 |
+| ' | 748 |
+| _ | 272 |
+| ) | 194 |
+| $ | 164 |
+
 [End of document]
