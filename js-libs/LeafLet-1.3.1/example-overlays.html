@@ -29,7 +29,9 @@
 	var mymap = L.map('mapid').setView([34.786, 135.44], 13);
     L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
 
-	L.marker([34.786, 135.44]).addTo(mymap);
+	L.marker([34.786, 135.44]).addTo(mymap)
+        .bindPopup('example of popup<br>like this!')
+        .openPopup();
 
 	L.circle([34.7787, 135.5054], {
 		color: 'red',
