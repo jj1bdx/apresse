@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <!-- Google Maps API -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+ 
+    <link rel="stylesheet" href="leaflet-1.3.1/leaflet.css">
+    <script src="leaflet-1.3.1/leaflet.js"></script>
+
+    <script src='./Leaflet.GoogleMutant.js'></script>
+
+	
+</head>
+<body>
+
+
+
+<div id="mapid" style="width: 1024px; height: 768px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([34.786, 135.44], 13);
+    L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
+
+	L.marker([34.786, 135.44]).addTo(mymap);
+
+	L.circle([34.7787, 135.5054], {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5,
+		radius: 500
+	}).addTo(mymap);
+
+	L.polygon([
+		[34.8082, 135.4462],
+		[34.8043, 135.4754],
+		[34.7873, 135.4617]
+	]).addTo(mymap);
+
+
+</script>
+
+
+
+</body>
+</html>
