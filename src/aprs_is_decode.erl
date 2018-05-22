@@ -9,22 +9,18 @@
 init_cp() ->
     {binary:compile_pattern(<<$>>>),
      binary:compile_pattern(<<$:>>),
-     binary:compile_pattern(<<$,>>),
-     binary:compile_pattern(<<13, 10>>)}.
+     binary:compile_pattern(<<$,>>)}.
 
-decode_header(D, {CPS, CPI, CPR, CPEND}) ->
+decode_header(D, {CPS, CPI, CPR}) ->
     [Header, InfoCRLF] = binary:split(D, CPI),
     [Source, Destrelay] = binary:split(Header, CPS),
     [Destination|Relay] = binary:split(Destrelay, CPR, [global]),
-    Info = binary:replace(InfoCRLF, CPEND, <<>>),
+    Info = binary:part(InfoCRLF, 0, erlang:byte_size(InfoCRLF) - 2),
     {Source, Destination, Relay, Info}.
 
 info_dispatch(Info) ->
     <<Type:8, Rest/binary>> = Info,
-    case Type of
-        $! -> first_exclamation(Rest);
-        _ -> undefined
-    end.
+    info_dispatch_type({Type, Rest}).
 
-first_exclamation(Rest) ->
-    Rest.
+info_dispatch_type({$!, Field}) -> Field;
+info_dispatch_type({_, Field}) -> Field, undefined.
