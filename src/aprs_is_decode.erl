@@ -22,6 +22,7 @@ info_dispatch(Info) ->
     <<Type:8, Rest/binary>> = Info,
     info_dispatch_type(Type, Rest).
 
+info_dispatch_type(Type, <<>>) -> {undefined, nofield};
 info_dispatch_type($!, Field) ->
     position_nomsg(binary:first(Field), Field); 
 info_dispatch_type($=, Field) ->
@@ -33,12 +34,21 @@ info_dispatch_type($@, Field) ->
 info_dispatch_type($T, Field) -> {telemetry, Field};
 info_dispatch_type($:, Field) -> {message, Field};
 info_dispatch_type($?, Field) -> {query, Field};
+info_dispatch_type($<, Field) -> {capabilities, Field};
 info_dispatch_type($>, Field) -> {status, Field};
 info_dispatch_type($;, Field) -> {object, Field};
 info_dispatch_type($), Field) -> {item, Field};
+info_dispatch_type($_, Field) -> {weather_report, Field};
 info_dispatch_type($$, Field) -> {nmea, Field};
 info_dispatch_type($,, Field) -> {test_data, Field};
+info_dispatch_type(${, Field) -> {user_defined, Field};
 info_dispatch_type($}, Field) -> {third_party, Field};
+info_dispatch_type($', Field) -> {mic_e_current, Field};
+info_dispatch_type($`, Field) -> {mic_e_old, Field};
+info_dispatch_type($[, Field) -> {grid_locator, Field};
+info_dispatch_type($*, Field) -> {weather_station_star, Field};
+info_dispatch_type($#, Field) -> {weather_station_sharp, Field};
+info_dispatch_type($%, Field) -> {agrelo, Field};
 info_dispatch_type(_, Field) -> {undefined, Field}.
 
 position_nomsg(T, Field) when $0 =< T, T =< $9 ->
