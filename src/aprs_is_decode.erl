@@ -20,11 +20,11 @@ decode_header(D, {CPS, CPI, CPR, CPEND}) ->
     {Source, Destination, Relay, Info}.
 
 info_dispatch(Info) ->
-    case binary:at(Info, 0) of
-        $! -> first_exclamation(Info);
+    <<Type:8, Rest/binary>> = Info,
+    case Type of
+        $! -> first_exclamation(Rest);
         _ -> undefined
     end.
 
-first_exclamation(Info) ->
-    Info,
-    true.
+first_exclamation(Rest) ->
+    Rest.
