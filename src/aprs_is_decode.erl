@@ -2,7 +2,8 @@
 
 -export([
         init_cp/0,
-        decode_header/2
+        decode_header/2,
+        info_dispatch/1
     ]).
 
 init_cp() ->
@@ -17,3 +18,13 @@ decode_header(D, {CPS, CPI, CPR, CPEND}) ->
     [Destination|Relay] = binary:split(Destrelay, CPR, [global]),
     Info = binary:replace(InfoCRLF, CPEND, <<>>),
     {Source, Destination, Relay, Info}.
+
+info_dispatch(Info) ->
+    case binary:at(Info, 0) of
+        $! -> first_exclamation(Info);
+        _ -> undefined
+    end.
+
+first_exclamation(Info) ->
+    Info,
+    true.

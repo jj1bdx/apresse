@@ -16,12 +16,14 @@ connect_dump_receive_loop(S, N, CP) ->
     case gen_tcp:recv(S, 0, 1000) of
         {ok, D} ->
             io:format("~s", [D]),
-            case binary:at(D, 0) of
+            case binary:first(D) of
                 $# -> io:format("Comment line, not a packet~n", []);
                 _ -> {Source, Destination, Relay, Info} = 
                         aprs_is_decode:decode_header(D, CP),
                         io:format("Source: ~s~nDestination: ~s~nRelay: ~p~nInfo: ~s~n",
-                            [Source, Destination, Relay, Info])
+                            [Source, Destination, Relay, Info]),
+                        io:format("Decoded: ~p~n~n", 
+                            [aprs_is_decode:info_dispatch(Info)])
             end;
         {error, _} -> true
     end,
