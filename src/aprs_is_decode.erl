@@ -119,7 +119,7 @@ time_decode_compressed(Field) ->
 position_decode_compressed(Field) ->
     case erlang:byte_size(Field) >= 13 of
         true -> 
-            <<LatComp:4/binary, LongComp:4/binary,
+            <<_:8, LatComp:4/binary, LongComp:4/binary,
               Symbol:4/binary, Rest/binary>> = Field,
             {{longlat, 
                  base91_to_latitude(LatComp),
