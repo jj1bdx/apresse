@@ -8,7 +8,7 @@ connect_dump() ->
     {ok, Prompt} = gen_tcp:recv(Socket, 0, 5000),
     io:format("~s", [Prompt]),
     ok = gen_tcp:send(Socket, "user N6BDX pass -1 vers apresse 0.01\n"),
-    connect_dump_receive_loop(Socket, 100001,aprs_is_decode:init_cp()),
+    connect_dump_receive_loop(Socket, 1000001, aprs_is_decode:init_cp()),
     ok = gen_tcp:close(Socket).
 
 connect_dump_receive_loop(_, 0, _) -> ok;
