@@ -4,7 +4,9 @@
 
 connect_dump() ->
     {ok, Socket} = gen_tcp:connect("fukuoka.aprs2.net", 10152, 
-        [binary, {active, false}, {packet, line}]),
+        [binary, {active, false}, {packet, line},
+            {nodelay, true}, {keepalive, true}
+        ]),
     {ok, Prompt} = gen_tcp:recv(Socket, 0, 5000),
     io:format("~s", [Prompt]),
     ok = gen_tcp:send(Socket, "user N6BDX pass -1 vers apresse 0.01\n"),
@@ -13,7 +15,7 @@ connect_dump() ->
 
 connect_dump_receive_loop(_, 0, _) -> ok;
 connect_dump_receive_loop(S, N, CP) ->
-    case gen_tcp:recv(S, 0, 1000) of
+    case gen_tcp:recv(S, 0, 10000) of
         {ok, D} ->
             io:format("~s", [D]),
             case binary:first(D) of
@@ -25,7 +27,8 @@ connect_dump_receive_loop(S, N, CP) ->
                         io:format("Decoded: ~p~n~n", 
                             [aprs_is_decode:info_dispatch(Info)])
             end;
-        {error, _} -> true
+        {error, E} ->
+            io:format("Error: ~p~n~n", [E])
     end,
     connect_dump_receive_loop(S, N-1, CP).
 
