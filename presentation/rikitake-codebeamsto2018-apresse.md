@@ -92,6 +92,15 @@ Stockholm, Sweden
 
 ---
 
+# So what is APRS anyway?
+
+* Global network of amateur radio stations
+* Broadcasting/receiving information like Twitter
+* Aggregated information site: [aprs.fi](https://aprs.fi)
+* Stations connected via APRS Internet Service (APRS-IS)
+
+---
+
 # [fit] A YouTube example of 1200bps AX.25/APRS sound [^3]
 
 ![](https://www.youtube.com/watch?v=32yuWezqjrI)
@@ -105,6 +114,42 @@ Stockholm, Sweden
 ---
 
 ![fit](Toyonaka-aprs-fi-20180526.png)
+
+---
+
+# APRS-IS message example
+
+```
+DL1MBW-8>APAVT5,qAS,DC1MBB-10:>M-FC-178 K 4.13V  34.3C AVRT5 20170403
+```
+
+## Decoded results
+
+```
+Source: DL1MBW-8
+Destination: APAVT5
+Relay: [<<"qAS">>,<<"DC1MBB-10">>]
+Info: >M-FC-178 K 4.13V  34.3C AVRT5 20170403
+Decoded: {status,<<"M-FC-178 K 4.13V  34.3C AVRT5 20170403">>}
+```
+
+---
+
+# APRS-IS message decoder in Erlang
+
+```erlang
+init_cp() ->
+    {binary:compile_pattern(<<$>>>),
+     binary:compile_pattern(<<$:>>),
+     binary:compile_pattern(<<$,>>)}.
+
+decode_header(D, {CPS, CPI, CPR}) ->
+    [Header, InfoCRLF] = binary:split(D, CPI),
+    [Source, Destrelay] = binary:split(Header, CPS),
+    [Destination|Relay] = binary:split(Destrelay, CPR, [global]),
+    Info = binary:part(InfoCRLF, 0, erlang:byte_size(InfoCRLF) - 2),
+    {Source, Destination, Relay, Info}.
+```
 
 ---
 
