@@ -83,10 +83,12 @@ Stockholm, Sweden
 
 # Messaging on amateur radio
 
+![right, fit](instagram-raspi-receiver.jpg)
+
 * AX.25 protocol since 1980s
 * 1200bps Bell202 + audio FM transceivers
 * 9600bps GMSK + specific transceivers
-* Modern gears: Raspberry Pi + SDR
+* Modern gears: Raspberry Pi + SDR dongle for receiver
 
 ---
 
@@ -108,3 +110,10 @@ Stockholm, Sweden
 
 # [fit] Thank you
 # [fit] Questions?
+
+<!--
+Local Variables:
+mode: markdown
+coding: utf-8
+End:
+-->
