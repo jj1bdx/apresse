@@ -1,4 +1,4 @@
-theme: Zurich, 5 
+theme: Zurich, 1 
 footer: Kenji Rikitake / Code BEAM STO 2018
 slidenumbers: true
 
@@ -169,6 +169,14 @@ decode_header(D, {CPS, CPI, CPR}) ->
     Info = binary:part(InfoCRLF, 0, erlang:byte_size(InfoCRLF) - 2),
     {Source, Destination, Relay, Info}.
 ```
+
+---
+
+# [fit] This presentation is suppored by
+# [fit] Pepabo R&D Institute, GMO Pepabo, Inc.
+
+![inline, fit](pepaken_logo.jpg)
+
 
 ---
 
