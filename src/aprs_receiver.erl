@@ -1,6 +1,14 @@
 -module(aprs_receiver).
 
--export([connect_dump/0]).
+-export([start/0,
+         connect_dump/0]).
+
+start() ->
+    loop().
+
+loop() ->
+    connect_dump(),
+    loop().
 
 connect_dump() ->
     {ok, Socket} = gen_tcp:connect("fukuoka.aprs2.net", 10152, 
@@ -10,7 +18,7 @@ connect_dump() ->
     {ok, Prompt} = gen_tcp:recv(Socket, 0, 5000),
     io:format("~s", [Prompt]),
     ok = gen_tcp:send(Socket, "user N6BDX pass -1 vers apresse 0.01\n"),
-    connect_dump_receive_loop(Socket, 1000001, aprs_is_decode:init_cp()),
+    connect_dump_receive_loop(Socket, 1000, aprs_is_decode:init_cp()),
     ok = gen_tcp:close(Socket).
 
 connect_dump_receive_loop(_, 0, _) -> ok;
@@ -19,7 +27,7 @@ connect_dump_receive_loop(S, N, CP) ->
         {ok, D} ->
             io:format("~s", [D]),
             case binary:first(D) of
-                $# -> io:format("Comment line, not a packet~n", []);
+                $# -> io:format("Comment: not a packet~n~n", []);
                 _ -> {Source, Destination, Relay, Info} = 
                         aprs_is_decode:decode_header(D, CP),
                         io:format("Source: ~s~nDestination: ~s~nRelay: ~p~nInfo: ~s~n",
@@ -28,7 +36,8 @@ connect_dump_receive_loop(S, N, CP) ->
                             [aprs_is_decode:info_dispatch(Info)])
             end;
         {error, E} ->
-            io:format("Error: ~p~n~n", [E])
+            io:format("Error: ~p~n~n", [E]),
+            connect_dump_receive_loop(S, 0, CP)
     end,
     connect_dump_receive_loop(S, N-1, CP).
 
