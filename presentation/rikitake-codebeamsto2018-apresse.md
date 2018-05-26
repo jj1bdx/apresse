@@ -69,7 +69,7 @@ Stockholm, Sweden
 
 ![original](jj1bdx-packet-radio-1987.JPG)
 
-# [fit] Me enjoying amateur radio, circa 1987
+# [fit] Me enjoying amateur packet radio, December 1986
 
 ---
 
@@ -172,11 +172,25 @@ decode_header(D, {CPS, CPI, CPR}) ->
 
 ---
 
-# [fit] This presentation is suppored by
-# [fit] Pepabo R&D Institute, GMO Pepabo, Inc.
+# Summary
 
-![inline, fit](pepaken_logo.jpg)
+* BEAM is designed for a large-scale and high concurrency projects
+* The application of BEAM is *not* restricted to the large-scale projects
+* Starting small with BEAM languages such as Erlang and Elixir is a good way to prototype
+* You can use BEAM for small projects too
 
+---
+
+![fit,right](pepaken_logo.jpg)
+
+# Acknowledgment
+
+This presentation is suppored by
+Pepabo R&D Institute, GMO Pepabo, Inc.
+
+Thanks to Code BEAM Crew and Erlang Solutions!
+
+... and thank you for being here!
 
 ---
 
