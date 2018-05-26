@@ -49,17 +49,9 @@ Stockholm, Sweden
 
 ---
 
-# 18 U.S. Code §2511 (2)(g)
+# Amateur radio privacy in the USA
 
-* It shall not be unlawful under this chapter or chapter 121 of this title for any person
-* (ii) to intercept any radio communication which is transmitted
-* (III) by a station operating on an authorized frequency within the bands allocated to the amateur, citizens band, or general mobile radio services [...]
-
----
-
-# Amateur radio privacy in the USA in plain English
-
-* Anyone can record anything in the amateur radio bands (18 USC 2511(2)(g))
+* Anyone can intercept anything in the amateur radio bands (18 USC §2511(2)(g))
 * Anyone can make a backup and disclosure of the information transmitted in amateur radio bands (18 USC chapter 121) 
 * ... therefore **NO PRIVACY** [^2]
 
@@ -117,20 +109,47 @@ Stockholm, Sweden
 
 ---
 
+# [fit] APRS-IS systems [^4]
+
+![fit, right](aprs-is.png)
+
+* Very much like old USENET or modern messaging systems
+* IGate systems are clients for the radio systems
+* All contents are supposed to be on the amateur radio
+* A text messaging system with the specific format
+
+[^4]: quoted from <http://www.aprs-is.net/Specification.aspx>, by Peter Loveall, AE5PL
+
+---
+
+# APRS-IS messages
+
+```
+AK4VF>APRX28,TCPIP*,qAC,T2INDIANA:!3735.58NR07730.15W&↩
+Raspberry Pi iGate
+OE1W-11>APLWS2,qAU,OE1W-2:;N3620455 *140549h4821.65N/0↩
+1621.32EO302/008/A=011516!wvl!Clb=-3.3m/s 403.50MHz ↩
+Type=RS41 BK=Off
+KB1EJH-13>APN391,TCPIP*,qAS,KB1EJH:@111405z3849.75N/07↩
+519.50W_287/002g008t075r000p000P000h58b10151.DsVP
+BA1GM-6>APLM2C,TCPIP*,qAS,BA1GM-6:=3952.10N/11631.65E>↩
+272/049/A=000039http://www.aprs.cn 10X_12S_4.12V
+```
+
+---
+
 # APRS-IS message example
 
 ```
-DL1MBW-8>APAVT5,qAS,DC1MBB-10:>M-FC-178 K 4.13V  34.3C AVRT5 20170403
-```
-
-## Decoded results
-
-```
+DL1MBW-8>APAVT5,qAS,DC1MBB-10:>M-FC-178 K ↩
+4.13V  34.3C AVRT5 20170403
+%%% decoded as:
 Source: DL1MBW-8
 Destination: APAVT5
 Relay: [<<"qAS">>,<<"DC1MBB-10">>]
 Info: >M-FC-178 K 4.13V  34.3C AVRT5 20170403
-Decoded: {status,<<"M-FC-178 K 4.13V  34.3C AVRT5 20170403">>}
+Decoded: {status,
+<<"M-FC-178 K 4.13V  34.3C AVRT5 20170403">>}
 ```
 
 ---
