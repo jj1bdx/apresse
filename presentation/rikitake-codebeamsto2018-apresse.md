@@ -4,9 +4,11 @@ slidenumbers: true
 
 <!-- Use Deckset 2.0, aspect ratio 16:9 -->
 
-# [fit] APRS-IS Servers on The BEAM
+![original](rob-bye-462774-unsplash-modified.jpg)
 
-... or how to prototype APRS-IS software on Erlang and Elixir quickly under a tight deadline
+# [fit] APRS-IS Servers on The BEAM [^*]
+
+[^*]: ... Or how to prototype APRS-IS software on Erlang and Elixir quickly under a tight deadline
 
 ---
 
@@ -196,6 +198,15 @@ Thanks to Code BEAM Crew and Erlang Solutions!
 
 # [fit] Thank you
 # [fit] Questions?
+
+---
+[.autoscale: true]
+# Photo credits
+
+* Title: [Photo by Rob Bye on Unsplash](https://unsplash.com/photos/LphK1Oht5NA), modified by Kenji Rikitake
+* APRS-IS system diagram: Peter Loveall
+* Other images: Kenji Rikitake
+
 
 <!--
 Local Variables:
