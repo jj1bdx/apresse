@@ -94,5 +94,5 @@ cleanup_ets(C) when (C rem 1000) == 0 ->
     T = erlang:monotonic_time(millisecond) - 180000,
     ets:select_delete(
         aprs_positions,
-        ets:fun2ms(fun({Time, _, _}) -> Time < T end));
+        ets:fun2ms(fun({Time, _, _, _}) -> Time < T end));
 cleanup_ets(_) -> 0.
