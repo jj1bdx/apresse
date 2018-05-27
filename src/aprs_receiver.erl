@@ -85,6 +85,9 @@ parse_message(
     {Lat, Long};
 parse_message(_) -> undefined.
 
+put_ets(_Time, undefined, {_Lat, _Long}) -> undefined;
+put_ets(_Time, _Source, {undefined, _Long}) -> undefined;
+put_ets(_Time, _Source, {_Lat, undefined}) -> undefined;
 put_ets(Time, Source, {Lat, Long}) ->
     % io:format("~p~n", [{Time, Source, Lat, Long}]),
     ets:insert(aprs_positions, {Time, Source, Lat, Long});

@@ -23,7 +23,7 @@
 
 
 
-<div id="mapid" style="width: 1024px; height: 768px;"></div>
+<div id="mapid" style="width: 1280px; height: 768px;"></div>
 <script>
 
     function sleep(ms) {
@@ -31,7 +31,7 @@
     }
 
     async function demo() {
-	    var mymap = L.map('mapid').setView([34.786, 135.44], 13);
+	    var mymap = L.map('mapid').setView([0, 0], 1);
         L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
 
 	    var layer = L.marker([34.786, 135.44]).addTo(mymap)

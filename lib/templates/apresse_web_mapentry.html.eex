@@ -1,0 +1,5 @@
+<%
+popup = :io_lib.format("Source: ~s<br>Lat: ~.4f<br>Long: ~.4f",
+                   [source, lat, long])
+%>
+var marker = L.marker([<%= lat %>, <%= long %>]).addTo(mymap).bindPopup('<%= popup %>');
