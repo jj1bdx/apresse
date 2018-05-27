@@ -22,6 +22,16 @@ Stockholm, Sweden
 
 ---
 
+# Topics
+
+* Amateur Radio
+* APRS and APRS-IS
+* apresse: a simple mapping system
+* Implementing apresse
+* Summary
+
+---
+
 # Automatic Packet Reporting System (APRS) [^1]
 
 * Amateur radio
@@ -140,46 +150,284 @@ BA1GM-6>APLM2C,TCPIP*,qAS,BA1GM-6:=3952.10N/11631.65E>↩
 
 ---
 
-# APRS-IS message example
+# APRS-IS message formats
 
-```
-DL1MBW-8>APAVT5,qAS,DC1MBB-10:>M-FC-178 K ↩
-4.13V  34.3C AVRT5 20170403
-%%% decoded as:
-Source: DL1MBW-8
-Destination: APAVT5
-Relay: [<<"qAS">>,<<"DC1MBB-10">>]
-Info: >M-FC-178 K 4.13V  34.3C AVRT5 20170403
-Decoded: {status,
-<<"M-FC-178 K 4.13V  34.3C AVRT5 20170403">>}
+- Position reports (also timestamps, messages)
+- Broadcast messages/bulletins and queries
+- Objects and items
+- Weather reports
+- Telemetry data
+- ... and many others
+
+---
+
+# apresse: a simple mapping system of APRS-IS
+
+* Erlang part: retrieving information from APRS-IS and cache the position info in the ETS
+* Elixir part: picking up the info from the ETS and show it to the Web browser when requested
+* Browser: running mapping framework LeafLet with Google Maps
+
+---
+
+# What Erlang part of apresse does
+
+* Connect to an APRS-IS (Tier-2) server
+* Pull the messages and decode them
+* Pick up the position data and store into ETS
+
+---
+
+# APRS-IS client code in Erlang
+
+```erlang
+connect_dump() ->
+    {ok, Socket} = gen_tcp:connect("sweden.aprs2.net", 10152,
+        [binary, {active, false}, {packet, line},
+            {nodelay, true}, {keepalive, true}
+        ]),
+    {ok, _Prompt} = gen_tcp:recv(Socket, 0, 5000),
+    ok = gen_tcp:send(Socket,
+         "user N0CALL pass -1 vers apresse 0.01\n"),
+         _C = connect_dump_receive_loop(Socket, 0,
+                 aprs_is_decode:init_cp(), true),
+    ok = gen_tcp:close(Socket).
 ```
 
 ---
 
-# APRS-IS message decoder in Erlang
+# gen_tcp:connect/3 options
+
+```erlang, [.highlight: 3-4]
+connect_dump() ->
+    {ok, Socket} = gen_tcp:connect("sweden.aprs2.net", 10152,
+        [binary, {active, false}, {packet, line},
+            {nodelay, true}, {keepalive, true}
+        ]),
+    {ok, _Prompt} = gen_tcp:recv(Socket, 0, 5000),
+    ok = gen_tcp:send(Socket,
+         "user N0CALL pass -1 vers apresse 0.01\n"),
+         _C = connect_dump_receive_loop(Socket, 0,
+                 aprs_is_decode:init_cp(), true),
+    ok = gen_tcp:close(Socket).
+```
+
+---
+
+# APRS-IS message header decoder in Erlang
 
 ```erlang
-init_cp() ->
-    {binary:compile_pattern(<<$>>>),
-     binary:compile_pattern(<<$:>>),
-     binary:compile_pattern(<<$,>>)}.
-
+init_cp() -> {binary:compile_pattern(<<$>>>),
+    binary:compile_pattern(<<$:>>),
+    binary:compile_pattern(<<$,>>)}.
 decode_header(D, {CPS, CPI, CPR}) ->
     [Header, InfoCRLF] = binary:split(D, CPI),
     [Source, Destrelay] = binary:split(Header, CPS),
-    [Destination|Relay] = binary:split(Destrelay, CPR, [global]),
-    Info = binary:part(InfoCRLF, 0, erlang:byte_size(InfoCRLF) - 2),
+    [Destination|Relay] = binary:split(
+                            Destrelay, CPR, [global]),
+    Info = binary:part(InfoCRLF, 0,
+                       erlang:byte_size(InfoCRLF) - 2),
     {Source, Destination, Relay, Info}.
 ```
 
 ---
 
+# APRS-IS message content decoder in Erlang
+
+```erlang
+info_dispatch(Info) ->
+<<Type:8, Rest/binary>> = Info,
+info_dispatch_type(Type, Rest).
+
+info_dispatch_type(_, <<>>) -> {undefined, nofield};
+info_dispatch_type($!, Field) ->
+    position_nomsg(binary:first(Field), Field);
+info_dispatch_type($=, Field) ->
+    position_msg(binary:first(Field), Field);
+%%% and the pattern matching continues...
+```
+
+---
+
+# Decoded APRS-IS message example
+
+```
+F4BSX>APFD09,WIDE3-3,qAR,F1ZXR-3:=4313.61N/00134.33E↩
+-PHG52NaN04/Dep:09 {UIV32}
+Source: F4BSX
+Destination: APFD09
+Relay: [<<"WIDE3-3">>,<<"qAR">>,<<"F1ZXR-3">>]
+Info: =4313.61N/00134.33E-PHG52NaN04/Dep:09 {UIV32}
+Decoded: {position,no_message,{uncompressed,
+ {{longlat,43.22683333333333,1.5721666666666665},{symid,47},
+  <"-PHG52NaN04/Dep:09 {UIV32}">>}}}
+```
+
+---
+
+# Storing positions in the ETS with Erlang
+
+```erlang
+ets_init()->
+  ets:new(aprs_positions, [set, protected, named_table]).
+put_ets({Source, _Dest, _Relay, Info}) ->
+    Time = erlang:monotonic_time(millisecond),
+    put_ets(Time, Source,
+        parse_message(aprs_is_decode:info_dispatch(Info))).
+put_ets(Time, Source, {Lat, Long}) ->
+    % io:format("~p~n", [{Time, Source, Lat, Long}]),
+    ets:insert(aprs_positions, {Time, Source, Lat, Long}).
+```
+
+---
+
+# How ETS data are stored
+
+```erlang,
+6> ets:tab2list(aprs_positions).
+[{-576459299045,<<"SR3NOW">>,51.6595,17.7965},
+ {-576459323341,<<"HS3LIQ-2">>,
+   14.9745,102.07033333333334},
+ {-576459367284,<<"K3HQI-1">>,
+   39.96216666666667,-76.801},
+ {-576459335460,<<"LSBRG">>,38.580333333333336,
+  -94.61716666666666},|...]
+```
+---
+
+# Use ets:tab2list/1 to dump the ETS table
+
+```erlang, [.highlight: 1]
+6> ets:tab2list(aprs_positions).
+[{-576459299045,<<"SR3NOW">>,51.6595,17.7965},
+ {-576459323341,<<"HS3LIQ-2">>,
+   14.9745,102.07033333333334},
+ {-576459367284,<<"K3HQI-1">>,
+   39.96216666666667,-76.801},
+ {-576459335460,<<"LSBRG">>,38.580333333333336,
+  -94.61716666666666},|...]
+```
+---
+
+# Purging older ETS data
+
+```erlang
+-include_lib("stdlib/include/ms_transform.hrl").
+
+ets_cleanup() ->
+  T = erlang:monotonic_time(millisecond) - 180000,
+  ets:select_delete(
+    aprs_positions,
+    ets:fun2ms(fun({Time, _, _, _}) -> Time < T end)).
+```
+      
+---
+
+# What Elixir part of apresse does
+
+* Start the Erlang part and Web server
+* When requested, create the position data for LeafLet
+* Respond with all the headers and scripts of LeafLet as HTML
+
+---
+
+# ApresseWeb.Endpoint: web server in Plug
+
+```elixir
+defmodule ApresseWeb.Endpoint do
+  use Plug.Builder
+  plug Plug.Static,
+       at: "/static", from: :apresse_web
+  % default processing
+  plug ApresseWeb.APRSMap
+  plug :not_found
+  plug :halt # and the code continues...
+```
+
+---
+
+# Generating LeafLet markers by EEx template
+
+```elixir
+<%
+popup = :io_lib.format(
+  "Source: ~s<br>Lat: ~.4f<br>Long: ~.4f",
+  [source, lat, long])
+%>
+var marker =
+  L.marker([<%= lat %>, <%= long %>])
+  .addTo(mymap).bindPopup('<%= popup %>');
+```
+
+---
+
+# An excerpt from the result HTML
+
+```JavaScript
+<script>
+  function showmap() {
+    var mymap = L.map('mapid').setView([0.0, 0.0], 1);
+    L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
+// Generated part
+var marker = L.marker([-34.4095, 19.307166666666667])
+.addTo(mymap).bindPopup('Source: ZR1TX<br>
+Lat: -34.4095<br>Long: 19.3072');
+// ... and the HTML continues
+```
+
+---
+
+# Automatically generated by the EEX template
+
+```JavaScript,[.highlight: 5-9]
+<script>
+  function showmap() {
+    var mymap = L.map('mapid').setView([0.0, 0.0], 1);
+    L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
+// Generated part
+var marker = L.marker([-34.4095, 19.307166666666667])
+.addTo(mymap).bindPopup('Source: ZR1TX<br>
+Lat: -34.4095<br>Long: 19.3072');
+// ... and the HTML continues
+```
+
+---
+
+![original, fit](leaflet-homepage.png)
+
+### [LeafLet](https://leafletjs.com/)
+
+---
+
+![fit](apresse-web-wholeworld.png)
+
+---
+
+![fit](apresse-web-sweden.png)
+
+---
+
+# How much code lines are needed for apresse 0.01
+
+* Erlang code: 288 lines
+* Elixir code: 121 lines without templates
+* EEx template: 31 lines
+* ... less than 500 lines in total
+
+---
+
 # Summary
 
-* BEAM is designed for a large-scale and high concurrency projects
-* The application of BEAM is *not* restricted to the large-scale projects
-* Starting small with BEAM languages such as Erlang and Elixir is a good way to prototype
+* BEAM is for large-scale/high-concurrency
+* BEAM is *not* restricted to the large-scale projects
+* Starting small with BEAM languages (Erlang/Elixir) is a good way to prototype quickly
 * You can use BEAM for small projects too
+* Elixir and Erlang nicely coexist with each other by using proper building tools (mix and rebar3)
+
+---
+
+# [fit] Source code and data
+
+# [fit] Github: [jj1bdx/apresse](https://github.com/jj1bdx/apresse)
 
 ---
 
