@@ -123,7 +123,7 @@ Stockholm, Sweden
 
 # [fit] APRS-IS systems [^4]
 
-![fit, right](aprs-is.png)
+![fit, right](aprs-is-network.png)
 
 * Very much like old USENET or modern messaging systems
 * IGate systems are clients for the radio systems
