@@ -3,11 +3,12 @@ defmodule Apresse.MixProject do
 
   def project do
     [
-      app: :apresse,
+      app: :apresse_web,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: package(),
       description: "Web server for displaying APRS-IS positions in a map",
       name: "Apresse"
     ]
@@ -24,6 +25,7 @@ defmodule Apresse.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {ApresseWeb, []},
       extra_applications: [:plug, :cowboy, :logger]
     ]
   end
