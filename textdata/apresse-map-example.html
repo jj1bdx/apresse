@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>apresse APRS map</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Maps API -->
+<script
+    src="http://maps.google.com/maps/api/js?sensor=false&libraries=geomtry">
+</script>
+<link rel="stylesheet" href="static/leaflet.css">
+<script src="static/leaflet.js"></script>
+<script src='static/Leaflet.GoogleMutant.js'></script>
+</head> 
+<body>
+<h1>apresse APRS map</h1>
+<div id="mapid" style="width: 1280px; height: 768px;"></div>
+<script>
+  function showmap() {
+    var mymap = L.map('mapid').setView([0.0, 0.0], 1);
+    L.gridLayer.googleMutant({type: 'roadmap'}).addTo(mymap);
+
+var marker = L.marker([-34.4095, 19.307166666666667]).addTo(mymap).bindPopup('Source: ZR1TX<br>Lat: -34.4095<br>Long: 19.3072');
+
+var marker = L.marker([45.20333333333333, -0.5855]).addTo(mymap).bindPopup('Source: F5PON-9<br>Lat: 45.2033<br>Long: -0.5855');
+
+var marker = L.marker([42.288, -85.16516666666666]).addTo(mymap).bindPopup('Source: W8DF-5<br>Lat: 42.2880<br>Long: -85.1652');
+
+var marker = L.marker([24.617, 121.74816666666666]).addTo(mymap).bindPopup('Source: BV0MT-13<br>Lat: 24.6170<br>Long: 121.7482');
+
+var marker = L.marker([47.192166666666665, 14.743833333333333]).addTo(mymap).bindPopup('Source: OE6POD-11<br>Lat: 47.1922<br>Long: 14.7438');
+
+var marker = L.marker([47.435833333333335, -2.0883333333333334]).addTo(mymap).bindPopup('Source: F4GBV-3<br>Lat: 47.4358<br>Long: -2.0883');
+
+var marker = L.marker([50.047, 19.920666666666666]).addTo(mymap).bindPopup('Source: SR9NRK<br>Lat: 50.0470<br>Long: 19.9207');
+
+var marker = L.marker([40.75383333333333, 140.53366666666668]).addTo(mymap).bindPopup('Source: JH7UAX<br>Lat: 40.7538<br>Long: 140.5337');
+
+var marker = L.marker([31.083666666666666, 103.8565]).addTo(mymap).bindPopup('Source: BH8CKF-3<br>Lat: 31.0837<br>Long: 103.8565');
+
+var marker = L.marker([28.079833333333333, 120.85916666666667]).addTo(mymap).bindPopup('Source: BH5BNQ-8<br>Lat: 28.0798<br>Long: 120.8592');
+
+var marker = L.marker([39.94166666666667, -75.61133333333333]).addTo(mymap).bindPopup('Source: WA2MZB-2<br>Lat: 39.9417<br>Long: -75.6113');
+
+var marker = L.marker([28.552, -81.3555]).addTo(mymap).bindPopup('Source: K1XC-C<br>Lat: 28.5520<br>Long: -81.3555');
+
+var marker = L.marker([40.809, -85.8405]).addTo(mymap).bindPopup('Source: N9MNU-10<br>Lat: 40.8090<br>Long: -85.8405');
+
+var marker = L.marker([13.295833333333333, 101.1635]).addTo(mymap).bindPopup('Source: E27ASY-9<br>Lat: 13.2958<br>Long: 101.1635');
+
+var marker = L.marker([51.41578416805364, -1.757585462793287]).addTo(mymap).bindPopup('Source: MB7UMA<br>Lat: 51.4158<br>Long: -1.7576');
+
+var marker = L.marker([60.27766666666667, 25.254333333333335]).addTo(mymap).bindPopup('Source: OH2RDS<br>Lat: 60.2777<br>Long: 25.2543');
+
+var marker = L.marker([37.587833333333336, -112.85733333333333]).addTo(mymap).bindPopup('Source: KF6RAL-4<br>Lat: 37.5878<br>Long: -112.8573');
+
+var marker = L.marker([28.121833333333335, 120.95283333333333]).addTo(mymap).bindPopup('Source: BG5BLU-9<br>Lat: 28.1218<br>Long: 120.9528');
+
+var marker = L.marker([33.924166666666665, -78.1425]).addTo(mymap).bindPopup('Source: N2MH-14<br>Lat: 33.9242<br>Long: -78.1425');
+
+var marker = L.marker([-24.888166666666667, 152.34683333333334]).addTo(mymap).bindPopup('Source: VK4KDS-8<br>Lat: -24.8882<br>Long: 152.3468');
+
+var marker = L.marker([38.559166347269546, -0.10199881341782202]).addTo(mymap).bindPopup('Source: EA5URB-14<br>Lat: 38.5592<br>Long: -0.1020');
+
+var marker = L.marker([-33.229166666666664, 151.541]).addTo(mymap).bindPopup('Source: VK2JDW-N<br>Lat: -33.2292<br>Long: 151.5410');
+
+var marker = L.marker([53.06966666666667, 5.536666666666667]).addTo(mymap).bindPopup('Source: PA1CD-10<br>Lat: 53.0697<br>Long: 5.5367');
+
+var marker = L.marker([40.538333333333334, -77.75066666666666]).addTo(mymap).bindPopup('Source: K3DNA<br>Lat: 40.5383<br>Long: -77.7507');
+
+var marker = L.marker([44.89833333333333, -0.243]).addTo(mymap).bindPopup('Source: F6KLI<br>Lat: 44.8983<br>Long: -0.2430');
+
+var marker = L.marker([51.425, -115.07166666666667]).addTo(mymap).bindPopup('Source: MKGBRD<br>Lat: 51.4250<br>Long: -115.0717');
+
+var marker = L.marker([32.444833333333335, -97.80466666666666]).addTo(mymap).bindPopup('Source: W5HCT-B<br>Lat: 32.4448<br>Long: -97.8047');
+
+var marker = L.marker([43.56016666666667, -80.91866666666667]).addTo(mymap).bindPopup('Source: VE3NMN-C<br>Lat: 43.5602<br>Long: -80.9187');
+
+var marker = L.marker([62.51583333333333, 6.873]).addTo(mymap).bindPopup('Source: LD6LF<br>Lat: 62.5158<br>Long: 6.8730');
+
+var marker = L.marker([41.723, 12.999]).addTo(mymap).bindPopup('Source: I0OJJ<br>Lat: 41.7230<br>Long: 12.9990');
+
+var marker = L.marker([39.774166666666666, -75.928]).addTo(mymap).bindPopup('Source: N3XRV-2<br>Lat: 39.7742<br>Long: -75.9280');
+
+var marker = L.marker([45.011833333333335, -96.18533333333333]).addTo(mymap).bindPopup('Source: NY0I<br>Lat: 45.0118<br>Long: -96.1853');
+
+var marker = L.marker([47.38783333333333, 6.5600000000000005]).addTo(mymap).bindPopup('Source: F4FEB-13<br>Lat: 47.3878<br>Long: 6.5600');
+
+var marker = L.marker([24.617, 121.74816666666666]).addTo(mymap).bindPopup('Source: BV0MT-13<br>Lat: 24.6170<br>Long: 121.7482');
+
+var marker = L.marker([32.222, -110.72333333333333]).addTo(mymap).bindPopup('Source: NG8H-1<br>Lat: 32.2220<br>Long: -110.7233');
+
+var marker = L.marker([34.846, 135.68583333333333]).addTo(mymap).bindPopup('Source: JE3ZUE-9<br>Lat: 34.8460<br>Long: 135.6858');
+
+var marker = L.marker([33.861666666666665, 132.71966666666665]).addTo(mymap).bindPopup('Source: JJ5CWA-12<br>Lat: 33.8617<br>Long: 132.7197');
+
+var marker = L.marker([9.073333333333334, -79.4275]).addTo(mymap).bindPopup('Source: HP1MRA-3<br>Lat: 9.0733<br>Long: -79.4275');
+
+var marker = L.marker([48.652833333333334, -123.6495]).addTo(mymap).bindPopup('Source: VA7CBN<br>Lat: 48.6528<br>Long: -123.6495');
+
+var marker = L.marker([47.126333333333335, 22.47833333333333]).addTo(mymap).bindPopup('Source: YO5OHH-2<br>Lat: 47.1263<br>Long: 22.4783');
+
+var marker = L.marker([27.601166666666668, -80.3925]).addTo(mymap).bindPopup('Source: WA4TCD-C<br>Lat: 27.6012<br>Long: -80.3925');
+
+var marker = L.marker([46.16766666666667, 12.126333333333333]).addTo(mymap).bindPopup('Source: IZ3NWN-10<br>Lat: 46.1677<br>Long: 12.1263');
+
+var marker = L.marker([41.47416666666667, -71.77166666666666]).addTo(mymap).bindPopup('Source: N1LMA-15<br>Lat: 41.4742<br>Long: -71.7717');
+
+var marker = L.marker([31.926666666666666, 120.29833333333333]).addTo(mymap).bindPopup('Source: BI4VNM-13<br>Lat: 31.9267<br>Long: 120.2983');
+
+var marker = L.marker([46.038, 25.21216666666667]).addTo(mymap).bindPopup('Source: YO6IGJ-N<br>Lat: 46.0380<br>Long: 25.2122');
+
+var marker = L.marker([64.21, 20.8685]).addTo(mymap).bindPopup('Source: SM2FLT<br>Lat: 64.2100<br>Long: 20.8685');
+
+var marker = L.marker([48.72116666666667, 2.7863333333333333]).addTo(mymap).bindPopup('Source: F6ANO-13<br>Lat: 48.7212<br>Long: 2.7863');
+
+var marker = L.marker([39.8915, 118.86766666666666]).addTo(mymap).bindPopup('Source: BG3MUF-9<br>Lat: 39.8915<br>Long: 118.8677');
+
+var marker = L.marker([49.26283333333333, -124.80933333333333]).addTo(mymap).bindPopup('Source: VA7DWC-1<br>Lat: 49.2628<br>Long: -124.8093');
+
+var marker = L.marker([49.57216666666667, 21.65116666666667]).addTo(mymap).bindPopup('Source: SR8WXD<br>Lat: 49.5722<br>Long: 21.6512');
+
+var marker = L.marker([44.32183333333333, -96.92216666666667]).addTo(mymap).bindPopup('Source: N0VEK-3<br>Lat: 44.3218<br>Long: -96.9222');
+
+var marker = L.marker([39.181666666666665, -1.4783333333333333]).addTo(mymap).bindPopup('Source: EB5IGQ-9<br>Lat: 39.1817<br>Long: -1.4783');
+
+var marker = L.marker([-24.376666666666665, 150.9635]).addTo(mymap).bindPopup('Source: VK4RGA-3<br>Lat: -24.3767<br>Long: 150.9635');
+
+var marker = L.marker([22.676666666666666, 113.81]).addTo(mymap).bindPopup('Source: BI7KJP-13<br>Lat: 22.6767<br>Long: 113.8100');
+
+var marker = L.marker([43.57066666666667, 6.9671666666666665]).addTo(mymap).bindPopup('Source: F4ONQ-2<br>Lat: 43.5707<br>Long: 6.9672');
+
+var marker = L.marker([39.518166666666666, -84.75733333333334]).addTo(mymap).bindPopup('Source: W8VFR-5<br>Lat: 39.5182<br>Long: -84.7573');
+
+var marker = L.marker([44.68783333333333, 10.846833333333333]).addTo(mymap).bindPopup('Source: IZ4FHV<br>Lat: 44.6878<br>Long: 10.8468');
+
+var marker = L.marker([39.897666666666666, 116.6365]).addTo(mymap).bindPopup('Source: BH1IEO-8<br>Lat: 39.8977<br>Long: 116.6365');
+
+var marker = L.marker([39.690666666666665, -75.75833333333334]).addTo(mymap).bindPopup('Source: W3UD-3<br>Lat: 39.6907<br>Long: -75.7583');
+
+var marker = L.marker([51.4445, 5.5]).addTo(mymap).bindPopup('Source: PI1DSE-C<br>Lat: 51.4445<br>Long: 5.5000');
+
+var marker = L.marker([56.786, 16.343833333333333]).addTo(mymap).bindPopup('Source: SA0BOZ-5<br>Lat: 56.7860<br>Long: 16.3438');
+
+var marker = L.marker([45.80233333333334, 25.8425]).addTo(mymap).bindPopup('Source: YO6HEG-10<br>Lat: 45.8023<br>Long: 25.8425');
+
+var marker = L.marker([37.104166666666664, -8.679666666666666]).addTo(mymap).bindPopup('Source: CT1FGR-B<br>Lat: 37.1042<br>Long: -8.6797');
+
+var marker = L.marker([3.017, 101.43133333333333]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0170<br>Long: 101.4313');
+
+var marker = L.marker([53.15566666666667, 17.045666666666666]).addTo(mymap).bindPopup('Source: SQ3KNQ-10<br>Lat: 53.1557<br>Long: 17.0457');
+
+var marker = L.marker([49.4695, 8.482333333333333]).addTo(mymap).bindPopup('Source: DB0CPU-7<br>Lat: 49.4695<br>Long: 8.4823');
+
+var marker = L.marker([39.181666666666665, -1.48]).addTo(mymap).bindPopup('Source: EB5IGQ-9<br>Lat: 39.1817<br>Long: -1.4800');
+
+var marker = L.marker([-6.535833333333334, 106.70133333333334]).addTo(mymap).bindPopup('Source: YF1ZQA<br>Lat: -6.5358<br>Long: 106.7013');
+
+var marker = L.marker([31.227666666666668, 121.41583333333334]).addTo(mymap).bindPopup('Source: VE7RZ7<br>Lat: 31.2277<br>Long: 121.4158');
+
+var marker = L.marker([49.89783333333333, -119.42333333333333]).addTo(mymap).bindPopup('Source: VA7WS-1<br>Lat: 49.8978<br>Long: -119.4233');
+
+var marker = L.marker([64.328, 10.415333333333333]).addTo(mymap).bindPopup('Source: LA3LJA-1<br>Lat: 64.3280<br>Long: 10.4153');
+
+var marker = L.marker([36.857166666666664, 30.783166666666666]).addTo(mymap).bindPopup('Source: TA4AEI<br>Lat: 36.8572<br>Long: 30.7832');
+
+var marker = L.marker([43.07266666666667, -89.41166666666666]).addTo(mymap).bindPopup('Source: WT9M-5<br>Lat: 43.0727<br>Long: -89.4117');
+
+var marker = L.marker([37.512166666666666, 122.05116666666666]).addTo(mymap).bindPopup('Source: BD4KM-10<br>Lat: 37.5122<br>Long: 122.0512');
+
+var marker = L.marker([43.833, -0.8085]).addTo(mymap).bindPopup('Source: F5OPV-IoT<br>Lat: 43.8330<br>Long: -0.8085');
+
+var marker = L.marker([60.2885, -1.4251666666666667]).addTo(mymap).bindPopup('Source: GM4SLV<br>Lat: 60.2885<br>Long: -1.4252');
+
+var marker = L.marker([36.611666666666665, 114.52716666666667]).addTo(mymap).bindPopup('Source: BG3OTT-3<br>Lat: 36.6117<br>Long: 114.5272');
+
+var marker = L.marker([-33.29816666666667, 149.10783333333333]).addTo(mymap).bindPopup('Source: VK2BLO-WX<br>Lat: -33.2982<br>Long: 149.1078');
+
+var marker = L.marker([-6.245666666666667, 106.74633333333334]).addTo(mymap).bindPopup('Source: YE0EEE-13<br>Lat: -6.2457<br>Long: 106.7463');
+
+var marker = L.marker([42.71083333333333, 3.0365]).addTo(mymap).bindPopup('Source: DL1IK<br>Lat: 42.7108<br>Long: 3.0365');
+
+var marker = L.marker([22.638166666666667, 120.30316666666667]).addTo(mymap).bindPopup('Source: BM4AIK-E<br>Lat: 22.6382<br>Long: 120.3032');
+
+var marker = L.marker([35.358666666666664, 137.08766666666668]).addTo(mymap).bindPopup('Source: JF2HMJ-10<br>Lat: 35.3587<br>Long: 137.0877');
+
+var marker = L.marker([56.146166666666666, -117.74333333333334]).addTo(mymap).bindPopup('Source: VE6AAF<br>Lat: 56.1462<br>Long: -117.7433');
+
+var marker = L.marker([47.7105, 10.333]).addTo(mymap).bindPopup('Source: DE1TBK-10<br>Lat: 47.7105<br>Long: 10.3330');
+
+var marker = L.marker([38.407, -90.73383333333334]).addTo(mymap).bindPopup('Source: KD0ZEA-C<br>Lat: 38.4070<br>Long: -90.7338');
+
+var marker = L.marker([43.339, -4.05]).addTo(mymap).bindPopup('Source: EA1YO-13<br>Lat: 43.3390<br>Long: -4.0500');
+
+var marker = L.marker([36.968, 30.7]).addTo(mymap).bindPopup('Source: TA4IKY<br>Lat: 36.9680<br>Long: 30.7000');
+
+var marker = L.marker([42.59916666666667, -74.9275]).addTo(mymap).bindPopup('Source: N2KGC<br>Lat: 42.5992<br>Long: -74.9275');
+
+var marker = L.marker([32.284166666666664, 105.51366666666667]).addTo(mymap).bindPopup('Source: BG8EJT-10<br>Lat: 32.2842<br>Long: 105.5137');
+
+var marker = L.marker([34.289833333333334, -118.82266666666666]).addTo(mymap).bindPopup('Source: K6OUA-11<br>Lat: 34.2898<br>Long: -118.8227');
+
+var marker = L.marker([42.296, 118.94933333333333]).addTo(mymap).bindPopup('Source: BH1NIN-9<br>Lat: 42.2960<br>Long: 118.9493');
+
+var marker = L.marker([14.644666666666666, -90.45616666666666]).addTo(mymap).bindPopup('Source: TG9ACF-C<br>Lat: 14.6447<br>Long: -90.4562');
+
+var marker = L.marker([46.3355, 10.330333333333334]).addTo(mymap).bindPopup('Source: IR2E<br>Lat: 46.3355<br>Long: 10.3303');
+
+var marker = L.marker([33.16583333333333, -96.659]).addTo(mymap).bindPopup('Source: K5GHS-4<br>Lat: 33.1658<br>Long: -96.6590');
+
+var marker = L.marker([28.083166666666667, 120.85983333333333]).addTo(mymap).bindPopup('Source: BH5BNQ-8<br>Lat: 28.0832<br>Long: 120.8598');
+
+var marker = L.marker([18.120666666666665, 99.8745]).addTo(mymap).bindPopup('Source: E28AE-3<br>Lat: 18.1207<br>Long: 99.8745');
+
+var marker = L.marker([40.548, -105.1095]).addTo(mymap).bindPopup('Source: WA5VRL-13<br>Lat: 40.5480<br>Long: -105.1095');
+
+var marker = L.marker([50.0, 0.0]).addTo(mymap).bindPopup('Source: JA9THA-B<br>Lat: 50.0000<br>Long: 0.0000');
+
+var marker = L.marker([25.0395, 101.56266666666667]).addTo(mymap).bindPopup('Source: BG8SIK-9<br>Lat: 25.0395<br>Long: 101.5627');
+
+var marker = L.marker([42.296, 118.94933333333333]).addTo(mymap).bindPopup('Source: BH1NIN-9<br>Lat: 42.2960<br>Long: 118.9493');
+
+var marker = L.marker([57.155833333333334, -2.180833333333333]).addTo(mymap).bindPopup('Source: MB7UAB<br>Lat: 57.1558<br>Long: -2.1808');
+
+var marker = L.marker([44.476, 10.486333333333333]).addTo(mymap).bindPopup('Source: IW4BMA-3<br>Lat: 44.4760<br>Long: 10.4863');
+
+var marker = L.marker([59.74166666666667, 10.033833333333334]).addTo(mymap).bindPopup('Source: LA5PPA-1<br>Lat: 59.7417<br>Long: 10.0338');
+
+var marker = L.marker([31.598333333333333, 120.36333333333333]).addTo(mymap).bindPopup('Source: BH4TDV-13<br>Lat: 31.5983<br>Long: 120.3633');
+
+var marker = L.marker([-23.5445, -45.8595]).addTo(mymap).bindPopup('Source: PU2WAT-2<br>Lat: -23.5445<br>Long: -45.8595');
+
+var marker = L.marker([50.48266666666667, -122.59716666666667]).addTo(mymap).bindPopup('Source: BIRKEN<br>Lat: 50.4827<br>Long: -122.5972');
+
+var marker = L.marker([33.82666666666667, -109.1655]).addTo(mymap).bindPopup('Source: ALPAZ-4<br>Lat: 33.8267<br>Long: -109.1655');
+
+var marker = L.marker([52.98383333333334, 9.849166666666667]).addTo(mymap).bindPopup('Source: DL8OBP-10<br>Lat: 52.9838<br>Long: 9.8492');
+
+var marker = L.marker([48.69083333333333, 12.208333333333334]).addTo(mymap).bindPopup('Source: DH2RL-2<br>Lat: 48.6908<br>Long: 12.2083');
+
+var marker = L.marker([51.55, 8.567166666666667]).addTo(mymap).bindPopup('Source: DK3GY-10<br>Lat: 51.5500<br>Long: 8.5672');
+
+var marker = L.marker([13.9865, 100.6175]).addTo(mymap).bindPopup('Source: HS1ZHY-7<br>Lat: 13.9865<br>Long: 100.6175');
+
+var marker = L.marker([38.928, -119.93283333333333]).addTo(mymap).bindPopup('Source: WA6EWV-3<br>Lat: 38.9280<br>Long: -119.9328');
+
+var marker = L.marker([52.126666666666665, 5.098]).addTo(mymap).bindPopup('Source: PD3PVO-7<br>Lat: 52.1267<br>Long: 5.0980');
+
+var marker = L.marker([52.251333333333335, 0.10166666666666666]).addTo(mymap).bindPopup('Source: G1SAA-5<br>Lat: 52.2513<br>Long: 0.1017');
+
+var marker = L.marker([50.62433333333333, 4.3895]).addTo(mymap).bindPopup('Source: ON0WTO-2<br>Lat: 50.6243<br>Long: 4.3895');
+
+var marker = L.marker([44.102, -79.4415]).addTo(mymap).bindPopup('Source: VE3YRA<br>Lat: 44.1020<br>Long: -79.4415');
+
+var marker = L.marker([40.40716666666667, -116.86466666666666]).addTo(mymap).bindPopup('Source: LEWIS<br>Lat: 40.4072<br>Long: -116.8647');
+
+var marker = L.marker([-26.7785, -49.03]).addTo(mymap).bindPopup('Source: PP5BLU-15<br>Lat: -26.7785<br>Long: -49.0300');
+
+var marker = L.marker([-29.358333333333334, -50.854166666666664]).addTo(mymap).bindPopup('Source: PU3DSS-13<br>Lat: -29.3583<br>Long: -50.8542');
+
+var marker = L.marker([55.61366666666667, 12.976333333333333]).addTo(mymap).bindPopup('Source: SK7RDS-1<br>Lat: 55.6137<br>Long: 12.9763');
+
+var marker = L.marker([37.459, 118.48016666666666]).addTo(mymap).bindPopup('Source: BG4PRC-6<br>Lat: 37.4590<br>Long: 118.4802');
+
+var marker = L.marker([14.926666666666666, 103.48533333333333]).addTo(mymap).bindPopup('Source: HS3LSE-5<br>Lat: 14.9267<br>Long: 103.4853');
+
+var marker = L.marker([34.47966666666667, -87.29166666666667]).addTo(mymap).bindPopup('Source: LAWEMA<br>Lat: 34.4797<br>Long: -87.2917');
+
+var marker = L.marker([35.80533333333333, -100.39016666666667]).addTo(mymap).bindPopup('Source: CANADN<br>Lat: 35.8053<br>Long: -100.3902');
+
+var marker = L.marker([31.293333333333333, 121.31133333333334]).addTo(mymap).bindPopup('Source: BH4DBZ-10<br>Lat: 31.2933<br>Long: 121.3113');
+
+var marker = L.marker([47.24733333333333, -1.5365]).addTo(mymap).bindPopup('Source: F5ORE-N<br>Lat: 47.2473<br>Long: -1.5365');
+
+var marker = L.marker([6.305166666666667, -75.446]).addTo(mymap).bindPopup('Source: HK4D-2<br>Lat: 6.3052<br>Long: -75.4460');
+
+var marker = L.marker([-22.711666666666666, -47.648]).addTo(mymap).bindPopup('Source: PY2FJ-1<br>Lat: -22.7117<br>Long: -47.6480');
+
+var marker = L.marker([36.851, 118.0215]).addTo(mymap).bindPopup('Source: BG4PZF-1<br>Lat: 36.8510<br>Long: 118.0215');
+
+var marker = L.marker([30.47533333333333, -84.27483333333333]).addTo(mymap).bindPopup('Source: AE4S<br>Lat: 30.4753<br>Long: -84.2748');
+
+var marker = L.marker([42.83083333333333, 2.769833333333333]).addTo(mymap).bindPopup('Source: F6KBR-4<br>Lat: 42.8308<br>Long: 2.7698');
+
+var marker = L.marker([53.1975, 44.963166666666666]).addTo(mymap).bindPopup('Source: R4FBA-1<br>Lat: 53.1975<br>Long: 44.9632');
+
+var marker = L.marker([44.13516666666666, -79.31066666666666]).addTo(mymap).bindPopup('Source: VE3YRA-8<br>Lat: 44.1352<br>Long: -79.3107');
+
+var marker = L.marker([51.5325, 7.231833333333333]).addTo(mymap).bindPopup('Source: DL6AKU-1<br>Lat: 51.5325<br>Long: 7.2318');
+
+var marker = L.marker([41.40416666666667, 2.215333333333333]).addTo(mymap).bindPopup('Source: EA3BIL-7<br>Lat: 41.4042<br>Long: 2.2153');
+
+var marker = L.marker([43.717, 0.8903333333333333]).addTo(mymap).bindPopup('Source: F8DJD-15<br>Lat: 43.7170<br>Long: 0.8903');
+
+var marker = L.marker([31.5425, 120.265]).addTo(mymap).bindPopup('Source: BI4RYL-10<br>Lat: 31.5425<br>Long: 120.2650');
+
+var marker = L.marker([53.5755, 10.082833333333333]).addTo(mymap).bindPopup('Source: DM0HHW-C<br>Lat: 53.5755<br>Long: 10.0828');
+
+var marker = L.marker([50.88133333333333, 11.129]).addTo(mymap).bindPopup('Source: DB0RIE<br>Lat: 50.8813<br>Long: 11.1290');
+
+var marker = L.marker([53.10433333333334, 8.885]).addTo(mymap).bindPopup('Source: DM0BAM-C<br>Lat: 53.1043<br>Long: 8.8850');
+
+var marker = L.marker([51.50183333333333, 9.752]).addTo(mymap).bindPopup('Source: DL8BB<br>Lat: 51.5018<br>Long: 9.7520');
+
+var marker = L.marker([40.078, 116.155]).addTo(mymap).bindPopup('Source: BG1GXG-8<br>Lat: 40.0780<br>Long: 116.1550');
+
+var marker = L.marker([50.922666666666665, 12.982166666666666]).addTo(mymap).bindPopup('Source: DO1MIT-9<br>Lat: 50.9227<br>Long: 12.9822');
+
+var marker = L.marker([40.895, 29.179666666666666]).addTo(mymap).bindPopup('Source: TA2TQ-10<br>Lat: 40.8950<br>Long: 29.1797');
+
+var marker = L.marker([28.521, -99.85716666666667]).addTo(mymap).bindPopup('Source: W5EVH-11<br>Lat: 28.5210<br>Long: -99.8572');
+
+var marker = L.marker([-25.718666666666667, 28.69783333333333]).addTo(mymap).bindPopup('Source: ZS0ERB-3<br>Lat: -25.7187<br>Long: 28.6978');
+
+var marker = L.marker([45.15833333333333, 19.862]).addTo(mymap).bindPopup('Source: YU0XFG-1<br>Lat: 45.1583<br>Long: 19.8620');
+
+var marker = L.marker([45.074333333333335, -117.519]).addTo(mymap).bindPopup('Source: MEDSPR<br>Lat: 45.0743<br>Long: -117.5190');
+
+var marker = L.marker([34.11866666666667, -80.93683333333334]).addTo(mymap).bindPopup('Source: N4MSG-10<br>Lat: 34.1187<br>Long: -80.9368');
+
+var marker = L.marker([44.20283333333333, 27.310333333333332]).addTo(mymap).bindPopup('Source: YO9IPZ-13<br>Lat: 44.2028<br>Long: 27.3103');
+
+var marker = L.marker([9.964666666666666, -84.00683333333333]).addTo(mymap).bindPopup('Source: TI2CVJ<br>Lat: 9.9647<br>Long: -84.0068');
+
+var marker = L.marker([51.352833333333336, 5.444]).addTo(mymap).bindPopup('Source: PE1RXQ-4<br>Lat: 51.3528<br>Long: 5.4440');
+
+var marker = L.marker([48.6915, 9.014333333333333]).addTo(mymap).bindPopup('Source: DB0RBB-0<br>Lat: 48.6915<br>Long: 9.0143');
+
+var marker = L.marker([35.25383333333333, 139.96]).addTo(mymap).bindPopup('Source: JO1YLU-3<br>Lat: 35.2538<br>Long: 139.9600');
+
+var marker = L.marker([28.121833333333335, 120.95283333333333]).addTo(mymap).bindPopup('Source: BG5BLU-9<br>Lat: 28.1218<br>Long: 120.9528');
+
+var marker = L.marker([32.94683333333333, -96.846]).addTo(mymap).bindPopup('Source: W5MGM-10<br>Lat: 32.9468<br>Long: -96.8460');
+
+var marker = L.marker([50.0, 0.0]).addTo(mymap).bindPopup('Source: KD2HUY-R<br>Lat: 50.0000<br>Long: 0.0000');
+
+var marker = L.marker([34.567, -87.17333333333333]).addTo(mymap).bindPopup('Source: ESTLAW<br>Lat: 34.5670<br>Long: -87.1733');
+
+var marker = L.marker([38.9005, -105.20733333333334]).addTo(mymap).bindPopup('Source: W0DVM-1<br>Lat: 38.9005<br>Long: -105.2073');
+
+var marker = L.marker([50.9345, 12.9785]).addTo(mymap).bindPopup('Source: DO1MIT-9<br>Lat: 50.9345<br>Long: 12.9785');
+
+var marker = L.marker([32.435, 105.85133333333333]).addTo(mymap).bindPopup('Source: BH8FNJ-10<br>Lat: 32.4350<br>Long: 105.8513');
+
+var marker = L.marker([22.975166666666667, 111.97633333333333]).addTo(mymap).bindPopup('Source: BR7IAF-13<br>Lat: 22.9752<br>Long: 111.9763');
+
+var marker = L.marker([42.619, -71.34716666666667]).addTo(mymap).bindPopup('Source: WB2OSZ-5<br>Lat: 42.6190<br>Long: -71.3472');
+
+var marker = L.marker([61.14083333333333, 28.104]).addTo(mymap).bindPopup('Source: OH5FVY<br>Lat: 61.1408<br>Long: 28.1040');
+
+var marker = L.marker([48.44283333333333, 17.026166666666665]).addTo(mymap).bindPopup('Source: OM2WX-6<br>Lat: 48.4428<br>Long: 17.0262');
+
+var marker = L.marker([24.465, 54.348166666666664]).addTo(mymap).bindPopup('Source: A65FH-5<br>Lat: 24.4650<br>Long: 54.3482');
+
+var marker = L.marker([31.926666666666666, 120.58833333333334]).addTo(mymap).bindPopup('Source: BY4SHX-13<br>Lat: 31.9267<br>Long: 120.5883');
+
+var marker = L.marker([30.338, 112.21266666666666]).addTo(mymap).bindPopup('Source: BR6QQ-13<br>Lat: 30.3380<br>Long: 112.2127');
+
+var marker = L.marker([49.0145, 25.779833333333332]).addTo(mymap).bindPopup('Source: UT3BW-1<br>Lat: 49.0145<br>Long: 25.7798');
+
+var marker = L.marker([-34.90083333333333, -57.961666666666666]).addTo(mymap).bindPopup('Source: LU4ECL-1<br>Lat: -34.9008<br>Long: -57.9617');
+
+var marker = L.marker([32.54066666666667, -97.3445]).addTo(mymap).bindPopup('Source: KG5WXW-11<br>Lat: 32.5407<br>Long: -97.3445');
+
+var marker = L.marker([34.215666666666664, 108.92683333333333]).addTo(mymap).bindPopup('Source: BG9ACB-9<br>Lat: 34.2157<br>Long: 108.9268');
+
+var marker = L.marker([14.3895, 100.063]).addTo(mymap).bindPopup('Source: E29XZ-1<br>Lat: 14.3895<br>Long: 100.0630');
+
+var marker = L.marker([23.188, 112.88016666666667]).addTo(mymap).bindPopup('Source: BI7NAM-10<br>Lat: 23.1880<br>Long: 112.8802');
+
+var marker = L.marker([3.015833333333333, 101.432]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0158<br>Long: 101.4320');
+
+var marker = L.marker([53.3025, -4.6465]).addTo(mymap).bindPopup('Source: MB7UHI<br>Lat: 53.3025<br>Long: -4.6465');
+
+var marker = L.marker([35.11416666666667, -85.78933333333333]).addTo(mymap).bindPopup('Source: W4RLR<br>Lat: 35.1142<br>Long: -85.7893');
+
+var marker = L.marker([39.21933333333333, -121.07]).addTo(mymap).bindPopup('Source: WA3ELA<br>Lat: 39.2193<br>Long: -121.0700');
+
+var marker = L.marker([30.478666666666665, -90.762]).addTo(mymap).bindPopup('Source: KD5QZD-12<br>Lat: 30.4787<br>Long: -90.7620');
+
+var marker = L.marker([39.8915, 118.86766666666666]).addTo(mymap).bindPopup('Source: BG3MUF-9<br>Lat: 39.8915<br>Long: 118.8677');
+
+var marker = L.marker([51.965666666666664, 9.798166666666667]).addTo(mymap).bindPopup('Source: DO0GEZ<br>Lat: 51.9657<br>Long: 9.7982');
+
+var marker = L.marker([52.0, -2.0]).addTo(mymap).bindPopup('Source: G8KUW-R<br>Lat: 52.0000<br>Long: -2.0000');
+
+var marker = L.marker([50.0, 0.0]).addTo(mymap).bindPopup('Source: GW7MVG-R<br>Lat: 50.0000<br>Long: 0.0000');
+
+var marker = L.marker([35.545, 137.84333333333333]).addTo(mymap).bindPopup('Source: JA0WME-5<br>Lat: 35.5450<br>Long: 137.8433');
+
+var marker = L.marker([61.00183333333333, 14.573833333333333]).addTo(mymap).bindPopup('Source: SK4KO-10<br>Lat: 61.0018<br>Long: 14.5738');
+
+var marker = L.marker([45.986, 15.2795]).addTo(mymap).bindPopup('Source: S55YLA-11<br>Lat: 45.9860<br>Long: 15.2795');
+
+var marker = L.marker([56.8075, 16.3665]).addTo(mymap).bindPopup('Source: SA0BOZ-5<br>Lat: 56.8075<br>Long: 16.3665');
+
+var marker = L.marker([43.70733333333333, -111.34516666666667]).addTo(mymap).bindPopup('Source: REX<br>Lat: 43.7073<br>Long: -111.3452');
+
+var marker = L.marker([30.643833333333333, 104.08133333333333]).addTo(mymap).bindPopup('Source: BG8DZN-R<br>Lat: 30.6438<br>Long: 104.0813');
+
+var marker = L.marker([41.611, -70.60783333333333]).addTo(mymap).bindPopup('Source: K1RK-1<br>Lat: 41.6110<br>Long: -70.6078');
+
+var marker = L.marker([37.2875, 140.37466666666666]).addTo(mymap).bindPopup('Source: JP7YEX-I<br>Lat: 37.2875<br>Long: 140.3747');
+
+var marker = L.marker([3.0171666666666668, 101.43116666666667]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0172<br>Long: 101.4312');
+
+var marker = L.marker([47.418, 19.018333333333334]).addTo(mymap).bindPopup('Source: HA5PT-13<br>Lat: 47.4180<br>Long: 19.0183');
+
+var marker = L.marker([52.76233333333333, 5.103666666666666]).addTo(mymap).bindPopup('Source: PI1TJK<br>Lat: 52.7623<br>Long: 5.1037');
+
+var marker = L.marker([46.0505, 11.334666666666667]).addTo(mymap).bindPopup('Source: IR3AS<br>Lat: 46.0505<br>Long: 11.3347');
+
+var marker = L.marker([38.74066666666667, -9.131833333333333]).addTo(mymap).bindPopup('Source: CS5LX-1<br>Lat: 38.7407<br>Long: -9.1318');
+
+var marker = L.marker([37.45916666666667, 118.48016666666666]).addTo(mymap).bindPopup('Source: BG4PRC-6<br>Lat: 37.4592<br>Long: 118.4802');
+
+var marker = L.marker([52.13283333333333, 14.634166666666667]).addTo(mymap).bindPopup('Source: DB0FFO<br>Lat: 52.1328<br>Long: 14.6342');
+
+var marker = L.marker([47.98416666666667, 16.293166666666668]).addTo(mymap).bindPopup('Source: OE3PAS-15<br>Lat: 47.9842<br>Long: 16.2932');
+
+var marker = L.marker([38.33883333333333, -87.35416666666667]).addTo(mymap).bindPopup('Source: KD9JB-1<br>Lat: 38.3388<br>Long: -87.3542');
+
+var marker = L.marker([13.905166666666666, 100.40716666666667]).addTo(mymap).bindPopup('Source: E21RBE-9<br>Lat: 13.9052<br>Long: 100.4072');
+
+var marker = L.marker([28.075333333333333, 120.858]).addTo(mymap).bindPopup('Source: BH5BNQ-8<br>Lat: 28.0753<br>Long: 120.8580');
+
+var marker = L.marker([26.006833333333333, -80.20116666666667]).addTo(mymap).bindPopup('Source: AB4JO<br>Lat: 26.0068<br>Long: -80.2012');
+
+var marker = L.marker([34.21633333333333, 108.92683333333333]).addTo(mymap).bindPopup('Source: BG9ACB-9<br>Lat: 34.2163<br>Long: 108.9268');
+
+var marker = L.marker([34.54933333333334, 136.55983333333333]).addTo(mymap).bindPopup('Source: JP2VWJ-10<br>Lat: 34.5493<br>Long: 136.5598');
+
+var marker = L.marker([-6.245666666666667, 106.74616666666667]).addTo(mymap).bindPopup('Source: YE0EEE-1<br>Lat: -6.2457<br>Long: 106.7462');
+
+var marker = L.marker([57.646166666666666, 13.077666666666667]).addTo(mymap).bindPopup('Source: SM6WZI-1<br>Lat: 57.6462<br>Long: 13.0777');
+
+var marker = L.marker([13.9095, 100.36216666666667]).addTo(mymap).bindPopup('Source: E21SMM-3<br>Lat: 13.9095<br>Long: 100.3622');
+
+var marker = L.marker([35.709, 139.81116666666668]).addTo(mymap).bindPopup('Source: JE0AQG<br>Lat: 35.7090<br>Long: 139.8112');
+
+var marker = L.marker([24.887166666666666, 121.287]).addTo(mymap).bindPopup('Source: BM3FUI-10<br>Lat: 24.8872<br>Long: 121.2870');
+
+var marker = L.marker([29.374666666666666, -100.84633333333333]).addTo(mymap).bindPopup('Source: WB5TZJ<br>Lat: 29.3747<br>Long: -100.8463');
+
+var marker = L.marker([52.08133333333333, 21.31]).addTo(mymap).bindPopup('Source: SQ5SSY<br>Lat: 52.0813<br>Long: 21.3100');
+
+var marker = L.marker([9.119, 99.26133333333334]).addTo(mymap).bindPopup('Source: HS8AFA-C<br>Lat: 9.1190<br>Long: 99.2613');
+
+var marker = L.marker([38.83016666666666, 0.06283333333333334]).addTo(mymap).bindPopup('Source: EB5FOL-10<br>Lat: 38.8302<br>Long: 0.0628');
+
+var marker = L.marker([44.33833333333333, 24.8645]).addTo(mymap).bindPopup('Source: YO3HCJ-9<br>Lat: 44.3383<br>Long: 24.8645');
+
+var marker = L.marker([43.670833333333334, -79.38566666666667]).addTo(mymap).bindPopup('Source: VA3WIK-R<br>Lat: 43.6708<br>Long: -79.3857');
+
+var marker = L.marker([34.279833333333336, -92.10266666666666]).addTo(mymap).bindPopup('Source: N5RN-10<br>Lat: 34.2798<br>Long: -92.1027');
+
+var marker = L.marker([50.0, 0.0]).addTo(mymap).bindPopup('Source: BG6SLL-R<br>Lat: 50.0000<br>Long: 0.0000');
+
+var marker = L.marker([35.654333333333334, 117.25333333333333]).addTo(mymap).bindPopup('Source: BH4OLM-10<br>Lat: 35.6543<br>Long: 117.2533');
+
+var marker = L.marker([39.858666666666664, 116.40166666666667]).addTo(mymap).bindPopup('Source: BY1AA-3<br>Lat: 39.8587<br>Long: 116.4017');
+
+var marker = L.marker([-34.47, -58.755833333333335]).addTo(mymap).bindPopup('Source: LU9DCE<br>Lat: -34.4700<br>Long: -58.7558');
+
+var marker = L.marker([40.632666666666665, -111.98433333333334]).addTo(mymap).bindPopup('Source: KJ7BC-9<br>Lat: 40.6327<br>Long: -111.9843');
+
+var marker = L.marker([-37.839, 145.271]).addTo(mymap).bindPopup('Source: VK3GO-9<br>Lat: -37.8390<br>Long: 145.2710');
+
+var marker = L.marker([36.093833333333336, 103.71333333333334]).addTo(mymap).bindPopup('Source: BG9GYH-10<br>Lat: 36.0938<br>Long: 103.7133');
+
+var marker = L.marker([41.87533333333333, -84.64983333333333]).addTo(mymap).bindPopup('Source: KE8FXA-10<br>Lat: 41.8753<br>Long: -84.6498');
+
+var marker = L.marker([42.5, -89.31666666666666]).addTo(mymap).bindPopup('Source: N9XKH-10<br>Lat: 42.5000<br>Long: -89.3167');
+
+var marker = L.marker([28.132166666666667, 120.95266666666667]).addTo(mymap).bindPopup('Source: BH5BNR-8<br>Lat: 28.1322<br>Long: 120.9527');
+
+var marker = L.marker([13.671833333333334, 100.4555]).addTo(mymap).bindPopup('Source: E20BFQ-8<br>Lat: 13.6718<br>Long: 100.4555');
+
+var marker = L.marker([49.9885, 8.591833333333334]).addTo(mymap).bindPopup('Source: DB0AIS<br>Lat: 49.9885<br>Long: 8.5918');
+
+var marker = L.marker([34.57033333333333, -92.56416666666667]).addTo(mymap).bindPopup('Source: KJ5FA-10<br>Lat: 34.5703<br>Long: -92.5642');
+
+var marker = L.marker([30.47533333333333, -84.27483333333333]).addTo(mymap).bindPopup('Source: AE4S<br>Lat: 30.4753<br>Long: -84.2748');
+
+var marker = L.marker([40.80383333333333, -89.22333333333333]).addTo(mymap).bindPopup('Source: K9VSK<br>Lat: 40.8038<br>Long: -89.2233');
+
+var marker = L.marker([48.711166666666664, 21.232]).addTo(mymap).bindPopup('Source: OM0ODM-R<br>Lat: 48.7112<br>Long: 21.2320');
+
+var marker = L.marker([29.2945, 120.1995]).addTo(mymap).bindPopup('Source: BG5DNR-10<br>Lat: 29.2945<br>Long: 120.1995');
+
+var marker = L.marker([39.03066666666667, -76.60816666666666]).addTo(mymap).bindPopup('Source: WA3NHK-10<br>Lat: 39.0307<br>Long: -76.6082');
+
+var marker = L.marker([13.713333333333333, 101.0365]).addTo(mymap).bindPopup('Source: E21HVV<br>Lat: 13.7133<br>Long: 101.0365');
+
+var marker = L.marker([50.79216666666667, 16.2335]).addTo(mymap).bindPopup('Source: SQ6RR-11<br>Lat: 50.7922<br>Long: 16.2335');
+
+var marker = L.marker([42.81, 23.426666666666666]).addTo(mymap).bindPopup('Source: LZ0IOS-10<br>Lat: 42.8100<br>Long: 23.4267');
+
+var marker = L.marker([39.697833333333335, 20.969833333333334]).addTo(mymap).bindPopup('Source: SV4GDE-5<br>Lat: 39.6978<br>Long: 20.9698');
+
+var marker = L.marker([50.094, 4.893]).addTo(mymap).bindPopup('Source: ON0WIN-2<br>Lat: 50.0940<br>Long: 4.8930');
+
+var marker = L.marker([40.33133333333333, -75.97333333333333]).addTo(mymap).bindPopup('Source: N3GXH-3<br>Lat: 40.3313<br>Long: -75.9733');
+
+var marker = L.marker([52.358666666666664, 12.966666666666667]).addTo(mymap).bindPopup('Source: DH0BRO-2<br>Lat: 52.3587<br>Long: 12.9667');
+
+var marker = L.marker([53.574, 15.766166666666667]).addTo(mymap).bindPopup('Source: SR1WXW<br>Lat: 53.5740<br>Long: 15.7662');
+
+var marker = L.marker([36.082, -85.37416666666667]).addTo(mymap).bindPopup('Source: K4UAN-3<br>Lat: 36.0820<br>Long: -85.3742');
+
+var marker = L.marker([45.5265, 1.457]).addTo(mymap).bindPopup('Source: F5ZZW-3<br>Lat: 45.5265<br>Long: 1.4570');
+
+var marker = L.marker([35.730333333333334, 139.93883333333332]).addTo(mymap).bindPopup('Source: JL1TJX-5<br>Lat: 35.7303<br>Long: 139.9388');
+
+var marker = L.marker([42.160333333333334, -71.76483333333333]).addTo(mymap).bindPopup('Source: KC1AZZ-B<br>Lat: 42.1603<br>Long: -71.7648');
+
+var marker = L.marker([31.717, 118.4975]).addTo(mymap).bindPopup('Source: BG6AJI-10<br>Lat: 31.7170<br>Long: 118.4975');
+
+var marker = L.marker([3.0163333333333333, 101.43216666666666]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0163<br>Long: 101.4322');
+
+var marker = L.marker([35.19233333333333, -84.5595]).addTo(mymap).bindPopup('Source: KA4ELN-0<br>Lat: 35.1923<br>Long: -84.5595');
+
+var marker = L.marker([52.7335, 41.291666666666664]).addTo(mymap).bindPopup('Source: RA3POU-9<br>Lat: 52.7335<br>Long: 41.2917');
+
+var marker = L.marker([34.18683333333333, -118.0355]).addTo(mymap).bindPopup('Source: N6EX-1<br>Lat: 34.1868<br>Long: -118.0355');
+
+var marker = L.marker([39.665, 3.0516666666666667]).addTo(mymap).bindPopup('Source: EA6VQ-14<br>Lat: 39.6650<br>Long: 3.0517');
+
+var marker = L.marker([43.23566666666667, 21.97]).addTo(mymap).bindPopup('Source: YT1NIV-2<br>Lat: 43.2357<br>Long: 21.9700');
+
+var marker = L.marker([36.487833333333334, -81.49783333333333]).addTo(mymap).bindPopup('Source: W4MLN-1<br>Lat: 36.4878<br>Long: -81.4978');
+
+var marker = L.marker([36.6305, 114.51483333333333]).addTo(mymap).bindPopup('Source: BI3OUM-10<br>Lat: 36.6305<br>Long: 114.5148');
+
+var marker = L.marker([35.5835, -117.67566666666667]).addTo(mymap).bindPopup('Source: W3ISZ-1<br>Lat: 35.5835<br>Long: -117.6757');
+
+var marker = L.marker([18.474166666666665, -69.9265]).addTo(mymap).bindPopup('Source: HI8V-1<br>Lat: 18.4742<br>Long: -69.9265');
+
+var marker = L.marker([35.2085, -85.28083333333333]).addTo(mymap).bindPopup('Source: W4RRG-B<br>Lat: 35.2085<br>Long: -85.2808');
+
+var marker = L.marker([48.23433333333333, 9.926]).addTo(mymap).bindPopup('Source: DL9GJ-6<br>Lat: 48.2343<br>Long: 9.9260');
+
+var marker = L.marker([43.00033333333333, -78.785]).addTo(mymap).bindPopup('Source: K2ILH-2<br>Lat: 43.0003<br>Long: -78.7850');
+
+var marker = L.marker([58.268, 14.845]).addTo(mymap).bindPopup('Source: SA5BAU<br>Lat: 58.2680<br>Long: 14.8450');
+
+var marker = L.marker([43.58533333333333, -79.64966666666666]).addTo(mymap).bindPopup('Source: VE3GXV<br>Lat: 43.5853<br>Long: -79.6497');
+
+var marker = L.marker([53.502, -2.08]).addTo(mymap).bindPopup('Source: GB3KU<br>Lat: 53.5020<br>Long: -2.0800');
+
+var marker = L.marker([32.685833333333335, -97.39233333333334]).addTo(mymap).bindPopup('Source: KC5TIL-3<br>Lat: 32.6858<br>Long: -97.3923');
+
+var marker = L.marker([28.654666666666667, 121.27766666666666]).addTo(mymap).bindPopup('Source: BG5FIM-10<br>Lat: 28.6547<br>Long: 121.2777');
+
+var marker = L.marker([30.1455, -101.3255]).addTo(mymap).bindPopup('Source: AB5I-5<br>Lat: 30.1455<br>Long: -101.3255');
+
+var marker = L.marker([47.10966666666667, 39.6555]).addTo(mymap).bindPopup('Source: RC7LL-5<br>Lat: 47.1097<br>Long: 39.6555');
+
+var marker = L.marker([39.44883333333333, -0.37899999999999995]).addTo(mymap).bindPopup('Source: EA5FLS-1<br>Lat: 39.4488<br>Long: -0.3790');
+
+var marker = L.marker([37.87716666666667, -122.29716666666667]).addTo(mymap).bindPopup('Source: KJ6DZB-3<br>Lat: 37.8772<br>Long: -122.2972');
+
+var marker = L.marker([23.148666666666667, 113.23866666666666]).addTo(mymap).bindPopup('Source: BG7JRA-13<br>Lat: 23.1487<br>Long: 113.2387');
+
+var marker = L.marker([33.792, -116.47833333333334]).addTo(mymap).bindPopup('Source: AA6HF<br>Lat: 33.7920<br>Long: -116.4783');
+
+var marker = L.marker([49.046, 12.929]).addTo(mymap).bindPopup('Source: DO3NOW-9<br>Lat: 49.0460<br>Long: 12.9290');
+
+var marker = L.marker([32.10433333333334, -87.84]).addTo(mymap).bindPopup('Source: KK4QAM<br>Lat: 32.1043<br>Long: -87.8400');
+
+var marker = L.marker([37.715666666666664, -121.41683333333333]).addTo(mymap).bindPopup('Source: K7FED-10<br>Lat: 37.7157<br>Long: -121.4168');
+
+var marker = L.marker([47.837833333333336, 8.926]).addTo(mymap).bindPopup('Source: DH1GAP-13<br>Lat: 47.8378<br>Long: 8.9260');
+
+var marker = L.marker([28.259333333333334, -82.68766666666667]).addTo(mymap).bindPopup('Source: KG4YZY-1<br>Lat: 28.2593<br>Long: -82.6877');
+
+var marker = L.marker([51.125, 12.255166666666666]).addTo(mymap).bindPopup('Source: DG0LHC-5<br>Lat: 51.1250<br>Long: 12.2552');
+
+var marker = L.marker([51.8005, 10.615666666666666]).addTo(mymap).bindPopup('Source: DB0BRO<br>Lat: 51.8005<br>Long: 10.6157');
+
+var marker = L.marker([33.332, 130.14116666666666]).addTo(mymap).bindPopup('Source: JE6TUP-5<br>Lat: 33.3320<br>Long: 130.1412');
+
+var marker = L.marker([49.67916666666667, 12.235]).addTo(mymap).bindPopup('Source: DB0YQ<br>Lat: 49.6792<br>Long: 12.2350');
+
+var marker = L.marker([28.6085, -81.31383333333333]).addTo(mymap).bindPopup('Source: WA4IKQ<br>Lat: 28.6085<br>Long: -81.3138');
+
+var marker = L.marker([37.8085, -121.20733333333334]).addTo(mymap).bindPopup('Source: K6PKL-2<br>Lat: 37.8085<br>Long: -121.2073');
+
+var marker = L.marker([52.096333333333334, -106.63333333333334]).addTo(mymap).bindPopup('Source: VE5BNC-3<br>Lat: 52.0963<br>Long: -106.6333');
+
+var marker = L.marker([-29.576, 30.358166666666666]).addTo(mymap).bindPopup('Source: ZS5SAM-9<br>Lat: -29.5760<br>Long: 30.3582');
+
+var marker = L.marker([47.85616666666667, 12.143333333333333]).addTo(mymap).bindPopup('Source: DC8RAI-10<br>Lat: 47.8562<br>Long: 12.1433');
+
+var marker = L.marker([-33.1825, 151.49383333333333]).addTo(mymap).bindPopup('Source: VK2IPT<br>Lat: -33.1825<br>Long: 151.4938');
+
+var marker = L.marker([48.169, 16.6205]).addTo(mymap).bindPopup('Source: OE3REC-11<br>Lat: 48.1690<br>Long: 16.6205');
+
+var marker = L.marker([47.3715, -73.55516666666666]).addTo(mymap).bindPopup('Source: VE2VXT-1<br>Lat: 47.3715<br>Long: -73.5552');
+
+var marker = L.marker([39.17583333333334, -86.50183333333334]).addTo(mymap).bindPopup('Source: WB9TLH-12<br>Lat: 39.1758<br>Long: -86.5018');
+
+var marker = L.marker([69.31983333333334, 17.7235]).addTo(mymap).bindPopup('Source: LD9SJ<br>Lat: 69.3198<br>Long: 17.7235');
+
+var marker = L.marker([48.182, 16.392]).addTo(mymap).bindPopup('Source: OE1XAW<br>Lat: 48.1820<br>Long: 16.3920');
+
+var marker = L.marker([52.341833333333334, 15.2735]).addTo(mymap).bindPopup('Source: SR3NJE<br>Lat: 52.3418<br>Long: 15.2735');
+
+var marker = L.marker([51.021, 13.729]).addTo(mymap).bindPopup('Source: DB0ADD<br>Lat: 51.0210<br>Long: 13.7290');
+
+var marker = L.marker([53.1695, 8.635333333333334]).addTo(mymap).bindPopup('Source: DG0TD-15<br>Lat: 53.1695<br>Long: 8.6353');
+
+var marker = L.marker([47.98733333333333, 2.653]).addTo(mymap).bindPopup('Source: F6GVH-1<br>Lat: 47.9873<br>Long: 2.6530');
+
+var marker = L.marker([32.225833333333334, 119.79266666666666]).addTo(mymap).bindPopup('Source: BH4WAL-13<br>Lat: 32.2258<br>Long: 119.7927');
+
+var marker = L.marker([-33.888333333333335, 18.621166666666667]).addTo(mymap).bindPopup('Source: ZS1DFR-12<br>Lat: -33.8883<br>Long: 18.6212');
+
+var marker = L.marker([34.959, -104.61583333333333]).addTo(mymap).bindPopup('Source: KC7KMP-5<br>Lat: 34.9590<br>Long: -104.6158');
+
+var marker = L.marker([7.4015, 100.09616666666666]).addTo(mymap).bindPopup('Source: E23QD-10<br>Lat: 7.4015<br>Long: 100.0962');
+
+var marker = L.marker([35.020833333333336, 135.723]).addTo(mymap).bindPopup('Source: JE3XST-13<br>Lat: 35.0208<br>Long: 135.7230');
+
+var marker = L.marker([8.5675, 123.36866666666667]).addTo(mymap).bindPopup('Source: DW8BRQ-10<br>Lat: 8.5675<br>Long: 123.3687');
+
+var marker = L.marker([-21.755, -43.38583333333333]).addTo(mymap).bindPopup('Source: PY4XX-15<br>Lat: -21.7550<br>Long: -43.3858');
+
+var marker = L.marker([-27.631833333333333, 152.35616666666667]).addTo(mymap).bindPopup('Source: VK4TUX<br>Lat: -27.6318<br>Long: 152.3562');
+
+var marker = L.marker([43.63783333333333, 0.5333333333333333]).addTo(mymap).bindPopup('Source: F4GCF-12<br>Lat: 43.6378<br>Long: 0.5333');
+
+var marker = L.marker([50.0, 0.0]).addTo(mymap).bindPopup('Source: IZ0OWM-B<br>Lat: 50.0000<br>Long: 0.0000');
+
+var marker = L.marker([46.797666666666665, -122.23366666666666]).addTo(mymap).bindPopup('Source: K7MXE-2<br>Lat: 46.7977<br>Long: -122.2337');
+
+var marker = L.marker([54.77766666666667, 18.414]).addTo(mymap).bindPopup('Source: SP2YWL-2<br>Lat: 54.7777<br>Long: 18.4140');
+
+var marker = L.marker([38.7115, -76.98083333333334]).addTo(mymap).bindPopup('Source: KA3POX<br>Lat: 38.7115<br>Long: -76.9808');
+
+var marker = L.marker([-8.212333333333333, 112.74833333333333]).addTo(mymap).bindPopup('Source: YB3LZ<br>Lat: -8.2123<br>Long: 112.7483');
+
+var marker = L.marker([43.638333333333335, 5.138333333333334]).addTo(mymap).bindPopup('Source: F5UPZ-N<br>Lat: 43.6383<br>Long: 5.1383');
+
+var marker = L.marker([-33.538333333333334, -61.115833333333335]).addTo(mymap).bindPopup('Source: LU4FBS-13<br>Lat: -33.5383<br>Long: -61.1158');
+
+var marker = L.marker([41.56583333333333, -71.49333333333334]).addTo(mymap).bindPopup('Source: N1HRK-15<br>Lat: 41.5658<br>Long: -71.4933');
+
+var marker = L.marker([52.076166666666666, 8.403666666666666]).addTo(mymap).bindPopup('Source: DO2JMG<br>Lat: 52.0762<br>Long: 8.4037');
+
+var marker = L.marker([42.92016666666667, 1.5896666666666666]).addTo(mymap).bindPopup('Source: F1ZXR-3<br>Lat: 42.9202<br>Long: 1.5897');
+
+var marker = L.marker([45.405166666666666, -122.58416666666666]).addTo(mymap).bindPopup('Source: KC6RZW-10<br>Lat: 45.4052<br>Long: -122.5842');
+
+var marker = L.marker([47.5295, 25.566]).addTo(mymap).bindPopup('Source: YO8RAA-15<br>Lat: 47.5295<br>Long: 25.5660');
+
+var marker = L.marker([59.367333333333335, 10.125166666666667]).addTo(mymap).bindPopup('Source: LA9LRA-9<br>Lat: 59.3673<br>Long: 10.1252');
+
+var marker = L.marker([26.812, -80.21366666666667]).addTo(mymap).bindPopup('Source: K4PKT-3<br>Lat: 26.8120<br>Long: -80.2137');
+
+var marker = L.marker([27.822, -82.736]).addTo(mymap).bindPopup('Source: KF4KUL<br>Lat: 27.8220<br>Long: -82.7360');
+
+var marker = L.marker([30.59883333333333, -87.06933333333333]).addTo(mymap).bindPopup('Source: K4SRC-10<br>Lat: 30.5988<br>Long: -87.0693');
+
+var marker = L.marker([51.4575, 3.5981666666666667]).addTo(mymap).bindPopup('Source: PI1APV-2<br>Lat: 51.4575<br>Long: 3.5982');
+
+var marker = L.marker([34.24916666666667, -85.16916666666667]).addTo(mymap).bindPopup('Source: K4TQL-4<br>Lat: 34.2492<br>Long: -85.1692');
+
+var marker = L.marker([53.777166666666666, 12.721]).addTo(mymap).bindPopup('Source: DO0MAL<br>Lat: 53.7772<br>Long: 12.7210');
+
+var marker = L.marker([50.44766666666666, 30.458666666666666]).addTo(mymap).bindPopup('Source: UT4UWJ-13<br>Lat: 50.4477<br>Long: 30.4587');
+
+var marker = L.marker([42.63766666666667, 26.362833333333334]).addTo(mymap).bindPopup('Source: LZ2AB-6<br>Lat: 42.6377<br>Long: 26.3628');
+
+var marker = L.marker([39.63166666666667, 118.18683333333334]).addTo(mymap).bindPopup('Source: BI3MFQ-10<br>Lat: 39.6317<br>Long: 118.1868');
+
+var marker = L.marker([13.2905, 101.17866666666667]).addTo(mymap).bindPopup('Source: E27ASY-1<br>Lat: 13.2905<br>Long: 101.1787');
+
+var marker = L.marker([14.5105, 100.9105]).addTo(mymap).bindPopup('Source: E20BPJ-1<br>Lat: 14.5105<br>Long: 100.9105');
+
+var marker = L.marker([59.02283333333333, 17.933833333333332]).addTo(mymap).bindPopup('Source: SM0RWO-1<br>Lat: 59.0228<br>Long: 17.9338');
+
+var marker = L.marker([40.769333333333336, 140.50983333333335]).addTo(mymap).bindPopup('Source: JH7UAX<br>Lat: 40.7693<br>Long: 140.5098');
+
+var marker = L.marker([51.43783333333333, -0.9638333333333333]).addTo(mymap).bindPopup('Source: M0GQS<br>Lat: 51.4378<br>Long: -0.9638');
+
+var marker = L.marker([59.4785, 10.318333333333333]).addTo(mymap).bindPopup('Source: LE4ZTE<br>Lat: 59.4785<br>Long: 10.3183');
+
+var marker = L.marker([40.77133333333333, -96.611]).addTo(mymap).bindPopup('Source: W0KBS-10<br>Lat: 40.7713<br>Long: -96.6110');
+
+var marker = L.marker([39.56666666666667, -77.0]).addTo(mymap).bindPopup('Source: KB3ZKD<br>Lat: 39.5667<br>Long: -77.0000');
+
+var marker = L.marker([39.5075, -84.36633333333333]).addTo(mymap).bindPopup('Source: W8EH<br>Lat: 39.5075<br>Long: -84.3663');
+
+var marker = L.marker([38.456833333333336, -88.54783333333333]).addTo(mymap).bindPopup('Source: KC9NPJ-10<br>Lat: 38.4568<br>Long: -88.5478');
+
+var marker = L.marker([33.2335, -111.866]).addTo(mymap).bindPopup('Source: KB7KFC-3<br>Lat: 33.2335<br>Long: -111.8660');
+
+var marker = L.marker([33.56966666666667, 130.53183333333334]).addTo(mymap).bindPopup('Source: JE6VQE-12<br>Lat: 33.5697<br>Long: 130.5318');
+
+var marker = L.marker([-34.90083333333333, -57.961666666666666]).addTo(mymap).bindPopup('Source: LU4ECL-1<br>Lat: -34.9008<br>Long: -57.9617');
+
+var marker = L.marker([34.1545, -118.38983333333333]).addTo(mymap).bindPopup('Source: W6MIN-3<br>Lat: 34.1545<br>Long: -118.3898');
+
+var marker = L.marker([30.521333333333335, 120.68666666666667]).addTo(mymap).bindPopup('Source: BG5EIB-10<br>Lat: 30.5213<br>Long: 120.6867');
+
+var marker = L.marker([35.96966666666667, -77.82416666666667]).addTo(mymap).bindPopup('Source: N4TUF-2<br>Lat: 35.9697<br>Long: -77.8242');
+
+var marker = L.marker([35.12166666666667, 134.17383333333333]).addTo(mymap).bindPopup('Source: JR4MXP-10<br>Lat: 35.1217<br>Long: 134.1738');
+
+var marker = L.marker([52.4415, 16.9275]).addTo(mymap).bindPopup('Source: SQ3BKB<br>Lat: 52.4415<br>Long: 16.9275');
+
+var marker = L.marker([33.547333333333334, -82.13216666666666]).addTo(mymap).bindPopup('Source: KB4EOC<br>Lat: 33.5473<br>Long: -82.1322');
+
+var marker = L.marker([38.728, -90.43883333333333]).addTo(mymap).bindPopup('Source: N0ARS<br>Lat: 38.7280<br>Long: -90.4388');
+
+var marker = L.marker([51.168166666666664, 0.624]).addTo(mymap).bindPopup('Source: MB7UIK<br>Lat: 51.1682<br>Long: 0.6240');
+
+var marker = L.marker([44.30866666666667, -69.75516666666667]).addTo(mymap).bindPopup('Source: KQ1L<br>Lat: 44.3087<br>Long: -69.7552');
+
+var marker = L.marker([30.27616666666667, 112.31966666666666]).addTo(mymap).bindPopup('Source: BR6QQ-10<br>Lat: 30.2762<br>Long: 112.3197');
+
+var marker = L.marker([37.03066666666667, 136.9745]).addTo(mymap).bindPopup('Source: JA9LA-8<br>Lat: 37.0307<br>Long: 136.9745');
+
+var marker = L.marker([43.972, -93.36533333333334]).addTo(mymap).bindPopup('Source: KD0TGF-1<br>Lat: 43.9720<br>Long: -93.3653');
+
+var marker = L.marker([45.900166666666664, 12.378]).addTo(mymap).bindPopup('Source: IZ3QTC-10<br>Lat: 45.9002<br>Long: 12.3780');
+
+var marker = L.marker([36.94583333333333, -86.45666666666666]).addTo(mymap).bindPopup('Source: KJ4NES-4<br>Lat: 36.9458<br>Long: -86.4567');
+
+var marker = L.marker([42.031666666666666, -91.643]).addTo(mymap).bindPopup('Source: N0CXX-5<br>Lat: 42.0317<br>Long: -91.6430');
+
+var marker = L.marker([34.287333333333336, -118.71883333333334]).addTo(mymap).bindPopup('Source: KJ6TTN-1<br>Lat: 34.2873<br>Long: -118.7188');
+
+var marker = L.marker([28.121166666666667, 120.95183333333334]).addTo(mymap).bindPopup('Source: BG5BLU-9<br>Lat: 28.1212<br>Long: 120.9518');
+
+var marker = L.marker([48.142833333333336, 15.985333333333333]).addTo(mymap).bindPopup('Source: OE3ACS-2<br>Lat: 48.1428<br>Long: 15.9853');
+
+var marker = L.marker([-27.631833333333333, 152.35616666666667]).addTo(mymap).bindPopup('Source: VK4TUX<br>Lat: -27.6318<br>Long: 152.3562');
+
+var marker = L.marker([40.920833333333334, 23.094666666666665]).addTo(mymap).bindPopup('Source: SV2BNL-11<br>Lat: 40.9208<br>Long: 23.0947');
+
+var marker = L.marker([29.994, -95.24966666666667]).addTo(mymap).bindPopup('Source: W5SI-10<br>Lat: 29.9940<br>Long: -95.2497');
+
+var marker = L.marker([39.001666666666665, -94.83266666666667]).addTo(mymap).bindPopup('Source: WB5RFA<br>Lat: 39.0017<br>Long: -94.8327');
+
+var marker = L.marker([34.78, 135.66]).addTo(mymap).bindPopup('Source: JA3VQW-N<br>Lat: 34.7800<br>Long: 135.6600');
+
+var marker = L.marker([62.111333333333334, 24.139333333333333]).addTo(mymap).bindPopup('Source: OH6DL-10<br>Lat: 62.1113<br>Long: 24.1393');
+
+var marker = L.marker([35.53216666666667, -79.74983333333333]).addTo(mymap).bindPopup('Source: KJ4SPG<br>Lat: 35.5322<br>Long: -79.7498');
+
+var marker = L.marker([46.176833333333335, 10.326333333333332]).addTo(mymap).bindPopup('Source: IZ2BVC-C<br>Lat: 46.1768<br>Long: 10.3263');
+
+var marker = L.marker([30.541333333333334, 120.54366666666667]).addTo(mymap).bindPopup('Source: BH5EAU-10<br>Lat: 30.5413<br>Long: 120.5437');
+
+var marker = L.marker([38.490819739266946, -122.87624367987483]).addTo(mymap).bindPopup('Source: N5PSM-5<br>Lat: 38.4908<br>Long: -122.8762');
+
+var marker = L.marker([64.34416666666667, -149.18183333333334]).addTo(mymap).bindPopup('Source: ANDRSN<br>Lat: 64.3442<br>Long: -149.1818');
+
+var marker = L.marker([39.887166666666666, -74.17383333333333]).addTo(mymap).bindPopup('Source: WX2NJ-14<br>Lat: 39.8872<br>Long: -74.1738');
+
+var marker = L.marker([-26.745333333333335, 27.831166666666668]).addTo(mymap).bindPopup('Source: ZS6EY-14<br>Lat: -26.7453<br>Long: 27.8312');
+
+var marker = L.marker([-6.535833333333334, 106.70133333333334]).addTo(mymap).bindPopup('Source: YF1ZQA<br>Lat: -6.5358<br>Long: 106.7013');
+
+var marker = L.marker([44.98, -93.264]).addTo(mymap).bindPopup('Source: AE0RF-10<br>Lat: 44.9800<br>Long: -93.2640');
+
+var marker = L.marker([45.425666666666665, -122.53316666666667]).addTo(mymap).bindPopup('Source: KC5EBM-1<br>Lat: 45.4257<br>Long: -122.5332');
+
+var marker = L.marker([-41.30416666666667, 173.24766666666667]).addTo(mymap).bindPopup('Source: ZL4CS-9<br>Lat: -41.3042<br>Long: 173.2477');
+
+var marker = L.marker([43.75333333333333, 11.2935]).addTo(mymap).bindPopup('Source: IZ5CCS<br>Lat: 43.7533<br>Long: 11.2935');
+
+var marker = L.marker([50.57716666666666, 10.425666666666666]).addTo(mymap).bindPopup('Source: DF0MGN<br>Lat: 50.5772<br>Long: 10.4257');
+
+var marker = L.marker([-34.76683333333333, 149.73216666666667]).addTo(mymap).bindPopup('Source: VK2JUZ-1<br>Lat: -34.7668<br>Long: 149.7322');
+
+var marker = L.marker([38.20666666666666, 15.726333333333333]).addTo(mymap).bindPopup('Source: IR8DA<br>Lat: 38.2067<br>Long: 15.7263');
+
+var marker = L.marker([48.30166666666667, 11.9145]).addTo(mymap).bindPopup('Source: DB0EZ<br>Lat: 48.3017<br>Long: 11.9145');
+
+var marker = L.marker([39.34766666666667, -77.6175]).addTo(mymap).bindPopup('Source: K3DO-14<br>Lat: 39.3477<br>Long: -77.6175');
+
+var marker = L.marker([39.5075, -84.36633333333333]).addTo(mymap).bindPopup('Source: W8EH<br>Lat: 39.5075<br>Long: -84.3663');
+
+var marker = L.marker([42.28916666666667, -77.67166666666667]).addTo(mymap).bindPopup('Source: KC2WBX-3<br>Lat: 42.2892<br>Long: -77.6717');
+
+var marker = L.marker([49.92766666666667, 1.1053333333333333]).addTo(mymap).bindPopup('Source: F8KII-2<br>Lat: 49.9277<br>Long: 1.1053');
+
+var marker = L.marker([40.03066666666667, 116.203]).addTo(mymap).bindPopup('Source: BH1HUK-3<br>Lat: 40.0307<br>Long: 116.2030');
+
+var marker = L.marker([36.68933333333333, -97.16833333333334]).addTo(mymap).bindPopup('Source: PONCA<br>Lat: 36.6893<br>Long: -97.1683');
+
+var marker = L.marker([39.1975, -1.4358333333333333]).addTo(mymap).bindPopup('Source: EA5BG-2<br>Lat: 39.1975<br>Long: -1.4358');
+
+var marker = L.marker([50.5935, 15.263333333333334]).addTo(mymap).bindPopup('Source: OK0BBK-2<br>Lat: 50.5935<br>Long: 15.2633');
+
+var marker = L.marker([45.425666666666665, -122.533]).addTo(mymap).bindPopup('Source: KC5EBM-1<br>Lat: 45.4257<br>Long: -122.5330');
+
+var marker = L.marker([19.830666666666666, -90.54433333333333]).addTo(mymap).bindPopup('Source: XE3AHB<br>Lat: 19.8307<br>Long: -90.5443');
+
+var marker = L.marker([37.742333333333335, -25.556333333333335]).addTo(mymap).bindPopup('Source: CU2ZG-6<br>Lat: 37.7423<br>Long: -25.5563');
+
+var marker = L.marker([36.611666666666665, 114.52716666666667]).addTo(mymap).bindPopup('Source: BG3OTT-3<br>Lat: 36.6117<br>Long: 114.5272');
+
+var marker = L.marker([33.81366666666667, 130.73983333333334]).addTo(mymap).bindPopup('Source: JA6CFI-13<br>Lat: 33.8137<br>Long: 130.7398');
+
+var marker = L.marker([33.5785, 130.37583333333333]).addTo(mymap).bindPopup('Source: JA6ZKZ-4<br>Lat: 33.5785<br>Long: 130.3758');
+
+var marker = L.marker([-42.992666666666665, 147.31066666666666]).addTo(mymap).bindPopup('Source: VK7HSE-1<br>Lat: -42.9927<br>Long: 147.3107');
+
+var marker = L.marker([45.818, -118.48966666666666]).addTo(mymap).bindPopup('Source: K7LW-B<br>Lat: 45.8180<br>Long: -118.4897');
+
+var marker = L.marker([36.66883333333333, -88.33083333333333]).addTo(mymap).bindPopup('Source: KJ4W<br>Lat: 36.6688<br>Long: -88.3308');
+
+var marker = L.marker([39.8915, 118.86766666666666]).addTo(mymap).bindPopup('Source: BG3MUF-9<br>Lat: 39.8915<br>Long: 118.8677');
+
+var marker = L.marker([30.025833333333335, 114.95683333333334]).addTo(mymap).bindPopup('Source: BR6WA-10<br>Lat: 30.0258<br>Long: 114.9568');
+
+var marker = L.marker([-24.14816666666667, -49.8245]).addTo(mymap).bindPopup('Source: PY5HT-13<br>Lat: -24.1482<br>Long: -49.8245');
+
+var marker = L.marker([42.6795, -70.658]).addTo(mymap).bindPopup('Source: W4HIX<br>Lat: 42.6795<br>Long: -70.6580');
+
+var marker = L.marker([40.01116666666667, -75.442]).addTo(mymap).bindPopup('Source: W3HOA-2<br>Lat: 40.0112<br>Long: -75.4420');
+
+var marker = L.marker([40.928, 23.094666666666665]).addTo(mymap).bindPopup('Source: SV2BNL-12<br>Lat: 40.9280<br>Long: 23.0947');
+
+var marker = L.marker([24.147833333333335, 120.66183333333333]).addTo(mymap).bindPopup('Source: BV4WD-15<br>Lat: 24.1478<br>Long: 120.6618');
+
+var marker = L.marker([47.41916666666667, 13.058333333333334]).addTo(mymap).bindPopup('Source: OE2XHR<br>Lat: 47.4192<br>Long: 13.0583');
+
+var marker = L.marker([39.0815, -94.46483333333333]).addTo(mymap).bindPopup('Source: KB0HMR-3<br>Lat: 39.0815<br>Long: -94.4648');
+
+var marker = L.marker([42.130833333333335, 142.9175]).addTo(mymap).bindPopup('Source: JM8CGZ<br>Lat: 42.1308<br>Long: 142.9175');
+
+var marker = L.marker([38.763666666666666, -90.36933333333333]).addTo(mymap).bindPopup('Source: W0MA<br>Lat: 38.7637<br>Long: -90.3693');
+
+var marker = L.marker([2.2575, 102.3775]).addTo(mymap).bindPopup('Source: 9W2FRP-1<br>Lat: 2.2575<br>Long: 102.3775');
+
+var marker = L.marker([34.215, 108.927]).addTo(mymap).bindPopup('Source: BG9ACB-9<br>Lat: 34.2150<br>Long: 108.9270');
+
+var marker = L.marker([3.0178333333333334, 101.43116666666667]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0178<br>Long: 101.4312');
+
+var marker = L.marker([32.225833333333334, 119.79266666666666]).addTo(mymap).bindPopup('Source: BH4WAL-13<br>Lat: 32.2258<br>Long: 119.7927');
+
+var marker = L.marker([40.920833333333334, 23.094666666666665]).addTo(mymap).bindPopup('Source: SV2BNL-11<br>Lat: 40.9208<br>Long: 23.0947');
+
+var marker = L.marker([59.478833333333334, 10.316833333333333]).addTo(mymap).bindPopup('Source: LE4ZTE<br>Lat: 59.4788<br>Long: 10.3168');
+
+var marker = L.marker([35.335166666666666, 139.41766666666666]).addTo(mymap).bindPopup('Source: JN1CFQ-A<br>Lat: 35.3352<br>Long: 139.4177');
+
+var marker = L.marker([39.197833333333335, -1.4358333333333333]).addTo(mymap).bindPopup('Source: EA5BG-2<br>Lat: 39.1978<br>Long: -1.4358');
+
+var marker = L.marker([51.70033333333333, 5.346333333333333]).addTo(mymap).bindPopup('Source: PI1SHB-2<br>Lat: 51.7003<br>Long: 5.3463');
+
+var marker = L.marker([49.70016666666667, 10.768]).addTo(mymap).bindPopup('Source: DC1NF-7<br>Lat: 49.7002<br>Long: 10.7680');
+
+var marker = L.marker([53.58258559405239, 9.481300830082489]).addTo(mymap).bindPopup('Source: DF5WXF-9<br>Lat: 53.5826<br>Long: 9.4813');
+
+var marker = L.marker([42.494166666666665, -73.237]).addTo(mymap).bindPopup('Source: N1JJK-2<br>Lat: 42.4942<br>Long: -73.2370');
+
+var marker = L.marker([40.54183333333334, -74.16966666666667]).addTo(mymap).bindPopup('Source: N2UFM<br>Lat: 40.5418<br>Long: -74.1697');
+
+var marker = L.marker([63.79416666666667, 11.441833333333333]).addTo(mymap).bindPopup('Source: LA6GHA-1<br>Lat: 63.7942<br>Long: 11.4418');
+
+var marker = L.marker([45.395, -64.2215]).addTo(mymap).bindPopup('Source: VE1ZX<br>Lat: 45.3950<br>Long: -64.2215');
+
+var marker = L.marker([-31.076190651202594, 150.93011241028444]).addTo(mymap).bindPopup('Source: VK2YGV-8<br>Lat: -31.0762<br>Long: 150.9301');
+
+var marker = L.marker([34.06766666666667, 134.56216666666666]).addTo(mymap).bindPopup('Source: JA5FUC-10<br>Lat: 34.0677<br>Long: 134.5622');
+
+var marker = L.marker([59.41166666666667, 16.486666666666668]).addTo(mymap).bindPopup('Source: SA5BUM-5<br>Lat: 59.4117<br>Long: 16.4867');
+
+var marker = L.marker([28.058333333333334, -81.76833333333333]).addTo(mymap).bindPopup('Source: KQ4KX<br>Lat: 28.0583<br>Long: -81.7683');
+
+var marker = L.marker([41.11966666666667, -104.8865]).addTo(mymap).bindPopup('Source: KC5VGD-14<br>Lat: 41.1197<br>Long: -104.8865');
+
+var marker = L.marker([4.239833333333333, 101.00833333333334]).addTo(mymap).bindPopup('Source: 9W2OTG-9<br>Lat: 4.2398<br>Long: 101.0083');
+
+var marker = L.marker([24.147833333333335, 120.66183333333333]).addTo(mymap).bindPopup('Source: BV4WD-15<br>Lat: 24.1478<br>Long: 120.6618');
+
+var marker = L.marker([55.07366666666667, -7.266333333333334]).addTo(mymap).bindPopup('Source: F6FDN-8<br>Lat: 55.0737<br>Long: -7.2663');
+
+var marker = L.marker([55.507, 10.710166666666666]).addTo(mymap).bindPopup('Source: DG9KB<br>Lat: 55.5070<br>Long: 10.7102');
+
+var marker = L.marker([47.670833333333334, 9.5025]).addTo(mymap).bindPopup('Source: DL5UHR-9<br>Lat: 47.6708<br>Long: 9.5025');
+
+var marker = L.marker([45.51983333333333, 10.254166666666666]).addTo(mymap).bindPopup('Source: IW2FCH-3<br>Lat: 45.5198<br>Long: 10.2542');
+
+var marker = L.marker([42.650333333333336, -83.00916666666667]).addTo(mymap).bindPopup('Source: ANGELA-1<br>Lat: 42.6503<br>Long: -83.0092');
+
+var marker = L.marker([42.58083333333333, 1.8091666666666666]).addTo(mymap).bindPopup('Source: F1ZVN-3<br>Lat: 42.5808<br>Long: 1.8092');
+
+var marker = L.marker([39.04083333333333, -87.13033333333334]).addTo(mymap).bindPopup('Source: GCGH-11<br>Lat: 39.0408<br>Long: -87.1303');
+
+var marker = L.marker([45.698166666666665, -89.98183333333333]).addTo(mymap).bindPopup('Source: N9MEA-14<br>Lat: 45.6982<br>Long: -89.9818');
+
+var marker = L.marker([44.031, -79.47066666666667]).addTo(mymap).bindPopup('Source: VE3OIC-2<br>Lat: 44.0310<br>Long: -79.4707');
+
+var marker = L.marker([46.33116666666667, 26.997166666666665]).addTo(mymap).bindPopup('Source: YO3HCJ-3<br>Lat: 46.3312<br>Long: 26.9972');
+
+var marker = L.marker([34.245666666666665, -85.16916666666667]).addTo(mymap).bindPopup('Source: K4MUW-4<br>Lat: 34.2457<br>Long: -85.1692');
+
+var marker = L.marker([43.833, -0.8085]).addTo(mymap).bindPopup('Source: F5OPV-IoT<br>Lat: 43.8330<br>Long: -0.8085');
+
+var marker = L.marker([61.26066480103747, -149.8311693084746]).addTo(mymap).bindPopup('Source: KL7AIR-10<br>Lat: 61.2607<br>Long: -149.8312');
+
+var marker = L.marker([13.793, 99.92283333333333]).addTo(mymap).bindPopup('Source: HS7JEN-5<br>Lat: 13.7930<br>Long: 99.9228');
+
+var marker = L.marker([51.10216666666667, -0.091]).addTo(mymap).bindPopup('Source: GB7MH-B<br>Lat: 51.1022<br>Long: -0.0910');
+
+var marker = L.marker([64.472, 11.490833333333333]).addTo(mymap).bindPopup('Source: LA6TPA<br>Lat: 64.4720<br>Long: 11.4908');
+
+var marker = L.marker([49.31666666666667, 1.3013333333333332]).addTo(mymap).bindPopup('Source: F1FPP-4<br>Lat: 49.3167<br>Long: 1.3013');
+
+var marker = L.marker([50.7375, 5.506]).addTo(mymap).bindPopup('Source: ON0LB-10<br>Lat: 50.7375<br>Long: 5.5060');
+
+var marker = L.marker([34.33283333333333, 134.842]).addTo(mymap).bindPopup('Source: JH6YCI-12<br>Lat: 34.3328<br>Long: 134.8420');
+
+var marker = L.marker([32.81366666666667, 130.63866666666667]).addTo(mymap).bindPopup('Source: JE6ZUP-3<br>Lat: 32.8137<br>Long: 130.6387');
+
+var marker = L.marker([51.40133333333333, 21.174166666666668]).addTo(mymap).bindPopup('Source: SQ7BCZ-15<br>Lat: 51.4013<br>Long: 21.1742');
+
+var marker = L.marker([43.21633333333333, -73.906]).addTo(mymap).bindPopup('Source: K2DLL-2<br>Lat: 43.2163<br>Long: -73.9060');
+
+var marker = L.marker([34.799166666666665, -92.49916666666667]).addTo(mymap).bindPopup('Source: LTROCK<br>Lat: 34.7992<br>Long: -92.4992');
+
+var marker = L.marker([51.892, -124.62733333333334]).addTo(mymap).bindPopup('Source: VE7SML-11<br>Lat: 51.8920<br>Long: -124.6273');
+
+var marker = L.marker([53.2835, -110.01066666666667]).addTo(mymap).bindPopup('Source: VA6RG-10<br>Lat: 53.2835<br>Long: -110.0107');
+
+var marker = L.marker([47.897166666666664, 13.1945]).addTo(mymap).bindPopup('Source: OE2TBM-10<br>Lat: 47.8972<br>Long: 13.1945');
+
+var marker = L.marker([48.692166666666665, 2.146]).addTo(mymap).bindPopup('Source: F6CNB-13<br>Lat: 48.6922<br>Long: 2.1460');
+
+var marker = L.marker([4.247833333333333, 101.0195]).addTo(mymap).bindPopup('Source: 9W2OTG-9<br>Lat: 4.2478<br>Long: 101.0195');
+
+var marker = L.marker([35.965833333333336, 140.38733333333334]).addTo(mymap).bindPopup('Source: JG1FVF<br>Lat: 35.9658<br>Long: 140.3873');
+
+var marker = L.marker([-23.3215, -51.14416666666666]).addTo(mymap).bindPopup('Source: PY5BK-15<br>Lat: -23.3215<br>Long: -51.1442');
+
+var marker = L.marker([23.002666666666666, 120.21]).addTo(mymap).bindPopup('Source: BV6JR-4<br>Lat: 23.0027<br>Long: 120.2100');
+
+var marker = L.marker([30.132833333333334, 120.16866666666667]).addTo(mymap).bindPopup('Source: BG5EEK-11<br>Lat: 30.1328<br>Long: 120.1687');
+
+var marker = L.marker([46.86666666666667, -103.83333333333333]).addTo(mymap).bindPopup('Source: K0ND-10<br>Lat: 46.8667<br>Long: -103.8333');
+
+var marker = L.marker([29.462833333333332, -98.10316666666667]).addTo(mymap).bindPopup('Source: WI5KEY<br>Lat: 29.4628<br>Long: -98.1032');
+
+var marker = L.marker([34.7435, -118.72516666666667]).addTo(mymap).bindPopup('Source: KF6RAL-15<br>Lat: 34.7435<br>Long: -118.7252');
+
+var marker = L.marker([13.358833333333333, 101.012]).addTo(mymap).bindPopup('Source: HS3XCB-10<br>Lat: 13.3588<br>Long: 101.0120');
+
+var marker = L.marker([42.446666666666665, -123.217]).addTo(mymap).bindPopup('Source: FIELDR<br>Lat: 42.4467<br>Long: -123.2170');
+
+var marker = L.marker([42.340333333333334, -71.42066666666666]).addTo(mymap).bindPopup('Source: W1CCE<br>Lat: 42.3403<br>Long: -71.4207');
+
+var marker = L.marker([54.595, -1.0251666666666666]).addTo(mymap).bindPopup('Source: G0BIA-R<br>Lat: 54.5950<br>Long: -1.0252');
+
+var marker = L.marker([52.367333333333335, 16.829666666666668]).addTo(mymap).bindPopup('Source: SO3AKO<br>Lat: 52.3673<br>Long: 16.8297');
+
+var marker = L.marker([45.80616666666667, -122.8845]).addTo(mymap).bindPopup('Source: N6ZZY<br>Lat: 45.8062<br>Long: -122.8845');
+
+var marker = L.marker([38.22700209489507, 15.74566713744926]).addTo(mymap).bindPopup('Source: IK8TGH-11<br>Lat: 38.2270<br>Long: 15.7457');
+
+var marker = L.marker([33.364333333333335, 132.63233333333332]).addTo(mymap).bindPopup('Source: JH5MOV-12<br>Lat: 33.3643<br>Long: 132.6323');
+
+var marker = L.marker([34.95, -104.63483333333333]).addTo(mymap).bindPopup('Source: KC7KMP-5<br>Lat: 34.9500<br>Long: -104.6348');
+
+var marker = L.marker([42.05716666666667, -82.6]).addTo(mymap).bindPopup('Source: VE3EOL-1<br>Lat: 42.0572<br>Long: -82.6000');
+
+var marker = L.marker([47.712, -122.156]).addTo(mymap).bindPopup('Source: KE7WTC-A<br>Lat: 47.7120<br>Long: -122.1560');
+
+var marker = L.marker([43.073166666666665, -88.38766666666666]).addTo(mymap).bindPopup('Source: W9TJK-1<br>Lat: 43.0732<br>Long: -88.3877');
+
+var marker = L.marker([34.219166666666666, -93.08766666666666]).addTo(mymap).bindPopup('Source: DEGRAY<br>Lat: 34.2192<br>Long: -93.0877');
+
+var marker = L.marker([-23.335333333333335, -46.553]).addTo(mymap).bindPopup('Source: PU2YYP-2<br>Lat: -23.3353<br>Long: -46.5530');
+
+var marker = L.marker([45.674166666666665, 8.947166666666666]).addTo(mymap).bindPopup('Source: IW2NIA-3<br>Lat: 45.6742<br>Long: 8.9472');
+
+var marker = L.marker([44.20283333333333, 27.310333333333332]).addTo(mymap).bindPopup('Source: YO9IPZ-13<br>Lat: 44.2028<br>Long: 27.3103');
+
+var marker = L.marker([48.0925, 17.317]).addTo(mymap).bindPopup('Source: OM1ATS-6<br>Lat: 48.0925<br>Long: 17.3170');
+
+var marker = L.marker([48.60883333333334, -93.38616666666667]).addTo(mymap).bindPopup('Source: VE3BVC<br>Lat: 48.6088<br>Long: -93.3862');
+
+var marker = L.marker([56.283833333333334, -121.18533333333333]).addTo(mymap).bindPopup('Source: VE7RSJ<br>Lat: 56.2838<br>Long: -121.1853');
+
+var marker = L.marker([51.596333333333334, 7.148833333333333]).addTo(mymap).bindPopup('Source: DB0HE-B<br>Lat: 51.5963<br>Long: 7.1488');
+
+var marker = L.marker([-39.0625, 174.06133333333332]).addTo(mymap).bindPopup('Source: ZL2KGF-10<br>Lat: -39.0625<br>Long: 174.0613');
+
+var marker = L.marker([40.14516666666667, 26.371166666666667]).addTo(mymap).bindPopup('Source: YM1CNK<br>Lat: 40.1452<br>Long: 26.3712');
+
+var marker = L.marker([33.2335, -111.866]).addTo(mymap).bindPopup('Source: KB7KFC-1<br>Lat: 33.2335<br>Long: -111.8660');
+
+var marker = L.marker([28.654666666666667, 121.27766666666666]).addTo(mymap).bindPopup('Source: BG5FIM-10<br>Lat: 28.6547<br>Long: 121.2777');
+
+var marker = L.marker([49.13466666666667, 6.215]).addTo(mymap).bindPopup('Source: F5ZLC-B<br>Lat: 49.1347<br>Long: 6.2150');
+
+var marker = L.marker([14.812666666666667, 100.36216666666667]).addTo(mymap).bindPopup('Source: E24EXK-9<br>Lat: 14.8127<br>Long: 100.3622');
+
+var marker = L.marker([41.57066666666667, 23.612833333333334]).addTo(mymap).bindPopup('Source: LZ0DAO<br>Lat: 41.5707<br>Long: 23.6128');
+
+var marker = L.marker([59.312333333333335, 18.180833333333332]).addTo(mymap).bindPopup('Source: SA0AZS-10<br>Lat: 59.3123<br>Long: 18.1808');
+
+var marker = L.marker([23.3155, 115.644]).addTo(mymap).bindPopup('Source: BD7KLE-6<br>Lat: 23.3155<br>Long: 115.6440');
+
+var marker = L.marker([37.26083333333333, -76.765]).addTo(mymap).bindPopup('Source: K1DUG<br>Lat: 37.2608<br>Long: -76.7650');
+
+var marker = L.marker([18.147333333333332, 100.14616666666667]).addTo(mymap).bindPopup('Source: HS5GQO-15<br>Lat: 18.1473<br>Long: 100.1462');
+
+var marker = L.marker([-35.70783333333333, 174.318]).addTo(mymap).bindPopup('Source: ZL1AMK-R<br>Lat: -35.7078<br>Long: 174.3180');
+
+var marker = L.marker([43.934333333333335, -77.16033333333333]).addTo(mymap).bindPopup('Source: VA3JLF-1<br>Lat: 43.9343<br>Long: -77.1603');
+
+var marker = L.marker([45.20883333333333, -117.07083333333334]).addTo(mymap).bindPopup('Source: SALT<br>Lat: 45.2088<br>Long: -117.0708');
+
+var marker = L.marker([51.87583333333333, 12.459833333333334]).addTo(mymap).bindPopup('Source: DO1AA-10<br>Lat: 51.8758<br>Long: 12.4598');
+
+var marker = L.marker([46.30733333333333, -78.64233333333334]).addTo(mymap).bindPopup('Source: VE3NBR-10<br>Lat: 46.3073<br>Long: -78.6423');
+
+var marker = L.marker([42.311166666666665, 2.0736666666666665]).addTo(mymap).bindPopup('Source: EA3AGY-1<br>Lat: 42.3112<br>Long: 2.0737');
+
+var marker = L.marker([46.52916666666667, 14.317333333333334]).addTo(mymap).bindPopup('Source: OE8KKK-11<br>Lat: 46.5292<br>Long: 14.3173');
+
+var marker = L.marker([28.439333333333334, 113.04816666666666]).addTo(mymap).bindPopup('Source: BG7BMV-5<br>Lat: 28.4393<br>Long: 113.0482');
+
+var marker = L.marker([44.20283333333333, 27.310333333333332]).addTo(mymap).bindPopup('Source: YO9IPZ-10<br>Lat: 44.2028<br>Long: 27.3103');
+
+var marker = L.marker([40.408833333333334, 15.618166666666667]).addTo(mymap).bindPopup('Source: IR8AV<br>Lat: 40.4088<br>Long: 15.6182');
+
+var marker = L.marker([39.65383333333333, 20.848666666666666]).addTo(mymap).bindPopup('Source: SV6NOB-15<br>Lat: 39.6538<br>Long: 20.8487');
+
+var marker = L.marker([51.8095, 6.6095]).addTo(mymap).bindPopup('Source: DH0SK-10<br>Lat: 51.8095<br>Long: 6.6095');
+
+var marker = L.marker([48.288666666666664, 16.4515]).addTo(mymap).bindPopup('Source: OE3BUB-10<br>Lat: 48.2887<br>Long: 16.4515');
+
+var marker = L.marker([34.175333333333334, -82.157]).addTo(mymap).bindPopup('Source: W4GWM-1<br>Lat: 34.1753<br>Long: -82.1570');
+
+var marker = L.marker([31.133333333333333, -93.2655]).addTo(mymap).bindPopup('Source: KE5PFA-C<br>Lat: 31.1333<br>Long: -93.2655');
+
+var marker = L.marker([34.603833333333334, 119.15166666666667]).addTo(mymap).bindPopup('Source: BG4XBP-10<br>Lat: 34.6038<br>Long: 119.1517');
+
+var marker = L.marker([37.56316666666667, -97.19333333333333]).addTo(mymap).bindPopup('Source: N0KTA<br>Lat: 37.5632<br>Long: -97.1933');
+
+var marker = L.marker([-26.315333333333335, -48.83883333333333]).addTo(mymap).bindPopup('Source: GRM-15<br>Lat: -26.3153<br>Long: -48.8388');
+
+var marker = L.marker([46.123333333333335, 13.979333333333333]).addTo(mymap).bindPopup('Source: S55VL-10<br>Lat: 46.1233<br>Long: 13.9793');
+
+var marker = L.marker([34.845166666666664, 135.68483333333333]).addTo(mymap).bindPopup('Source: JE3ZUE-9<br>Lat: 34.8452<br>Long: 135.6848');
+
+var marker = L.marker([33.584666666666664, -112.26716666666667]).addTo(mymap).bindPopup('Source: KC7HAN<br>Lat: 33.5847<br>Long: -112.2672');
+
+var marker = L.marker([45.21483333333333, -123.75483333333334]).addTo(mymap).bindPopup('Source: HEBOWX<br>Lat: 45.2148<br>Long: -123.7548');
+
+var marker = L.marker([40.5095, 8.466333333333333]).addTo(mymap).bindPopup('Source: IR0UCW<br>Lat: 40.5095<br>Long: 8.4663');
+
+var marker = L.marker([39.181333333333335, -1.4386666666666668]).addTo(mymap).bindPopup('Source: EA5BG-6<br>Lat: 39.1813<br>Long: -1.4387');
+
+var marker = L.marker([51.641666666666666, -3.243]).addTo(mymap).bindPopup('Source: MB6IMU-B<br>Lat: 51.6417<br>Long: -3.2430');
+
+var marker = L.marker([51.152166666666666, 16.236666666666668]).addTo(mymap).bindPopup('Source: SP1ODY-9<br>Lat: 51.1522<br>Long: 16.2367');
+
+var marker = L.marker([45.19233333333333, 12.276166666666667]).addTo(mymap).bindPopup('Source: IR3DM-11<br>Lat: 45.1923<br>Long: 12.2762');
+
+var marker = L.marker([39.66166666666667, -107.17033333333333]).addTo(mymap).bindPopup('Source: DTSERO<br>Lat: 39.6617<br>Long: -107.1703');
+
+var marker = L.marker([41.022, -83.64366666666666]).addTo(mymap).bindPopup('Source: NK8J-N<br>Lat: 41.0220<br>Long: -83.6437');
+
+var marker = L.marker([27.976666666666667, -82.81916666666666]).addTo(mymap).bindPopup('Source: KK4EQF-12<br>Lat: 27.9767<br>Long: -82.8192');
+
+var marker = L.marker([30.162, 120.663]).addTo(mymap).bindPopup('Source: BG5DAL-9<br>Lat: 30.1620<br>Long: 120.6630');
+
+var marker = L.marker([40.794666666666664, 14.364833333333333]).addTo(mymap).bindPopup('Source: IW8DON-3<br>Lat: 40.7947<br>Long: 14.3648');
+
+var marker = L.marker([-38.5185, 176.0215]).addTo(mymap).bindPopup('Source: ZL1BCO-3<br>Lat: -38.5185<br>Long: 176.0215');
+
+var marker = L.marker([47.358333333333334, 15.187833333333334]).addTo(mymap).bindPopup('Source: OE6XLR-11<br>Lat: 47.3583<br>Long: 15.1878');
+
+var marker = L.marker([45.651, 9.681333333333333]).addTo(mymap).bindPopup('Source: IR2UCL<br>Lat: 45.6510<br>Long: 9.6813');
+
+var marker = L.marker([13.361666666666666, 101.01566666666666]).addTo(mymap).bindPopup('Source: HS3XCB-10<br>Lat: 13.3617<br>Long: 101.0157');
+
+var marker = L.marker([39.194, -1.431]).addTo(mymap).bindPopup('Source: EA5BG-5<br>Lat: 39.1940<br>Long: -1.4310');
+
+var marker = L.marker([33.91433333333333, -78.272]).addTo(mymap).bindPopup('Source: W3MA-2<br>Lat: 33.9143<br>Long: -78.2720');
+
+var marker = L.marker([39.178333333333335, -1.4866666666666666]).addTo(mymap).bindPopup('Source: EB5IGQ-9<br>Lat: 39.1783<br>Long: -1.4867');
+
+var marker = L.marker([29.593166666666665, 103.75766666666667]).addTo(mymap).bindPopup('Source: BG8CVR-10<br>Lat: 29.5932<br>Long: 103.7577');
+
+var marker = L.marker([51.5975, -3.9966666666666666]).addTo(mymap).bindPopup('Source: G0TVJ-5<br>Lat: 51.5975<br>Long: -3.9967');
+
+var marker = L.marker([51.841, 4.9515]).addTo(mymap).bindPopup('Source: PA2JOK<br>Lat: 51.8410<br>Long: 4.9515');
+
+var marker = L.marker([44.27333333333333, -96.12833333333333]).addTo(mymap).bindPopup('Source: KB0NLY-2<br>Lat: 44.2733<br>Long: -96.1283');
+
+var marker = L.marker([43.77133333333333, -116.08883333333333]).addTo(mymap).bindPopup('Source: W7VOI-B<br>Lat: 43.7713<br>Long: -116.0888');
+
+var marker = L.marker([39.19833333333333, -1.4378333333333333]).addTo(mymap).bindPopup('Source: EA5BG-3<br>Lat: 39.1983<br>Long: -1.4378');
+
+var marker = L.marker([4.250666666666667, 101.02933333333333]).addTo(mymap).bindPopup('Source: 9W2OTG-9<br>Lat: 4.2507<br>Long: 101.0293');
+
+var marker = L.marker([43.38033333333333, -3.779166666666667]).addTo(mymap).bindPopup('Source: ED1YAU-3<br>Lat: 43.3803<br>Long: -3.7792');
+
+var marker = L.marker([51.56433333333333, 19.477833333333333]).addTo(mymap).bindPopup('Source: SQ5GLB-1<br>Lat: 51.5643<br>Long: 19.4778');
+
+var marker = L.marker([52.319833333333335, -113.6775]).addTo(mymap).bindPopup('Source: RDDEER<br>Lat: 52.3198<br>Long: -113.6775');
+
+var marker = L.marker([34.63333333333333, -119.35]).addTo(mymap).bindPopup('Source: KJ6QEF-1<br>Lat: 34.6333<br>Long: -119.3500');
+
+var marker = L.marker([29.50883333333333, 103.33166666666666]).addTo(mymap).bindPopup('Source: BA8DX-2<br>Lat: 29.5088<br>Long: 103.3317');
+
+var marker = L.marker([38.406333333333336, -96.21716666666667]).addTo(mymap).bindPopup('Source: WX0U-2<br>Lat: 38.4063<br>Long: -96.2172');
+
+var marker = L.marker([7.0395, 100.5205]).addTo(mymap).bindPopup('Source: S9LVQ-1<br>Lat: 7.0395<br>Long: 100.5205');
+
+var marker = L.marker([42.967333333333336, -71.31983333333334]).addTo(mymap).bindPopup('Source: WB3DCA<br>Lat: 42.9673<br>Long: -71.3198');
+
+var marker = L.marker([45.1415, 1.5191666666666666]).addTo(mymap).bindPopup('Source: F1GBJ-4<br>Lat: 45.1415<br>Long: 1.5192');
+
+var marker = L.marker([47.168166666666664, 8.678]).addTo(mymap).bindPopup('Source: HB9FHL-13<br>Lat: 47.1682<br>Long: 8.6780');
+
+var marker = L.marker([34.31366666666667, 135.46066666666667]).addTo(mymap).bindPopup('Source: JP3YIY-I<br>Lat: 34.3137<br>Long: 135.4607');
+
+var marker = L.marker([39.68816666666667, 118.2]).addTo(mymap).bindPopup('Source: BI3NZV-3<br>Lat: 39.6882<br>Long: 118.2000');
+
+var marker = L.marker([38.35633333333333, -85.8475]).addTo(mymap).bindPopup('Source: N9CVA-10<br>Lat: 38.3563<br>Long: -85.8475');
+
+var marker = L.marker([43.239333333333335, 0.033]).addTo(mymap).bindPopup('Source: F5TQH-9<br>Lat: 43.2393<br>Long: 0.0330');
+
+var marker = L.marker([51.595166666666664, 9.949666666666667]).addTo(mymap).bindPopup('Source: DL6OCF<br>Lat: 51.5952<br>Long: 9.9497');
+
+var marker = L.marker([36.9815, 136.91933333333333]).addTo(mymap).bindPopup('Source: JA9LA-12<br>Lat: 36.9815<br>Long: 136.9193');
+
+var marker = L.marker([39.45183333333333, -86.453]).addTo(mymap).bindPopup('Source: K9JTV-N<br>Lat: 39.4518<br>Long: -86.4530');
+
+var marker = L.marker([28.259333333333334, -82.68766666666667]).addTo(mymap).bindPopup('Source: KG4YZY-1<br>Lat: 28.2593<br>Long: -82.6877');
+
+var marker = L.marker([52.2955, 10.466833333333334]).addTo(mymap).bindPopup('Source: DL0PTB-10<br>Lat: 52.2955<br>Long: 10.4668');
+
+var marker = L.marker([39.194, -1.431]).addTo(mymap).bindPopup('Source: EA5BG-5<br>Lat: 39.1940<br>Long: -1.4310');
+
+var marker = L.marker([31.926666666666666, 120.29833333333333]).addTo(mymap).bindPopup('Source: BI4VNM-13<br>Lat: 31.9267<br>Long: 120.2983');
+
+var marker = L.marker([34.907666666666664, 136.421]).addTo(mymap).bindPopup('Source: JI2CNH-10<br>Lat: 34.9077<br>Long: 136.4210');
+
+var marker = L.marker([18.045833333333334, 100.11366666666666]).addTo(mymap).bindPopup('Source: HS5GQO<br>Lat: 18.0458<br>Long: 100.1137');
+
+var marker = L.marker([42.302, -120.1425]).addTo(mymap).bindPopup('Source: KE7QP<br>Lat: 42.3020<br>Long: -120.1425');
+
+var marker = L.marker([34.18666666666667, -118.217]).addTo(mymap).bindPopup('Source: WA6MHA-15<br>Lat: 34.1867<br>Long: -118.2170');
+
+var marker = L.marker([53.502, -2.08]).addTo(mymap).bindPopup('Source: MB7IUK<br>Lat: 53.5020<br>Long: -2.0800');
+
+var marker = L.marker([42.9365, -81.2405]).addTo(mymap).bindPopup('Source: VE3TEJ<br>Lat: 42.9365<br>Long: -81.2405');
+
+var marker = L.marker([59.528666666666666, 11.3985]).addTo(mymap).bindPopup('Source: LD1MD<br>Lat: 59.5287<br>Long: 11.3985');
+
+var marker = L.marker([22.676666666666666, 113.81]).addTo(mymap).bindPopup('Source: BI7KJP-13<br>Lat: 22.6767<br>Long: 113.8100');
+
+var marker = L.marker([37.98416666666667, -78.485]).addTo(mymap).bindPopup('Source: KJ4RPW-3<br>Lat: 37.9842<br>Long: -78.4850');
+
+var marker = L.marker([-21.474333333333334, 149.10033333333334]).addTo(mymap).bindPopup('Source: VK4RM-13<br>Lat: -21.4743<br>Long: 149.1003');
+
+var marker = L.marker([35.730333333333334, 139.93883333333332]).addTo(mymap).bindPopup('Source: JL1TJX-5<br>Lat: 35.7303<br>Long: 139.9388');
+
+var marker = L.marker([64.914, 77.70616666666666]).addTo(mymap).bindPopup('Source: RT9K-10<br>Lat: 64.9140<br>Long: 77.7062');
+
+var marker = L.marker([36.11383333333333, -93.03183333333334]).addTo(mymap).bindPopup('Source: BOAT<br>Lat: 36.1138<br>Long: -93.0318');
+
+var marker = L.marker([59.031666666666666, 10.201166666666667]).addTo(mymap).bindPopup('Source: LD3KF<br>Lat: 59.0317<br>Long: 10.2012');
+
+var marker = L.marker([48.3345, 15.337666666666667]).addTo(mymap).bindPopup('Source: OE3XWJ-10<br>Lat: 48.3345<br>Long: 15.3377');
+
+var marker = L.marker([40.065666666666665, 116.272]).addTo(mymap).bindPopup('Source: BG1GXG-10<br>Lat: 40.0657<br>Long: 116.2720');
+
+var marker = L.marker([45.542833333333334, -64.09366666666666]).addTo(mymap).bindPopup('Source: VE1TPL<br>Lat: 45.5428<br>Long: -64.0937');
+
+var marker = L.marker([23.188, 112.88016666666667]).addTo(mymap).bindPopup('Source: BI7NAM-10<br>Lat: 23.1880<br>Long: 112.8802');
+
+var marker = L.marker([45.962, 12.8755]).addTo(mymap).bindPopup('Source: IV3GCH<br>Lat: 45.9620<br>Long: 12.8755');
+
+var marker = L.marker([48.202666666666666, 11.382333333333333]).addTo(mymap).bindPopup('Source: DL2MEL-10<br>Lat: 48.2027<br>Long: 11.3823');
+
+var marker = L.marker([36.182833333333335, -120.1225]).addTo(mymap).bindPopup('Source: WX6HNX-6<br>Lat: 36.1828<br>Long: -120.1225');
+
+var marker = L.marker([13.681, 100.498]).addTo(mymap).bindPopup('Source: E21EIC<br>Lat: 13.6810<br>Long: 100.4980');
+
+var marker = L.marker([54.7805, -127.1505]).addTo(mymap).bindPopup('Source: VE7RBH<br>Lat: 54.7805<br>Long: -127.1505');
+
+var marker = L.marker([50.43716666666667, 3.4478333333333335]).addTo(mymap).bindPopup('Source: F1ZLX-B<br>Lat: 50.4372<br>Long: 3.4478');
+
+var marker = L.marker([34.4055, -119.71516666666666]).addTo(mymap).bindPopup('Source: K6TZ-10<br>Lat: 34.4055<br>Long: -119.7152');
+
+var marker = L.marker([34.477666666666664, 119.167]).addTo(mymap).bindPopup('Source: BD4XBH-10<br>Lat: 34.4777<br>Long: 119.1670');
+
+var marker = L.marker([35.15116666666667, -106.5495]).addTo(mymap).bindPopup('Source: KF5EFR<br>Lat: 35.1512<br>Long: -106.5495');
+
+var marker = L.marker([64.80554753416675, 0.0]).addTo(mymap).bindPopup('Source: IW2JXY-8<br>Lat: 64.8055<br>Long: 0.0000');
+
+var marker = L.marker([53.995333333333335, -110.82116666666667]).addTo(mymap).bindPopup('Source: ELKPNT<br>Lat: 53.9953<br>Long: -110.8212');
+
+var marker = L.marker([28.5705, 121.07616666666667]).addTo(mymap).bindPopup('Source: BG5FGC-2<br>Lat: 28.5705<br>Long: 121.0762');
+
+var marker = L.marker([39.793, -84.71566666666666]).addTo(mymap).bindPopup('Source: KB8RQB-1<br>Lat: 39.7930<br>Long: -84.7157');
+
+var marker = L.marker([54.2515, 23.088833333333334]).addTo(mymap).bindPopup('Source: SQ4CVR-10<br>Lat: 54.2515<br>Long: 23.0888');
+
+var marker = L.marker([62.45666666666666, -114.36233333333334]).addTo(mymap).bindPopup('Source: YKDIGI<br>Lat: 62.4567<br>Long: -114.3623');
+
+var marker = L.marker([-8.212333333333333, 112.74833333333333]).addTo(mymap).bindPopup('Source: YB3LZ<br>Lat: -8.2123<br>Long: 112.7483');
+
+var marker = L.marker([37.970332820547824, -84.80916503467866]).addTo(mymap).bindPopup('Source: KE4OOI-10<br>Lat: 37.9703<br>Long: -84.8092');
+
+var marker = L.marker([39.66716666666667, 20.853833333333334]).addTo(mymap).bindPopup('Source: SV6NOB-2<br>Lat: 39.6672<br>Long: 20.8538');
+
+var marker = L.marker([35.730333333333334, 139.93883333333332]).addTo(mymap).bindPopup('Source: JL1TJX-5<br>Lat: 35.7303<br>Long: 139.9388');
+
+var marker = L.marker([35.1265, -84.92116666666666]).addTo(mymap).bindPopup('Source: WB4BSD<br>Lat: 35.1265<br>Long: -84.9212');
+
+var marker = L.marker([40.107166666666664, 22.459833333333332]).addTo(mymap).bindPopup('Source: SV2AHT-11<br>Lat: 40.1072<br>Long: 22.4598');
+
+var marker = L.marker([30.486166666666666, -90.57966666666667]).addTo(mymap).bindPopup('Source: W5RHR-13<br>Lat: 30.4862<br>Long: -90.5797');
+
+var marker = L.marker([45.465333333333334, 8.715166666666667]).addTo(mymap).bindPopup('Source: IW1GIF-10<br>Lat: 45.4653<br>Long: 8.7152');
+
+var marker = L.marker([9.3115, -79.87483333333333]).addTo(mymap).bindPopup('Source: HP2BWJ-WX<br>Lat: 9.3115<br>Long: -79.8748');
+
+var marker = L.marker([52.14366666666667, -122.15866666666666]).addTo(mymap).bindPopup('Source: VE7WLR<br>Lat: 52.1437<br>Long: -122.1587');
+
+var marker = L.marker([28.2545, -81.65466666666667]).addTo(mymap).bindPopup('Source: WC4PEM-14<br>Lat: 28.2545<br>Long: -81.6547');
+
+var marker = L.marker([44.37583333333333, -64.528]).addTo(mymap).bindPopup('Source: VE1CYP-N<br>Lat: 44.3758<br>Long: -64.5280');
+
+var marker = L.marker([-26.315333333333335, -48.83883333333333]).addTo(mymap).bindPopup('Source: GRM-15<br>Lat: -26.3153<br>Long: -48.8388');
+
+var marker = L.marker([39.572, -75.9735]).addTo(mymap).bindPopup('Source: N3XJT-1<br>Lat: 39.5720<br>Long: -75.9735');
+
+var marker = L.marker([13.818166666666666, 100.04266666666666]).addTo(mymap).bindPopup('Source: E22ULT-5<br>Lat: 13.8182<br>Long: 100.0427');
+
+var marker = L.marker([47.815333333333335, 11.078333333333333]).addTo(mymap).bindPopup('Source: DJ1MAS-B<br>Lat: 47.8153<br>Long: 11.0783');
+
+var marker = L.marker([50.398833333333336, 19.436166666666665]).addTo(mymap).bindPopup('Source: SQ9CIE-4<br>Lat: 50.3988<br>Long: 19.4362');
+
+var marker = L.marker([37.73283333333333, -88.98633333333333]).addTo(mymap).bindPopup('Source: KC2HJR-7<br>Lat: 37.7328<br>Long: -88.9863');
+
+var marker = L.marker([34.90266666666667, 136.5485]).addTo(mymap).bindPopup('Source: JP2YHW-I<br>Lat: 34.9027<br>Long: 136.5485');
+
+var marker = L.marker([47.846833333333336, 12.545833333333333]).addTo(mymap).bindPopup('Source: DO7DH-5<br>Lat: 47.8468<br>Long: 12.5458');
+
+var marker = L.marker([44.00833333333333, 87.30916666666667]).addTo(mymap).bindPopup('Source: BG0AXE-10<br>Lat: 44.0083<br>Long: 87.3092');
+
+var marker = L.marker([35.13583333333333, 136.98366666666666]).addTo(mymap).bindPopup('Source: JS2WAD-13<br>Lat: 35.1358<br>Long: 136.9837');
+
+var marker = L.marker([-22.978166666666667, -43.226333333333336]).addTo(mymap).bindPopup('Source: PY1EGR-B<br>Lat: -22.9782<br>Long: -43.2263');
+
+var marker = L.marker([34.152166666666666, -116.387]).addTo(mymap).bindPopup('Source: YUCCA<br>Lat: 34.1522<br>Long: -116.3870');
+
+var marker = L.marker([53.827333333333335, 22.35333333333333]).addTo(mymap).bindPopup('Source: SQ4CUH-EL<br>Lat: 53.8273<br>Long: 22.3533');
+
+var marker = L.marker([40.91616666666667, 23.5565]).addTo(mymap).bindPopup('Source: SV7JLF-4<br>Lat: 40.9162<br>Long: 23.5565');
+
+var marker = L.marker([28.132166666666667, 120.95266666666667]).addTo(mymap).bindPopup('Source: BH5BNR-8<br>Lat: 28.1322<br>Long: 120.9527');
+
+var marker = L.marker([42.479, -96.37433333333334]).addTo(mymap).bindPopup('Source: KE0IHK-12<br>Lat: 42.4790<br>Long: -96.3743');
+
+var marker = L.marker([17.654720339383502, 100.0376293558329]).addTo(mymap).bindPopup('Source: HS5QQT-9<br>Lat: 17.6547<br>Long: 100.0376');
+
+var marker = L.marker([36.467333333333336, -86.47616666666667]).addTo(mymap).bindPopup('Source: W1ARN-1<br>Lat: 36.4673<br>Long: -86.4762');
+
+var marker = L.marker([51.0311924100744, 11.602179950961613]).addTo(mymap).bindPopup('Source: DG0AG-9<br>Lat: 51.0312<br>Long: 11.6022');
+
+var marker = L.marker([51.039833333333334, 18.597833333333334]).addTo(mymap).bindPopup('Source: SP6O-5<br>Lat: 51.0398<br>Long: 18.5978');
+
+var marker = L.marker([32.715, -117.13533333333334]).addTo(mymap).bindPopup('Source: KR6AUL-N<br>Lat: 32.7150<br>Long: -117.1353');
+
+var marker = L.marker([33.861333333333334, 132.72683333333333]).addTo(mymap).bindPopup('Source: JJ5CWA-12<br>Lat: 33.8613<br>Long: 132.7268');
+
+var marker = L.marker([-22.987, -46.986666666666665]).addTo(mymap).bindPopup('Source: PY2LEU-1<br>Lat: -22.9870<br>Long: -46.9867');
+
+var marker = L.marker([44.467333333333336, 143.14]).addTo(mymap).bindPopup('Source: JE8XTJ-3<br>Lat: 44.4673<br>Long: 143.1400');
+
+var marker = L.marker([44.60066666666667, 25.948333333333334]).addTo(mymap).bindPopup('Source: YO3IXW<br>Lat: 44.6007<br>Long: 25.9483');
+
+var marker = L.marker([51.291333333333334, 7.356833333333333]).addTo(mymap).bindPopup('Source: DB0ENL-13<br>Lat: 51.2913<br>Long: 7.3568');
+
+var marker = L.marker([13.793, 99.92283333333333]).addTo(mymap).bindPopup('Source: HS7JEN-5<br>Lat: 13.7930<br>Long: 99.9228');
+
+var marker = L.marker([40.585, 22.954833333333333]).addTo(mymap).bindPopup('Source: SV2AGW-2<br>Lat: 40.5850<br>Long: 22.9548');
+
+var marker = L.marker([46.52916666666667, 14.317333333333334]).addTo(mymap).bindPopup('Source: OE8KKK-11<br>Lat: 46.5292<br>Long: 14.3173');
+
+var marker = L.marker([52.45816666666666, -2.6365]).addTo(mymap).bindPopup('Source: G7RHF-11<br>Lat: 52.4582<br>Long: -2.6365');
+
+var marker = L.marker([42.05733333333333, -91.70233333333333]).addTo(mymap).bindPopup('Source: W0GQ-1<br>Lat: 42.0573<br>Long: -91.7023');
+
+var marker = L.marker([23.4255, 113.265]).addTo(mymap).bindPopup('Source: BD7LGX-9<br>Lat: 23.4255<br>Long: 113.2650');
+
+var marker = L.marker([44.400166666666664, 26.092333333333332]).addTo(mymap).bindPopup('Source: YO3IQI-2<br>Lat: 44.4002<br>Long: 26.0923');
+
+var marker = L.marker([40.9005, -72.73833333333333]).addTo(mymap).bindPopup('Source: K2RPF-4<br>Lat: 40.9005<br>Long: -72.7383');
+
+var marker = L.marker([45.0315, -70.31316666666666]).addTo(mymap).bindPopup('Source: KQ1L-7<br>Lat: 45.0315<br>Long: -70.3132');
+
+var marker = L.marker([35.690333333333335, -91.7895]).addTo(mymap).bindPopup('Source: BROCKM<br>Lat: 35.6903<br>Long: -91.7895');
+
+var marker = L.marker([23.1185, 113.30966666666667]).addTo(mymap).bindPopup('Source: BD7LM-7<br>Lat: 23.1185<br>Long: 113.3097');
+
+var marker = L.marker([28.561666666666667, -81.33816666666667]).addTo(mymap).bindPopup('Source: W4KBW<br>Lat: 28.5617<br>Long: -81.3382');
+
+var marker = L.marker([13.821458761019201, 100.53670266665966]).addTo(mymap).bindPopup('Source: HS6RFP-9<br>Lat: 13.8215<br>Long: 100.5367');
+
+var marker = L.marker([14.697333333333333, 102.17483333333334]).addTo(mymap).bindPopup('Source: HS3PKX-1<br>Lat: 14.6973<br>Long: 102.1748');
+
+var marker = L.marker([38.81333333333333, -104.8635]).addTo(mymap).bindPopup('Source: N0TZ-i<br>Lat: 38.8133<br>Long: -104.8635');
+
+var marker = L.marker([48.12116666666667, 16.27616666666667]).addTo(mymap).bindPopup('Source: OE3MSU-5<br>Lat: 48.1212<br>Long: 16.2762');
+
+var marker = L.marker([39.55583333333333, -87.29583333333333]).addTo(mymap).bindPopup('Source: WA9SDJ-13<br>Lat: 39.5558<br>Long: -87.2958');
+
+var marker = L.marker([43.451166666666666, -80.56633333333333]).addTo(mymap).bindPopup('Source: VA3NNW-13<br>Lat: 43.4512<br>Long: -80.5663');
+
+var marker = L.marker([52.38466666666667, 16.969]).addTo(mymap).bindPopup('Source: SQ3PLX-6<br>Lat: 52.3847<br>Long: 16.9690');
+
+var marker = L.marker([46.05766666666667, -60.45583333333333]).addTo(mymap).bindPopup('Source: VE1HAM<br>Lat: 46.0577<br>Long: -60.4558');
+
+var marker = L.marker([22.529833333333332, 113.32816666666666]).addTo(mymap).bindPopup('Source: BH7LSW-9<br>Lat: 22.5298<br>Long: 113.3282');
+
+var marker = L.marker([22.4985, 114.359]).addTo(mymap).bindPopup('Source: VR2XKP-3<br>Lat: 22.4985<br>Long: 114.3590');
+
+var marker = L.marker([25.068166666666666, 121.45383333333334]).addTo(mymap).bindPopup('Source: BV2LB-10<br>Lat: 25.0682<br>Long: 121.4538');
+
+var marker = L.marker([22.634166666666665, 114.21883333333334]).addTo(mymap).bindPopup('Source: bg7opi-10<br>Lat: 22.6342<br>Long: 114.2188');
+
+var marker = L.marker([42.65383333333333, -83.33166666666666]).addTo(mymap).bindPopup('Source: W8OAK-15<br>Lat: 42.6538<br>Long: -83.3317');
+
+var marker = L.marker([34.34166666666667, 134.05633333333333]).addTo(mymap).bindPopup('Source: JA5FXJ<br>Lat: 34.3417<br>Long: 134.0563');
+
+var marker = L.marker([28.081666666666667, 120.85983333333333]).addTo(mymap).bindPopup('Source: BH5BNQ-8<br>Lat: 28.0817<br>Long: 120.8598');
+
+var marker = L.marker([30.5225, -97.85]).addTo(mymap).bindPopup('Source: KC5AFM-1<br>Lat: 30.5225<br>Long: -97.8500');
+
+var marker = L.marker([52.41116666666667, 9.607833333333334]).addTo(mymap).bindPopup('Source: DO1KMR-10<br>Lat: 52.4112<br>Long: 9.6078');
+
+var marker = L.marker([38.7, -93.28383333333333]).addTo(mymap).bindPopup('Source: KB0VZQ<br>Lat: 38.7000<br>Long: -93.2838');
+
+var marker = L.marker([34.446333333333335, -87.482]).addTo(mymap).bindPopup('Source: MTHOPE<br>Lat: 34.4463<br>Long: -87.4820');
+
+var marker = L.marker([51.11566666666667, 20.866666666666667]).addTo(mymap).bindPopup('Source: SR7NRX<br>Lat: 51.1157<br>Long: 20.8667');
+
+var marker = L.marker([30.6555, 103.19166666666666]).addTo(mymap).bindPopup('Source: BY8DX-3<br>Lat: 30.6555<br>Long: 103.1917');
+
+var marker = L.marker([36.98866666666667, 136.92333333333335]).addTo(mymap).bindPopup('Source: JA9LA-12<br>Lat: 36.9887<br>Long: 136.9233');
+
+var marker = L.marker([39.1435, -84.46183333333333]).addTo(mymap).bindPopup('Source: W8MRG-3<br>Lat: 39.1435<br>Long: -84.4618');
+
+var marker = L.marker([51.720333333333336, 14.342]).addTo(mymap).bindPopup('Source: DB0SPN<br>Lat: 51.7203<br>Long: 14.3420');
+
+var marker = L.marker([32.225833333333334, 119.79433333333333]).addTo(mymap).bindPopup('Source: BH4WAL-10<br>Lat: 32.2258<br>Long: 119.7943');
+
+var marker = L.marker([23.3955, 120.43316666666666]).addTo(mymap).bindPopup('Source: BX2AEA-13<br>Lat: 23.3955<br>Long: 120.4332');
+
+var marker = L.marker([40.232, -95.97166666666666]).addTo(mymap).bindPopup('Source: HUMBOL<br>Lat: 40.2320<br>Long: -95.9717');
+
+var marker = L.marker([35.1705, -118.61883333333333]).addTo(mymap).bindPopup('Source: W6SLZ-1<br>Lat: 35.1705<br>Long: -118.6188');
+
+var marker = L.marker([51.318666666666665, 17.7345]).addTo(mymap).bindPopup('Source: SQ6WA-1<br>Lat: 51.3187<br>Long: 17.7345');
+
+var marker = L.marker([56.3005, 44.047333333333334]).addTo(mymap).bindPopup('Source: RA3TAT-13<br>Lat: 56.3005<br>Long: 44.0473');
+
+var marker = L.marker([49.80083333333333, 9.8235]).addTo(mymap).bindPopup('Source: DO8DH-B<br>Lat: 49.8008<br>Long: 9.8235');
+
+var marker = L.marker([48.182, 16.392]).addTo(mymap).bindPopup('Source: OE1XAW<br>Lat: 48.1820<br>Long: 16.3920');
+
+var marker = L.marker([23.090166666666665, 113.26683333333334]).addTo(mymap).bindPopup('Source: BH7JFR-11<br>Lat: 23.0902<br>Long: 113.2668');
+
+var marker = L.marker([48.66866666666667, 11.450833333333334]).addTo(mymap).bindPopup('Source: DJ8RZ-5<br>Lat: 48.6687<br>Long: 11.4508');
+
+var marker = L.marker([41.362, 15.698666666666666]).addTo(mymap).bindPopup('Source: IK7XTA<br>Lat: 41.3620<br>Long: 15.6987');
+
+var marker = L.marker([-31.074962066123078, 150.9419992334469]).addTo(mymap).bindPopup('Source: VK2YGV-8<br>Lat: -31.0750<br>Long: 150.9420');
+
+var marker = L.marker([-26.7455, 27.831333333333333]).addTo(mymap).bindPopup('Source: ZS6EY-9<br>Lat: -26.7455<br>Long: 27.8313');
+
+var marker = L.marker([47.5265, 25.5715]).addTo(mymap).bindPopup('Source: YO8AZQ-5<br>Lat: 47.5265<br>Long: 25.5715');
+
+var marker = L.marker([38.850833333333334, 105.7]).addTo(mymap).bindPopup('Source: BG3HTA-13<br>Lat: 38.8508<br>Long: 105.7000');
+
+var marker = L.marker([34.987, 136.91183333333333]).addTo(mymap).bindPopup('Source: JR2SRH-13<br>Lat: 34.9870<br>Long: 136.9118');
+
+var marker = L.marker([48.173833333333334, 12.7755]).addTo(mymap).bindPopup('Source: DB0BKN<br>Lat: 48.1738<br>Long: 12.7755');
+
+var marker = L.marker([-26.909666666666666, -49.3655]).addTo(mymap).bindPopup('Source: pu5bhv-13<br>Lat: -26.9097<br>Long: -49.3655');
+
+var marker = L.marker([36.945166666666665, 140.42716666666666]).addTo(mymap).bindPopup('Source: JA7ZGF-1<br>Lat: 36.9452<br>Long: 140.4272');
+
+var marker = L.marker([42.79633333333334, -87.78783333333334]).addTo(mymap).bindPopup('Source: KB0CVW<br>Lat: 42.7963<br>Long: -87.7878');
+
+var marker = L.marker([31.881333333333334, -92.5835]).addTo(mymap).bindPopup('Source: WINN<br>Lat: 31.8813<br>Long: -92.5835');
+
+var marker = L.marker([34.7585, 133.06566666666666]).addTo(mymap).bindPopup('Source: JH4YOP-10<br>Lat: 34.7585<br>Long: 133.0657');
+
+var marker = L.marker([-29.584833333333332, 30.376666666666665]).addTo(mymap).bindPopup('Source: ZS5SAM-9<br>Lat: -29.5848<br>Long: 30.3767');
+
+var marker = L.marker([49.91916666666667, 8.344166666666666]).addTo(mymap).bindPopup('Source: DD9WL-5<br>Lat: 49.9192<br>Long: 8.3442');
+
+var marker = L.marker([54.6985, 18.674333333333333]).addTo(mymap).bindPopup('Source: SQ9IDC-10<br>Lat: 54.6985<br>Long: 18.6743');
+
+var marker = L.marker([30.379, 120.04566666666666]).addTo(mymap).bindPopup('Source: BA5DX-10<br>Lat: 30.3790<br>Long: 120.0457');
+
+var marker = L.marker([34.11866666666667, -80.93683333333334]).addTo(mymap).bindPopup('Source: N4MSG-10<br>Lat: 34.1187<br>Long: -80.9368');
+
+var marker = L.marker([38.13616666666667, 13.317666666666666]).addTo(mymap).bindPopup('Source: IQ9PA<br>Lat: 38.1362<br>Long: 13.3177');
+
+var marker = L.marker([61.103833333333334, 10.446666666666667]).addTo(mymap).bindPopup('Source: LB1BF-8<br>Lat: 61.1038<br>Long: 10.4467');
+
+var marker = L.marker([40.8715, 35.4465]).addTo(mymap).bindPopup('Source: TA6ASS-1<br>Lat: 40.8715<br>Long: 35.4465');
+
+var marker = L.marker([34.654666666666664, -86.674]).addTo(mymap).bindPopup('Source: DW0076<br>Lat: 34.6547<br>Long: -86.6740');
+
+var marker = L.marker([34.85333333333333, 136.54566666666668]).addTo(mymap).bindPopup('Source: JA2YEP-4<br>Lat: 34.8533<br>Long: 136.5457');
+
+var marker = L.marker([30.513333333333332, 120.911]).addTo(mymap).bindPopup('Source: BG5HLN-10<br>Lat: 30.5133<br>Long: 120.9110');
+
+var marker = L.marker([39.666333333333334, 20.8525]).addTo(mymap).bindPopup('Source: SV6NOB-9<br>Lat: 39.6663<br>Long: 20.8525');
+
+var marker = L.marker([41.976333333333336, -4.5504999999999995]).addTo(mymap).bindPopup('Source: ED1ZBB-3<br>Lat: 41.9763<br>Long: -4.5505');
+
+var marker = L.marker([49.12316666666667, -122.711]).addTo(mymap).bindPopup('Source: SRRY99<br>Lat: 49.1232<br>Long: -122.7110');
+
+var marker = L.marker([44.03966666666667, -93.313]).addTo(mymap).bindPopup('Source: WB0VAK-R<br>Lat: 44.0397<br>Long: -93.3130');
+
+var marker = L.marker([39.92033333333333, -84.62516666666667]).addTo(mymap).bindPopup('Source: W8VFR-8<br>Lat: 39.9203<br>Long: -84.6252');
+
+var marker = L.marker([43.82483333333333, 7.778333333333333]).addTo(mymap).bindPopup('Source: IR1DG<br>Lat: 43.8248<br>Long: 7.7783');
+
+var marker = L.marker([33.020833333333336, 119.0205]).addTo(mymap).bindPopup('Source: BI4TDQ-10<br>Lat: 33.0208<br>Long: 119.0205');
+
+var marker = L.marker([44.725833333333334, 8.451166666666667]).addTo(mymap).bindPopup('Source: IR1UIV-B<br>Lat: 44.7258<br>Long: 8.4512');
+
+var marker = L.marker([63.992, 11.529]).addTo(mymap).bindPopup('Source: LD7ST<br>Lat: 63.9920<br>Long: 11.5290');
+
+var marker = L.marker([44.33716666666667, 2.716666666666667]).addTo(mymap).bindPopup('Source: F5RGH-10<br>Lat: 44.3372<br>Long: 2.7167');
+
+var marker = L.marker([40.926, 24.387666666666668]).addTo(mymap).bindPopup('Source: SV7GX-2<br>Lat: 40.9260<br>Long: 24.3877');
+
+var marker = L.marker([48.888666666666666, 8.679]).addTo(mymap).bindPopup('Source: DL1IFW-1<br>Lat: 48.8887<br>Long: 8.6790');
+
+var marker = L.marker([39.35766666666667, -8.4725]).addTo(mymap).bindPopup('Source: CT2JFJ<br>Lat: 39.3577<br>Long: -8.4725');
+
+var marker = L.marker([32.87016666666667, -97.28333333333333]).addTo(mymap).bindPopup('Source: KD5WMA-7<br>Lat: 32.8702<br>Long: -97.2833');
+
+var marker = L.marker([50.6125, 10.745166666666666]).addTo(mymap).bindPopup('Source: DB0FTS-10<br>Lat: 50.6125<br>Long: 10.7452');
+
+var marker = L.marker([7.394666666666667, 100.10633333333334]).addTo(mymap).bindPopup('Source: E23QD-5<br>Lat: 7.3947<br>Long: 100.1063');
+
+var marker = L.marker([40.986666666666665, -109.70733333333334]).addTo(mymap).bindPopup('Source: KF7VRJ-15<br>Lat: 40.9867<br>Long: -109.7073');
+
+var marker = L.marker([22.636666666666667, 120.30216666666666]).addTo(mymap).bindPopup('Source: BM4AIK-R<br>Lat: 22.6367<br>Long: 120.3022');
+
+var marker = L.marker([-34.572833333333335, -58.425666666666665]).addTo(mymap).bindPopup('Source: LU8EUT-R<br>Lat: -34.5728<br>Long: -58.4257');
+
+var marker = L.marker([39.096333333333334, -104.89283333333333]).addTo(mymap).bindPopup('Source: K0GIE<br>Lat: 39.0963<br>Long: -104.8928');
+
+var marker = L.marker([-42.01683333333333, 146.75516666666667]).addTo(mymap).bindPopup('Source: VK7RIN<br>Lat: -42.0168<br>Long: 146.7552');
+
+var marker = L.marker([42.05716666666667, -82.6]).addTo(mymap).bindPopup('Source: VE3EOL-1<br>Lat: 42.0572<br>Long: -82.6000');
+
+var marker = L.marker([49.749833333333335, 7.1185]).addTo(mymap).bindPopup('Source: DB0UT-10<br>Lat: 49.7498<br>Long: 7.1185');
+
+var marker = L.marker([46.66616666666667, 12.998833333333334]).addTo(mymap).bindPopup('Source: OE8PIT-5<br>Lat: 46.6662<br>Long: 12.9988');
+
+var marker = L.marker([34.032, -86.01]).addTo(mymap).bindPopup('Source: K4RBC-B<br>Lat: 34.0320<br>Long: -86.0100');
+
+var marker = L.marker([10.314166666666667, 123.89766666666667]).addTo(mymap).bindPopup('Source: DW7FCV-N<br>Lat: 10.3142<br>Long: 123.8977');
+
+var marker = L.marker([43.05, -89.48]).addTo(mymap).bindPopup('Source: W9HSY-C<br>Lat: 43.0500<br>Long: -89.4800');
+
+var marker = L.marker([-29.141333333333332, 26.176333333333332]).addTo(mymap).bindPopup('Source: ZS4JR-16<br>Lat: -29.1413<br>Long: 26.1763');
+
+var marker = L.marker([59.28916666666667, 15.248666666666667]).addTo(mymap).bindPopup('Source: SM4JPD-5<br>Lat: 59.2892<br>Long: 15.2487');
+
+var marker = L.marker([60.302166666666665, 25.036]).addTo(mymap).bindPopup('Source: OH2EGI-1<br>Lat: 60.3022<br>Long: 25.0360');
+
+var marker = L.marker([49.03916666666667, -123.833]).addTo(mymap).bindPopup('Source: VA7DXH-1<br>Lat: 49.0392<br>Long: -123.8330');
+
+var marker = L.marker([-41.163333333333334, 146.20183333333333]).addTo(mymap).bindPopup('Source: VK7DIK<br>Lat: -41.1633<br>Long: 146.2018');
+
+var marker = L.marker([13.318666666666667, 101.02266666666667]).addTo(mymap).bindPopup('Source: E21RBE-1<br>Lat: 13.3187<br>Long: 101.0227');
+
+var marker = L.marker([47.4705, 19.083833333333335]).addTo(mymap).bindPopup('Source: HA5PT-14<br>Lat: 47.4705<br>Long: 19.0838');
+
+var marker = L.marker([45.244, 141.7565]).addTo(mymap).bindPopup('Source: JR8YPB-10<br>Lat: 45.2440<br>Long: 141.7565');
+
+var marker = L.marker([22.934333333333335, 120.4905]).addTo(mymap).bindPopup('Source: BM7FKF-3<br>Lat: 22.9343<br>Long: 120.4905');
+
+var marker = L.marker([39.457, -84.30266666666667]).addTo(mymap).bindPopup('Source: N8QF<br>Lat: 39.4570<br>Long: -84.3027');
+
+var marker = L.marker([43.8905, 10.689666666666668]).addTo(mymap).bindPopup('Source: IW5ELM<br>Lat: 43.8905<br>Long: 10.6897');
+
+var marker = L.marker([46.43366666666667, 11.862666666666666]).addTo(mymap).bindPopup('Source: IR3AO<br>Lat: 46.4337<br>Long: 11.8627');
+
+var marker = L.marker([23.1165, 113.25]).addTo(mymap).bindPopup('Source: BD7LPO-10<br>Lat: 23.1165<br>Long: 113.2500');
+
+var marker = L.marker([48.588, 10.4745]).addTo(mymap).bindPopup('Source: DL2SBE-10<br>Lat: 48.5880<br>Long: 10.4745');
+
+var marker = L.marker([40.226166666666664, -76.881]).addTo(mymap).bindPopup('Source: N3SW<br>Lat: 40.2262<br>Long: -76.8810');
+
+var marker = L.marker([44.57333333333333, 7.438]).addTo(mymap).bindPopup('Source: IR1UII-B<br>Lat: 44.5733<br>Long: 7.4380');
+
+var marker = L.marker([40.199666666666666, -105.27883333333334]).addTo(mymap).bindPopup('Source: KE0JEY-10<br>Lat: 40.1997<br>Long: -105.2788');
+
+var marker = L.marker([13.374833333333333, 101.0195]).addTo(mymap).bindPopup('Source: HS3XCB-10<br>Lat: 13.3748<br>Long: 101.0195');
+
+var marker = L.marker([40.69416666666667, 14.504333333333333]).addTo(mymap).bindPopup('Source: IW8EIN-3<br>Lat: 40.6942<br>Long: 14.5043');
+
+var marker = L.marker([36.69683333333333, -4.446666666666666]).addTo(mymap).bindPopup('Source: EA7JTR-B<br>Lat: 36.6968<br>Long: -4.4467');
+
+var marker = L.marker([31.926833333333335, 120.58833333333334]).addTo(mymap).bindPopup('Source: BY4SHX-10<br>Lat: 31.9268<br>Long: 120.5883');
+
+var marker = L.marker([41.643166666666666, -93.70866666666667]).addTo(mymap).bindPopup('Source: K0KDS<br>Lat: 41.6432<br>Long: -93.7087');
+
+var marker = L.marker([30.514166666666668, 114.29166666666667]).addTo(mymap).bindPopup('Source: BG6RCY-10<br>Lat: 30.5142<br>Long: 114.2917');
+
+var marker = L.marker([40.928, 23.094666666666665]).addTo(mymap).bindPopup('Source: SV2BNL-12<br>Lat: 40.9280<br>Long: 23.0947');
+
+var marker = L.marker([36.966, 120.72]).addTo(mymap).bindPopup('Source: BG4IGX-10<br>Lat: 36.9660<br>Long: 120.7200');
+
+var marker = L.marker([43.63733333333333, 13.367833333333333]).addTo(mymap).bindPopup('Source: IW6DSE<br>Lat: 43.6373<br>Long: 13.3678');
+
+var marker = L.marker([39.668166666666664, -105.77266666666667]).addTo(mymap).bindPopup('Source: BVILLE<br>Lat: 39.6682<br>Long: -105.7727');
+
+var marker = L.marker([-26.7455, 27.831166666666668]).addTo(mymap).bindPopup('Source: ZS6EY-14<br>Lat: -26.7455<br>Long: 27.8312');
+
+var marker = L.marker([40.282833333333336, -84.1695]).addTo(mymap).bindPopup('Source: KC6NLX-13<br>Lat: 40.2828<br>Long: -84.1695');
+
+var marker = L.marker([26.676166666666667, 102.243]).addTo(mymap).bindPopup('Source: BH8EQW-13<br>Lat: 26.6762<br>Long: 102.2430');
+
+var marker = L.marker([37.8085, -121.20733333333334]).addTo(mymap).bindPopup('Source: K6PKL-2<br>Lat: 37.8085<br>Long: -121.2073');
+
+var marker = L.marker([28.121666666666666, 120.9525]).addTo(mymap).bindPopup('Source: BG5BLU-9<br>Lat: 28.1217<br>Long: 120.9525');
+
+var marker = L.marker([46.89216666666667, -71.2985]).addTo(mymap).bindPopup('Source: VE2XZT<br>Lat: 46.8922<br>Long: -71.2985');
+
+var marker = L.marker([28.517833333333332, -81.71533333333333]).addTo(mymap).bindPopup('Source: KC2BRB-1<br>Lat: 28.5178<br>Long: -81.7153');
+
+var marker = L.marker([36.47, -81.507]).addTo(mymap).bindPopup('Source: N4JEX-2<br>Lat: 36.4700<br>Long: -81.5070');
+
+var marker = L.marker([43.758, 4.8515]).addTo(mymap).bindPopup('Source: F5ZVF<br>Lat: 43.7580<br>Long: 4.8515');
+
+var marker = L.marker([38.9005, -105.20733333333334]).addTo(mymap).bindPopup('Source: W0DVM-1<br>Lat: 38.9005<br>Long: -105.2073');
+
+var marker = L.marker([39.354, -8.467333333333332]).addTo(mymap).bindPopup('Source: CQ0XBF-11<br>Lat: 39.3540<br>Long: -8.4673');
+
+var marker = L.marker([34.49466666666667, -119.71316666666667]).addTo(mymap).bindPopup('Source: KC6OYN<br>Lat: 34.4947<br>Long: -119.7132');
+
+var marker = L.marker([47.4715, 19.163]).addTo(mymap).bindPopup('Source: HA5OB-10<br>Lat: 47.4715<br>Long: 19.1630');
+
+var marker = L.marker([41.005833333333335, 39.14366666666667]).addTo(mymap).bindPopup('Source: YM7KEY<br>Lat: 41.0058<br>Long: 39.1437');
+
+var marker = L.marker([32.528166666666664, -92.6475]).addTo(mymap).bindPopup('Source: KQ5T-5<br>Lat: 32.5282<br>Long: -92.6475');
+
+var marker = L.marker([41.30883333333333, -84.38766666666666]).addTo(mymap).bindPopup('Source: KT8EMA<br>Lat: 41.3088<br>Long: -84.3877');
+
+var marker = L.marker([31.27616666666667, -97.17166666666667]).addTo(mymap).bindPopup('Source: W5BEC-5<br>Lat: 31.2762<br>Long: -97.1717');
+
+var marker = L.marker([50.5505, 8.7635]).addTo(mymap).bindPopup('Source: DB0GIS-B<br>Lat: 50.5505<br>Long: 8.7635');
+
+var marker = L.marker([24.464666666666666, 54.348]).addTo(mymap).bindPopup('Source: A65FH-5<br>Lat: 24.4647<br>Long: 54.3480');
+
+var marker = L.marker([38.152833333333334, -78.55733333333333]).addTo(mymap).bindPopup('Source: W4KEL-1<br>Lat: 38.1528<br>Long: -78.5573');
+
+var marker = L.marker([47.418, 19.018333333333334]).addTo(mymap).bindPopup('Source: HA5PT-13<br>Lat: 47.4180<br>Long: 19.0183');
+
+var marker = L.marker([32.9, -117.03]).addTo(mymap).bindPopup('Source: K6TEP-10<br>Lat: 32.9000<br>Long: -117.0300');
+
+var marker = L.marker([3.0171666666666668, 101.43133333333333]).addTo(mymap).bindPopup('Source: 9W2RGH-9<br>Lat: 3.0172<br>Long: 101.4313');
+
+var marker = L.marker([30.47533333333333, -84.27483333333333]).addTo(mymap).bindPopup('Source: AE4S<br>Lat: 30.4753<br>Long: -84.2748');
+
+var marker = L.marker([51.0311924100744, 11.602179950961613]).addTo(mymap).bindPopup('Source: DG0AG-9<br>Lat: 51.0312<br>Long: 11.6022');
+
+var marker = L.marker([44.02466666666667, -79.35]).addTo(mymap).bindPopup('Source: VE3YRK-C<br>Lat: 44.0247<br>Long: -79.3500');
+
+var marker = L.marker([59.7845, 8.759833333333333]).addTo(mymap).bindPopup('Source: LA3ZA-3<br>Lat: 59.7845<br>Long: 8.7598');
+
+var marker = L.marker([35.1705, -97.49266666666666]).addTo(mymap).bindPopup('Source: KG5KBQ-10<br>Lat: 35.1705<br>Long: -97.4927');
+
+var marker = L.marker([25.106, 121.84683333333334]).addTo(mymap).bindPopup('Source: BM1CDP-11<br>Lat: 25.1060<br>Long: 121.8468');
+
+var marker = L.marker([47.25933333333333, 25.3525]).addTo(mymap).bindPopup('Source: YO8CLN-10<br>Lat: 47.2593<br>Long: 25.3525');
+
+var marker = L.marker([28.811, -81.3405]).addTo(mymap).bindPopup('Source: W4PLB-B<br>Lat: 28.8110<br>Long: -81.3405');
+
+var marker = L.marker([50.706833333333336, 13.856666666666667]).addTo(mymap).bindPopup('Source: OK1TEC-3<br>Lat: 50.7068<br>Long: 13.8567');
+
+var marker = L.marker([50.12866666666667, 18.97533333333333]).addTo(mymap).bindPopup('Source: SP9SDZ-4<br>Lat: 50.1287<br>Long: 18.9753');
+
+var marker = L.marker([36.986333333333334, -112.504]).addTo(mymap).bindPopup('Source: KANAB<br>Lat: 36.9863<br>Long: -112.5040');
+
+var marker = L.marker([35.55116666666667, 137.84816666666666]).addTo(mymap).bindPopup('Source: JA0WME-5<br>Lat: 35.5512<br>Long: 137.8482');
+
+var marker = L.marker([45.986, 15.2795]).addTo(mymap).bindPopup('Source: S55YLA-11<br>Lat: 45.9860<br>Long: 15.2795');
+
+var marker = L.marker([45.314166666666665, -68.98966666666666]).addTo(mymap).bindPopup('Source: W1XR<br>Lat: 45.3142<br>Long: -68.9897');
+
+var marker = L.marker([41.443666666666665, -86.162]).addTo(mymap).bindPopup('Source: W9LRT-1<br>Lat: 41.4437<br>Long: -86.1620');
+
+var marker = L.marker([54.69883333333333, 18.672333333333334]).addTo(mymap).bindPopup('Source: SQ9IDC-10<br>Lat: 54.6988<br>Long: 18.6723');
+
+var marker = L.marker([50.157666666666664, 9.016]).addTo(mymap).bindPopup('Source: DF7DJ-15<br>Lat: 50.1577<br>Long: 9.0160');
+
+var marker = L.marker([25.052666666666667, 121.58333333333333]).addTo(mymap).bindPopup('Source: BU2DI-10<br>Lat: 25.0527<br>Long: 121.5833');
+
+var marker = L.marker([9.014, -79.477]).addTo(mymap).bindPopup('Source: HP1CDW-0<br>Lat: 9.0140<br>Long: -79.4770');
+
+var marker = L.marker([30.121166666666667, 120.01933333333334]).addTo(mymap).bindPopup('Source: BG5HVP-10<br>Lat: 30.1212<br>Long: 120.0193');
+
+var marker = L.marker([-34.09466666666667, -61.62866666666667]).addTo(mymap).bindPopup('Source: LU8FCJ-5<br>Lat: -34.0947<br>Long: -61.6287');
+
+var marker = L.marker([-26.485333333333333, 29.144833333333334]).addTo(mymap).bindPopup('Source: ZS6GC-12<br>Lat: -26.4853<br>Long: 29.1448');
+
+var marker = L.marker([43.698, -87.71966666666667]).addTo(mymap).bindPopup('Source: KC9SJY-C<br>Lat: 43.6980<br>Long: -87.7197');
+
+var marker = L.marker([52.022, 21.126333333333335]).addTo(mymap).bindPopup('Source: SQ5RTW-1<br>Lat: 52.0220<br>Long: 21.1263');
+
+var marker = L.marker([-37.77333333333333, 145.21533333333332]).addTo(mymap).bindPopup('Source: VK3CG<br>Lat: -37.7733<br>Long: 145.2153');
+
+var marker = L.marker([-26.485666666666667, 29.148666666666667]).addTo(mymap).bindPopup('Source: ZS6GC-12<br>Lat: -26.4857<br>Long: 29.1487');
+
+var marker = L.marker([38.528666666666666, -109.32466666666667]).addTo(mymap).bindPopup('Source: BALD<br>Lat: 38.5287<br>Long: -109.3247');
+
+var marker = L.marker([50.86483333333334, -2.1566666666666667]).addTo(mymap).bindPopup('Source: 2E1EJC<br>Lat: 50.8648<br>Long: -2.1567');
+
+var marker = L.marker([34.53966666666667, -86.98216666666667]).addTo(mymap).bindPopup('Source: W4TFW-1<br>Lat: 34.5397<br>Long: -86.9822');
+
+var marker = L.marker([37.056666666666665, 114.47]).addTo(mymap).bindPopup('Source: BR3NC-3<br>Lat: 37.0567<br>Long: 114.4700');
+
+var marker = L.marker([35.174, 133.73133333333334]).addTo(mymap).bindPopup('Source: JN4HSC-10<br>Lat: 35.1740<br>Long: 133.7313');
+
+var marker = L.marker([48.10916666666667, -106.725]).addTo(mymap).bindPopup('Source: GLSG-9<br>Lat: 48.1092<br>Long: -106.7250');
+
+var marker = L.marker([39.971333333333334, 116.39366666666666]).addTo(mymap).bindPopup('Source: BA1GG-10<br>Lat: 39.9713<br>Long: 116.3937');
+
+var marker = L.marker([33.552, 130.5865]).addTo(mymap).bindPopup('Source: JG6YDA-1<br>Lat: 33.5520<br>Long: 130.5865');
+
+var marker = L.marker([-6.535833333333334, 106.70133333333334]).addTo(mymap).bindPopup('Source: YF1ZQA<br>Lat: -6.5358<br>Long: 106.7013');
+
+var marker = L.marker([48.8165, 9.582]).addTo(mymap).bindPopup('Source: DO0SG<br>Lat: 48.8165<br>Long: 9.5820');
+
+var marker = L.marker([34.94733333333333, -104.64266666666667]).addTo(mymap).bindPopup('Source: KC7KMP-5<br>Lat: 34.9473<br>Long: -104.6427');
+
+var marker = L.marker([51.35766666666667, 1.0978333333333334]).addTo(mymap).bindPopup('Source: MB7UEK<br>Lat: 51.3577<br>Long: 1.0978');
+
+var marker = L.marker([46.643166666666666, 16.130666666666666]).addTo(mymap).bindPopup('Source: S57BMU-5<br>Lat: 46.6432<br>Long: 16.1307');
+
+var marker = L.marker([41.39566666666666, 2.1395]).addTo(mymap).bindPopup('Source: EA3GKP-12<br>Lat: 41.3957<br>Long: 2.1395');
+
+var marker = L.marker([28.055666666666667, -82.44966666666667]).addTo(mymap).bindPopup('Source: kp4cj<br>Lat: 28.0557<br>Long: -82.4497');
+
+var marker = L.marker([61.103833333333334, 10.446333333333333]).addTo(mymap).bindPopup('Source: LB1BF-8<br>Lat: 61.1038<br>Long: 10.4463');
+
+var marker = L.marker([52.735166666666665, -1.1006666666666667]).addTo(mymap).bindPopup('Source: MB7VB<br>Lat: 52.7352<br>Long: -1.1007');
+
+var marker = L.marker([39.81016666666667, 116.446]).addTo(mymap).bindPopup('Source: BH1AYY-10<br>Lat: 39.8102<br>Long: 116.4460');
+
+var marker = L.marker([47.906166666666664, -122.28133333333334]).addTo(mymap).bindPopup('Source: NR7SS-B<br>Lat: 47.9062<br>Long: -122.2813');
+
+var marker = L.marker([39.93266666666667, 32.842166666666664]).addTo(mymap).bindPopup('Source: TB2BMS-5<br>Lat: 39.9327<br>Long: 32.8422');
+
+var marker = L.marker([39.11416666666667, -9.375666666666667]).addTo(mymap).bindPopup('Source: CQ0DKE-C<br>Lat: 39.1142<br>Long: -9.3757');
+
+var marker = L.marker([23.074666666666666, 113.23066666666666]).addTo(mymap).bindPopup('Source: BG7JD-1<br>Lat: 23.0747<br>Long: 113.2307');
+
+var marker = L.marker([32.486666666666665, -97.9165]).addTo(mymap).bindPopup('Source: KB5RLJ-4<br>Lat: 32.4867<br>Long: -97.9165');
+
+var marker = L.marker([42.71083333333333, 3.0363333333333333]).addTo(mymap).bindPopup('Source: DL1IK<br>Lat: 42.7108<br>Long: 3.0363');
+
+var marker = L.marker([55.80246557074077, 9.460887416453602]).addTo(mymap).bindPopup('Source: OZ1JUX-9<br>Lat: 55.8025<br>Long: 9.4609');
+
+var marker = L.marker([51.362833333333334, 21.13383333333333]).addTo(mymap).bindPopup('Source: SQ5KGV-R<br>Lat: 51.3628<br>Long: 21.1338');
+
+var marker = L.marker([31.075333333333333, 115.754]).addTo(mymap).bindPopup('Source: BG6SJC-10<br>Lat: 31.0753<br>Long: 115.7540');
+
+var marker = L.marker([45.87133333333333, -74.07966666666667]).addTo(mymap).bindPopup('Source: VE2ONR-10<br>Lat: 45.8713<br>Long: -74.0797');
+
+var marker = L.marker([62.2665, 7.134166666666666]).addTo(mymap).bindPopup('Source: LD6BE<br>Lat: 62.2665<br>Long: 7.1342');
+
+var marker = L.marker([32.702333333333335, 130.63466666666667]).addTo(mymap).bindPopup('Source: JH6WLF-12<br>Lat: 32.7023<br>Long: 130.6347');
+
+var marker = L.marker([41.362, 15.698666666666666]).addTo(mymap).bindPopup('Source: IK7XTA<br>Lat: 41.3620<br>Long: 15.6987');
+
+var marker = L.marker([-26.315333333333335, -48.839166666666664]).addTo(mymap).bindPopup('Source: GRM-15<br>Lat: -26.3153<br>Long: -48.8392');
+
+var marker = L.marker([35.202333333333335, 138.726]).addTo(mymap).bindPopup('Source: JJ2YDX-10<br>Lat: 35.2023<br>Long: 138.7260');
+
+var marker = L.marker([37.747, 20.932333333333332]).addTo(mymap).bindPopup('Source: SV8S-B<br>Lat: 37.7470<br>Long: 20.9323');
+
+var marker = L.marker([48.214666666666666, 12.551833333333333]).addTo(mymap).bindPopup('Source: DB0XIM<br>Lat: 48.2147<br>Long: 12.5518');
+
+var marker = L.marker([52.29633333333334, -1.884]).addTo(mymap).bindPopup('Source: G4MUV-0<br>Lat: 52.2963<br>Long: -1.8840');
+
+var marker = L.marker([31.026666666666667, 121.5475]).addTo(mymap).bindPopup('Source: BH4BOI-10<br>Lat: 31.0267<br>Long: 121.5475');
+
+var marker = L.marker([49.0985, 1.4969999999999999]).addTo(mymap).bindPopup('Source: F4HXS-6<br>Lat: 49.0985<br>Long: 1.4970');
+
+var marker = L.marker([33.965333333333334, 131.30916666666667]).addTo(mymap).bindPopup('Source: JR4EUD-10<br>Lat: 33.9653<br>Long: 131.3092');
+
+var marker = L.marker([29.686333333333334, -90.78983333333333]).addTo(mymap).bindPopup('Source: KC5DI-B<br>Lat: 29.6863<br>Long: -90.7898');
+
+var marker = L.marker([50.6085, 3.0946666666666665]).addTo(mymap).bindPopup('Source: ON4WZ-14<br>Lat: 50.6085<br>Long: 3.0947');
+
+var marker = L.marker([13.8565, 100.615]).addTo(mymap).bindPopup('Source: E29DLR-1<br>Lat: 13.8565<br>Long: 100.6150');
+
+var marker = L.marker([50.026, 21.98966666666667]).addTo(mymap).bindPopup('Source: SR8NDR<br>Lat: 50.0260<br>Long: 21.9897');
+
+var marker = L.marker([44.75, -87.58966666666667]).addTo(mymap).bindPopup('Source: W9DOR-9<br>Lat: 44.7500<br>Long: -87.5897');
+
+var marker = L.marker([39.19466666666667, -1.4318333333333333]).addTo(mymap).bindPopup('Source: EA5BG-3<br>Lat: 39.1947<br>Long: -1.4318');
+
+var marker = L.marker([30.043666666666667, -90.69916666666667]).addTo(mymap).bindPopup('Source: ke5jzm-1<br>Lat: 30.0437<br>Long: -90.6992');
+
+var marker = L.marker([49.61066666666667, 21.532]).addTo(mymap).bindPopup('Source: SR8NZ<br>Lat: 49.6107<br>Long: 21.5320');
+
+var marker = L.marker([35.11383333333333, -118.23633333333333]).addTo(mymap).bindPopup('Source: NR6G-6<br>Lat: 35.1138<br>Long: -118.2363');
+
+var marker = L.marker([13.810166666666667, 100.63033333333334]).addTo(mymap).bindPopup('Source: FDIOT-1<br>Lat: 13.8102<br>Long: 100.6303');
+
+var marker = L.marker([37.38616666666667, 136.96066666666667]).addTo(mymap).bindPopup('Source: JH9YLY-3<br>Lat: 37.3862<br>Long: 136.9607');
+
+var marker = L.marker([33.001333333333335, -97.15633333333334]).addTo(mymap).bindPopup('Source: W5CGC<br>Lat: 33.0013<br>Long: -97.1563');
+
+var marker = L.marker([39.8635, -82.799]).addTo(mymap).bindPopup('Source: K8GPS-4<br>Lat: 39.8635<br>Long: -82.7990');
+
+var marker = L.marker([70.70766666666667, 23.674666666666667]).addTo(mymap).bindPopup('Source: LD9HN<br>Lat: 70.7077<br>Long: 23.6747');
+
+var marker = L.marker([33.56766666666667, 130.535]).addTo(mymap).bindPopup('Source: JE6VQE-12<br>Lat: 33.5677<br>Long: 130.5350');
+
+var marker = L.marker([42.9785, -0.766]).addTo(mymap).bindPopup('Source: F5ZVO<br>Lat: 42.9785<br>Long: -0.7660');
+
+var marker = L.marker([54.21933333333333, -4.699666666666666]).addTo(mymap).bindPopup('Source: GB3IM-P<br>Lat: 54.2193<br>Long: -4.6997');
+
+var marker = L.marker([46.73883333333333, 23.477333333333334]).addTo(mymap).bindPopup('Source: YO5HIN<br>Lat: 46.7388<br>Long: 23.4773');
+
+var marker = L.marker([-54.50983333333333, -67.198]).addTo(mymap).bindPopup('Source: LU8XW-2<br>Lat: -54.5098<br>Long: -67.1980');
+
+var marker = L.marker([34.846333333333334, 135.66633333333334]).addTo(mymap).bindPopup('Source: JE3ZUE-12<br>Lat: 34.8463<br>Long: 135.6663');
+
+var marker = L.marker([43.073166666666665, -88.38766666666666]).addTo(mymap).bindPopup('Source: W9TJK-1<br>Lat: 43.0732<br>Long: -88.3877');
+
+var marker = L.marker([32.7045, 130.62433333333334]).addTo(mymap).bindPopup('Source: JH6WLF-12<br>Lat: 32.7045<br>Long: 130.6243');
+
+var marker = L.marker([44.42666666666667, -76.63883333333334]).addTo(mymap).bindPopup('Source: VE3UEL<br>Lat: 44.4267<br>Long: -76.6388');
+
+var marker = L.marker([39.102, -108.548]).addTo(mymap).bindPopup('Source: KB0DC-2<br>Lat: 39.1020<br>Long: -108.5480');
+
+var marker = L.marker([61.35433333333334, 25.054666666666666]).addTo(mymap).bindPopup('Source: OH3RUD<br>Lat: 61.3543<br>Long: 25.0547');
+
+var marker = L.marker([39.993, 116.40416666666667]).addTo(mymap).bindPopup('Source: BA1GG-1<br>Lat: 39.9930<br>Long: 116.4042');
+
+var marker = L.marker([43.876333333333335, 87.537]).addTo(mymap).bindPopup('Source: BG0AQM-10<br>Lat: 43.8763<br>Long: 87.5370');
+
+var marker = L.marker([41.12283333333333, -87.893]).addTo(mymap).bindPopup('Source: W9AZ-1<br>Lat: 41.1228<br>Long: -87.8930');
+
+var marker = L.marker([52.675666666666665, 21.063333333333333]).addTo(mymap).bindPopup('Source: SQ5GVY-1<br>Lat: 52.6757<br>Long: 21.0633');
+
+var marker = L.marker([39.971333333333334, 116.39366666666666]).addTo(mymap).bindPopup('Source: BA1GG-10<br>Lat: 39.9713<br>Long: 116.3937');
+
+var marker = L.marker([43.736666666666665, -7.877166666666667]).addTo(mymap).bindPopup('Source: ED1ZAC-3<br>Lat: 43.7367<br>Long: -7.8772');
+
+var marker = L.marker([39.18, -1.485]).addTo(mymap).bindPopup('Source: EB5IGQ-9<br>Lat: 39.1800<br>Long: -1.4850');
+
+var marker = L.marker([30.164833333333334, 120.6605]).addTo(mymap).bindPopup('Source: BG5DAL-9<br>Lat: 30.1648<br>Long: 120.6605');
+
+var marker = L.marker([-25.3175, 152.86283333333333]).addTo(mymap).bindPopup('Source: VK4YOI-2<br>Lat: -25.3175<br>Long: 152.8628');
+
+var marker = L.marker([45.448166666666665, -93.2505]).addTo(mymap).bindPopup('Source: KE0CRR-10<br>Lat: 45.4482<br>Long: -93.2505');
+
+var marker = L.marker([48.245666666666665, 16.350833333333334]).addTo(mymap).bindPopup('Source: OE1WUW-10<br>Lat: 48.2457<br>Long: 16.3508');
+
+var marker = L.marker([51.97566666666667, 5.988333333333333]).addTo(mymap).bindPopup('Source: PD0GHF-9<br>Lat: 51.9757<br>Long: 5.9883');
+
+var marker = L.marker([69.06016666666666, 16.5375]).addTo(mymap).bindPopup('Source: LA6LOA-1<br>Lat: 69.0602<br>Long: 16.5375');
+
+var marker = L.marker([-34.10433333333334, 18.819333333333333]).addTo(mymap).bindPopup('Source: ZS1JHW-10<br>Lat: -34.1043<br>Long: 18.8193');
+
+var marker = L.marker([40.37916666666667, -80.08]).addTo(mymap).bindPopup('Source: NU3S-7<br>Lat: 40.3792<br>Long: -80.0800');
+
+var marker = L.marker([43.20033333333333, -88.74666666666667]).addTo(mymap).bindPopup('Source: K9LUK<br>Lat: 43.2003<br>Long: -88.7467');
+
+var marker = L.marker([32.225833333333334, 119.79433333333333]).addTo(mymap).bindPopup('Source: BH4WAL-10<br>Lat: 32.2258<br>Long: 119.7943');
+
+var marker = L.marker([36.61366666666667, -88.32216666666666]).addTo(mymap).bindPopup('Source: K4MSU-3<br>Lat: 36.6137<br>Long: -88.3222');
+
+var marker = L.marker([52.22083333333333, 14.5085]).addTo(mymap).bindPopup('Source: HF3M<br>Lat: 52.2208<br>Long: 14.5085');
+
+var marker = L.marker([41.82366666666667, -103.67516666666667]).addTo(mymap).bindPopup('Source: KC0OZ-10<br>Lat: 41.8237<br>Long: -103.6752');
+
+var marker = L.marker([53.02333333333333, -0.8653333333333334]).addTo(mymap).bindPopup('Source: 2E0RVV<br>Lat: 53.0233<br>Long: -0.8653');
+
+var marker = L.marker([1.4998333333333334, 103.71216666666666]).addTo(mymap).bindPopup('Source: 9W2TLW-13<br>Lat: 1.4998<br>Long: 103.7122');
+
+var marker = L.marker([37.8085, -121.20733333333334]).addTo(mymap).bindPopup('Source: K6PKL-2<br>Lat: 37.8085<br>Long: -121.2073');
+
+var marker = L.marker([35.18216666666667, -97.49383333333333]).addTo(mymap).bindPopup('Source: KG5KBQ-10<br>Lat: 35.1822<br>Long: -97.4938');
+
+var marker = L.marker([52.358666666666664, 12.966666666666667]).addTo(mymap).bindPopup('Source: DH0BRO-2<br>Lat: 52.3587<br>Long: 12.9667');
+
+var marker = L.marker([39.795833333333334, 84.1295]).addTo(mymap).bindPopup('Source: N8ODV-N<br>Lat: 39.7958<br>Long: 84.1295');
+
+var marker = L.marker([45.33016666666666, -121.711]).addTo(mymap).bindPopup('Source: TLINEB<br>Lat: 45.3302<br>Long: -121.7110');
+
+var marker = L.marker([32.0375, 118.766]).addTo(mymap).bindPopup('Source: BA4XX-10<br>Lat: 32.0375<br>Long: 118.7660');
+
+var marker = L.marker([47.38516666666666, 8.9155]).addTo(mymap).bindPopup('Source: HB9NF-10<br>Lat: 47.3852<br>Long: 8.9155');
+
+var marker = L.marker([31.828666666666667, -106.449]).addTo(mymap).bindPopup('Source: K5WPH<br>Lat: 31.8287<br>Long: -106.4490');
+
+var marker = L.marker([35.11266666666667, -82.60816666666666]).addTo(mymap).bindPopup('Source: N4VDE-3<br>Lat: 35.1127<br>Long: -82.6082');
+
+var marker = L.marker([24.974833333333333, 121.54716666666667]).addTo(mymap).bindPopup('Source: BM2LBP<br>Lat: 24.9748<br>Long: 121.5472');
+
+var marker = L.marker([35.89966666666667, -76.34766666666667]).addTo(mymap).bindPopup('Source: KX4NC-3<br>Lat: 35.8997<br>Long: -76.3477');
+
+var marker = L.marker([38.737833333333334, 121.17583333333333]).addTo(mymap).bindPopup('Source: BH2UU<br>Lat: 38.7378<br>Long: 121.1758');
+
+var marker = L.marker([50.000166666666665, 12.139333333333333]).addTo(mymap).bindPopup('Source: DB0MAK-13<br>Lat: 50.0002<br>Long: 12.1393');
+
+var marker = L.marker([42.58083333333333, 1.8091666666666666]).addTo(mymap).bindPopup('Source: F1ZVN-3<br>Lat: 42.5808<br>Long: 1.8092');
+
+var marker = L.marker([51.125, 12.255166666666666]).addTo(mymap).bindPopup('Source: DG0LHC-5<br>Lat: 51.1250<br>Long: 12.2552');
+
+var marker = L.marker([44.687, 10.632333333333333]).addTo(mymap).bindPopup('Source: IW4BMA-5<br>Lat: 44.6870<br>Long: 10.6323');
+
+var marker = L.marker([28.121833333333335, 120.95283333333333]).addTo(mymap).bindPopup('Source: BG5BLU-9<br>Lat: 28.1218<br>Long: 120.9528');
+
+var marker = L.marker([45.63883333333333, 25.580333333333332]).addTo(mymap).bindPopup('Source: YO6GBD-5<br>Lat: 45.6388<br>Long: 25.5803');
+
+var marker = L.marker([28.0775, 120.85833333333333]).addTo(mymap).bindPopup('Source: BH5BNQ-8<br>Lat: 28.0775<br>Long: 120.8583');
+
+var marker = L.marker([44.172333333333334, 28.640666666666668]).addTo(mymap).bindPopup('Source: YO4ISC-10<br>Lat: 44.1723<br>Long: 28.6407');
+
+var marker = L.marker([13.905166666666666, 100.36433333333333]).addTo(mymap).bindPopup('Source: E21SMM-8<br>Lat: 13.9052<br>Long: 100.3643');
+
+var marker = L.marker([46.71216666666667, 20.124666666666666]).addTo(mymap).bindPopup('Source: HG8PXL-2<br>Lat: 46.7122<br>Long: 20.1247');
+
+var marker = L.marker([30.260166666666667, -81.47566666666667]).addTo(mymap).bindPopup('Source: N1SER-1<br>Lat: 30.2602<br>Long: -81.4757');
+
+var marker = L.marker([25.792833333333334, -100.422]).addTo(mymap).bindPopup('Source: XE2NL-B<br>Lat: 25.7928<br>Long: -100.4220');
+
+var marker = L.marker([39.92333333333333, -83.86016666666667]).addTo(mymap).bindPopup('Source: W8OG<br>Lat: 39.9233<br>Long: -83.8602');
+
+var marker = L.marker([28.647166666666667, -17.825333333333333]).addTo(mymap).bindPopup('Source: EA8URA-1<br>Lat: 28.6472<br>Long: -17.8253');
+
+var marker = L.marker([31.389166666666668, 119.802]).addTo(mymap).bindPopup('Source: BY4TYX-10<br>Lat: 31.3892<br>Long: 119.8020');
+
+var marker = L.marker([48.24433333333333, 16.101]).addTo(mymap).bindPopup('Source: OE3PDB-13<br>Lat: 48.2443<br>Long: 16.1010');
+
+var marker = L.marker([52.7205, 4.733]).addTo(mymap).bindPopup('Source: PI1FRI-3<br>Lat: 52.7205<br>Long: 4.7330');
+
+var marker = L.marker([36.885333333333335, 118.29483333333333]).addTo(mymap).bindPopup('Source: bh4oph-10<br>Lat: 36.8853<br>Long: 118.2948');
+
+var marker = L.marker([24.199666666666666, 120.72333333333333]).addTo(mymap).bindPopup('Source: BV5AB<br>Lat: 24.1997<br>Long: 120.7233');
+
+var marker = L.marker([34.4055, -119.71516666666666]).addTo(mymap).bindPopup('Source: K6TZ-10<br>Lat: 34.4055<br>Long: -119.7152');
+
+var marker = L.marker([34.337833333333336, 134.84683333333334]).addTo(mymap).bindPopup('Source: JH6YCI-12<br>Lat: 34.3378<br>Long: 134.8468');
+
+var marker = L.marker([-22.853833333333334, -43.36033333333334]).addTo(mymap).bindPopup('Source: PY1CEU-C<br>Lat: -22.8538<br>Long: -43.3603');
+
+var marker = L.marker([33.88666666666667, -78.62966666666667]).addTo(mymap).bindPopup('Source: W2SWR-13<br>Lat: 33.8867<br>Long: -78.6297');
+
+var marker = L.marker([45.589666666666666, 9.951]).addTo(mymap).bindPopup('Source: IR2BZ<br>Lat: 45.5897<br>Long: 9.9510');
+
+var marker = L.marker([34.844166666666666, 135.66433333333333]).addTo(mymap).bindPopup('Source: JE3ZUE-12<br>Lat: 34.8442<br>Long: 135.6643');
+
+var marker = L.marker([25.033333333333335, 121.455]).addTo(mymap).bindPopup('Source: BO2AB-12<br>Lat: 25.0333<br>Long: 121.4550');
+
+var marker = L.marker([50.062666666666665, 21.405]).addTo(mymap).bindPopup('Source: SR8KKM<br>Lat: 50.0627<br>Long: 21.4050');
+
+var marker = L.marker([53.160833333333336, 22.06983333333333]).addTo(mymap).bindPopup('Source: SP4V-5<br>Lat: 53.1608<br>Long: 22.0698');
+
+var marker = L.marker([4.2515, 101.03516666666667]).addTo(mymap).bindPopup('Source: 9W2OTG-9<br>Lat: 4.2515<br>Long: 101.0352');
+
+var marker = L.marker([34.23833333333334, 108.99583333333334]).addTo(mymap).bindPopup('Source: BD9CJH-10<br>Lat: 34.2383<br>Long: 108.9958');
+
+var marker = L.marker([51.24933333333333, 4.5135]).addTo(mymap).bindPopup('Source: ON4SH-9<br>Lat: 51.2493<br>Long: 4.5135');
+
+var marker = L.marker([65.61266666666667, 22.2015]).addTo(mymap).bindPopup('Source: SK2DR-10<br>Lat: 65.6127<br>Long: 22.2015');
+
+var marker = L.marker([48.578, -89.28983333333333]).addTo(mymap).bindPopup('Source: VE3RRP<br>Lat: 48.5780<br>Long: -89.2898');
+
+var marker = L.marker([28.4845, -80.80283333333334]).addTo(mymap).bindPopup('Source: N9JY-1<br>Lat: 28.4845<br>Long: -80.8028');
+
+var marker = L.marker([41.03483333333333, -71.959]).addTo(mymap).bindPopup('Source: N2GYI-4<br>Lat: 41.0348<br>Long: -71.9590');
+
+var marker = L.marker([4.745166666666667, 100.94183333333334]).addTo(mymap).bindPopup('Source: 9M2SGN-1<br>Lat: 4.7452<br>Long: 100.9418');
+
+var marker = L.marker([36.590333333333334, 138.82333333333332]).addTo(mymap).bindPopup('Source: 7K1CLR-10<br>Lat: 36.5903<br>Long: 138.8233');
+
+var marker = L.marker([-27.534166666666668, 153.09583333333333]).addTo(mymap).bindPopup('Source: VK4AQF-2<br>Lat: -27.5342<br>Long: 153.0958');
+
+var marker = L.marker([36.966, 120.72]).addTo(mymap).bindPopup('Source: BG4IGX-10<br>Lat: 36.9660<br>Long: 120.7200');
+
+var marker = L.marker([43.906, -69.96333333333334]).addTo(mymap).bindPopup('Source: N1JOV-8<br>Lat: 43.9060<br>Long: -69.9633');
+
+var marker = L.marker([40.003166666666665, 116.45883333333333]).addTo(mymap).bindPopup('Source: BY1WJ<br>Lat: 40.0032<br>Long: 116.4588');
+
+var marker = L.marker([22.676666666666666, 113.81]).addTo(mymap).bindPopup('Source: BI7KJP-13<br>Lat: 22.6767<br>Long: 113.8100');
+
+var marker = L.marker([52.41, 16.886]).addTo(mymap).bindPopup('Source: SQ3HXR-9<br>Lat: 52.4100<br>Long: 16.8860');
+
+var marker = L.marker([50.0085, 19.9955]).addTo(mymap).bindPopup('Source: SP9CLQ-B<br>Lat: 50.0085<br>Long: 19.9955');
+
+var marker = L.marker([34.70133333333333, -79.925]).addTo(mymap).bindPopup('Source: KE4QPN<br>Lat: 34.7013<br>Long: -79.9250');
+
+var marker = L.marker([13.615, 100.705]).addTo(mymap).bindPopup('Source: HS1BLJ-4<br>Lat: 13.6150<br>Long: 100.7050');
+
+var marker = L.marker([35.57, 139.53883333333334]).addTo(mymap).bindPopup('Source: JF1FYV-13<br>Lat: 35.5700<br>Long: 139.5388');
+
+var marker = L.marker([52.188, 21.050333333333334]).addTo(mymap).bindPopup('Source: SQ5WC-10<br>Lat: 52.1880<br>Long: 21.0503');
+
+var marker = L.marker([43.073166666666665, -88.38766666666666]).addTo(mymap).bindPopup('Source: W9TJK-1<br>Lat: 43.0732<br>Long: -88.3877');
+
+var marker = L.marker([51.058, 3.0875]).addTo(mymap).bindPopup('Source: ON7JA-5<br>Lat: 51.0580<br>Long: 3.0875');
+
+var marker = L.marker([47.28816620550973, 8.881331282191297]).addTo(mymap).bindPopup('Source: HB9ZF-10<br>Lat: 47.2882<br>Long: 8.8813');
+
+var marker = L.marker([51.90716666666667, 10.406166666666667]).addTo(mymap).bindPopup('Source: DB0GSH<br>Lat: 51.9072<br>Long: 10.4062');
+
+var marker = L.marker([60.347833333333334, 23.128]).addTo(mymap).bindPopup('Source: OH1EEZ-2<br>Lat: 60.3478<br>Long: 23.1280');
+
+var marker = L.marker([5.051167418343724, -75.47933194373711]).addTo(mymap).bindPopup('Source: HK6RM-10<br>Lat: 5.0512<br>Long: -75.4793');
+
+var marker = L.marker([50.531666666666666, 30.193666666666665]).addTo(mymap).bindPopup('Source: US1UM-3<br>Lat: 50.5317<br>Long: 30.1937');
+
+var marker = L.marker([33.570166666666665, 130.5315]).addTo(mymap).bindPopup('Source: JE6VQE-12<br>Lat: 33.5702<br>Long: 130.5315');
+
+var marker = L.marker([35.288833333333336, -118.85666666666667]).addTo(mymap).bindPopup('Source: NR6G-5<br>Lat: 35.2888<br>Long: -118.8567');
+
+var marker = L.marker([42.43966666666667, 0.07333333333333333]).addTo(mymap).bindPopup('Source: EA3HVE-12<br>Lat: 42.4397<br>Long: 0.0733');
+
+var marker = L.marker([39.2855, -76.73933333333333]).addTo(mymap).bindPopup('Source: N3KTX-1<br>Lat: 39.2855<br>Long: -76.7393');
+
+var marker = L.marker([30.164, 120.66683333333333]).addTo(mymap).bindPopup('Source: BG5DAL-9<br>Lat: 30.1640<br>Long: 120.6668');
+
+var marker = L.marker([46.139833333333335, -67.602]).addTo(mymap).bindPopup('Source: VE9TOW<br>Lat: 46.1398<br>Long: -67.6020');
+
+var marker = L.marker([55.723, 37.397166666666664]).addTo(mymap).bindPopup('Source: R2DFR-13<br>Lat: 55.7230<br>Long: 37.3972');
+
+var marker = L.marker([40.8445, -84.34266666666667]).addTo(mymap).bindPopup('Source: W8FY-2<br>Lat: 40.8445<br>Long: -84.3427');
+
+var marker = L.marker([-25.285833333333333, -49.316833333333335]).addTo(mymap).bindPopup('Source: 147210<br>Lat: -25.2858<br>Long: -49.3168');
+
+var marker = L.marker([39.36383333333333, 9.296166666666666]).addTo(mymap).bindPopup('Source: IR0UBT-B<br>Lat: 39.3638<br>Long: 9.2962');
+
+var marker = L.marker([48.2375, 16.138333333333332]).addTo(mymap).bindPopup('Source: OE3FDS-10<br>Lat: 48.2375<br>Long: 16.1383');
+
+var marker = L.marker([40.29383333333333, -121.05283333333334]).addTo(mymap).bindPopup('Source: K6TTR<br>Lat: 40.2938<br>Long: -121.0528');
+
+var marker = L.marker([53.223333333333336, 16.869333333333334]).addTo(mymap).bindPopup('Source: SP3TUT-10<br>Lat: 53.2233<br>Long: 16.8693');
+
+var marker = L.marker([48.17, 15.978666666666667]).addTo(mymap).bindPopup('Source: OE3ILW-3<br>Lat: 48.1700<br>Long: 15.9787');
+
+var marker = L.marker([45.43683333333333, 11.5345]).addTo(mymap).bindPopup('Source: IR3EP-11<br>Lat: 45.4368<br>Long: 11.5345');
+
+var marker = L.marker([45.3525, 25.732166666666668]).addTo(mymap).bindPopup('Source: YO9GOO-10<br>Lat: 45.3525<br>Long: 25.7322');
+
+var marker = L.marker([44.762, -85.82916666666667]).addTo(mymap).bindPopup('Source: KJ4KFJ-15<br>Lat: 44.7620<br>Long: -85.8292');
+
+var marker = L.marker([39.877, 9.502833333333333]).addTo(mymap).bindPopup('Source: IR0UBM<br>Lat: 39.8770<br>Long: 9.5028');
+
+var marker = L.marker([45.3555, -88.91533333333334]).addTo(mymap).bindPopup('Source: KC9GGY-10<br>Lat: 45.3555<br>Long: -88.9153');
+
+var marker = L.marker([51.7425, -0.9665]).addTo(mymap).bindPopup('Source: M6YPX-10<br>Lat: 51.7425<br>Long: -0.9665');
+
+var marker = L.marker([47.56666666666667, 8.256333333333334]).addTo(mymap).bindPopup('Source: HB9GFX-1<br>Lat: 47.5667<br>Long: 8.2563');
+
+var marker = L.marker([40.797333333333334, -78.97016666666667]).addTo(mymap).bindPopup('Source: N3DXC-2<br>Lat: 40.7973<br>Long: -78.9702');
+
+var marker = L.marker([48.107166666666664, 8.756166666666667]).addTo(mymap).bindPopup('Source: DB0KLI-10<br>Lat: 48.1072<br>Long: 8.7562');
+
+var marker = L.marker([41.17, -85.09316666666666]).addTo(mymap).bindPopup('Source: W9INX-1<br>Lat: 41.1700<br>Long: -85.0932');
+
+var marker = L.marker([47.559666666666665, 10.778833333333333]).addTo(mymap).bindPopup('Source: DB0OAL-B<br>Lat: 47.5597<br>Long: 10.7788');
+
+var marker = L.marker([49.30416666666667, 9.665333333333333]).addTo(mymap).bindPopup('Source: DB0KUN<br>Lat: 49.3042<br>Long: 9.6653');
+
+var marker = L.marker([13.826833333333333, 100.67733333333334]).addTo(mymap).bindPopup('Source: HS1HTW-7<br>Lat: 13.8268<br>Long: 100.6773');
+
+var marker = L.marker([34.67666666666667, 112.4025]).addTo(mymap).bindPopup('Source: BA6KA-9<br>Lat: 34.6767<br>Long: 112.4025');
+
+var marker = L.marker([13.797666666666666, 100.721]).addTo(mymap).bindPopup('Source: E20FMC-9<br>Lat: 13.7977<br>Long: 100.7210');
+
+var marker = L.marker([13.318666666666667, 101.02266666666667]).addTo(mymap).bindPopup('Source: E21RBE-1<br>Lat: 13.3187<br>Long: 101.0227');
+
+var marker = L.marker([23.148, 113.238]).addTo(mymap).bindPopup('Source: BG7JRA-10<br>Lat: 23.1480<br>Long: 113.2380');
+
+var marker = L.marker([36.89116666666666, 30.72]).addTo(mymap).bindPopup('Source: TB4BEK-5<br>Lat: 36.8912<br>Long: 30.7200');
+
+var marker = L.marker([34.902166666666666, -92.49833333333333]).addTo(mymap).bindPopup('Source: KE5JJC<br>Lat: 34.9022<br>Long: -92.4983');
+
+var marker = L.marker([42.31966666666667, -92.59533333333333]).addTo(mymap).bindPopup('Source: AE0TB-5<br>Lat: 42.3197<br>Long: -92.5953');
+
+var marker = L.marker([42.16850254380116, 12.786997999611486]).addTo(mymap).bindPopup('Source: IR0UGN-10<br>Lat: 42.1685<br>Long: 12.7870');
+
+var marker = L.marker([47.13883333333333, 15.223833333333333]).addTo(mymap).bindPopup('Source: OE6XG-1<br>Lat: 47.1388<br>Long: 15.2238');
+
+var marker = L.marker([49.903166666666664, 9.425833333333333]).addTo(mymap).bindPopup('Source: DB0MMO<br>Lat: 49.9032<br>Long: 9.4258');
+
+var marker = L.marker([45.627833333333335, 5.425333333333334]).addTo(mymap).bindPopup('Source: F4KJS-3<br>Lat: 45.6278<br>Long: 5.4253');
+
+var marker = L.marker([49.57216666666667, 21.65116666666667]).addTo(mymap).bindPopup('Source: SR8WXD<br>Lat: 49.5722<br>Long: 21.6512');
+
+var marker = L.marker([35.00966666666667, 118.35866666666666]).addTo(mymap).bindPopup('Source: BR4LY-13<br>Lat: 35.0097<br>Long: 118.3587');
+
+var marker = L.marker([41.798833333333334, -77.51033333333334]).addTo(mymap).bindPopup('Source: N3FYI-5<br>Lat: 41.7988<br>Long: -77.5103');
+  }
+  showmap();
+</script>
+</body>
+</html>
