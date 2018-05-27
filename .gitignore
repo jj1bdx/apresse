@@ -21,3 +21,9 @@ priv/templates/*.dtl.erl
 ebin
 .edts
 env
+/_build
+/cover
+/deps
+/doc
+erl_crash.dump
+*.ez
