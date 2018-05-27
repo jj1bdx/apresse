@@ -18,11 +18,12 @@ connect_dump() ->
     {ok, Prompt} = gen_tcp:recv(Socket, 0, 5000),
     io:format("~s", [Prompt]),
     ok = gen_tcp:send(Socket, "user N6BDX pass -1 vers apresse 0.01\n"),
-    connect_dump_receive_loop(Socket, 10001, aprs_is_decode:init_cp()),
+    C = connect_dump_receive_loop(Socket, 0, aprs_is_decode:init_cp(), true),
+    io:format("Total: ~p packets~n~n", [C]),
     ok = gen_tcp:close(Socket).
 
-connect_dump_receive_loop(_, 0, _) -> ok;
-connect_dump_receive_loop(S, N, CP) ->
+connect_dump_receive_loop(_, C, _, false) -> C;
+connect_dump_receive_loop(S, C, CP, true) ->
     case gen_tcp:recv(S, 0, 10000) of
         {ok, D} ->
             io:format("~s", [D]),
@@ -37,7 +38,7 @@ connect_dump_receive_loop(S, N, CP) ->
             end;
         {error, E} ->
             io:format("Error: ~p~n~n", [E]),
-            connect_dump_receive_loop(S, 0, CP)
+            connect_dump_receive_loop(S, C, CP, false)
     end,
-    connect_dump_receive_loop(S, N-1, CP).
+    connect_dump_receive_loop(S, C + 1, CP, true).
 
