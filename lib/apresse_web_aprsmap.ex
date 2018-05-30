@@ -16,15 +16,21 @@ defmodule ApresseWeb.APRSMap do
 
   import Plug.Conn
   alias Plug.Conn
-
+  
+  @spec init(any()) :: no_return() 
+  
   def init(_opts) do
     # do nothing here
   end
+
+  @spec call(Plug.Conn.t, any()) :: Plug.Conn.t | no_return()
 
   def call(conn = %Conn{method: meth}, _)
     when meth in @allowed_methods do
     dump_aprs_map(conn)
   end
+
+  @spec call(Plug.Conn.t, any()) :: Plug.Conn.t | no_return()
 
   def call(conn, _opts) do
     conn

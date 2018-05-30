@@ -36,7 +36,7 @@ defmodule Apresse.MixProject do
       {:plug, "~> 1.5.1"},
       {:cowboy, "~> 1.0"}, 
       {:ex_doc, "~> 0.18", only: :dev}, 
-      # {:dialyxir, "~> 0.5.1", only: [:dev], runtime: false},
+      {:dialyxir, "~> 0.5.1", only: [:dev], runtime: false},
       {:exrm, "~> 1.0"}
     ]
   end

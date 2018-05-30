@@ -1,7 +1,9 @@
 -module(aprs_receiver).
 -export([start/0,
          init/0,
-         connect_dump/0]).
+         connect_dump/0,
+         put_ets/1,
+         parse_message/1]).
 
 -include_lib("stdlib/include/ms_transform.hrl").
 
@@ -32,6 +34,11 @@ connect_dump() ->
     ok = gen_tcp:send(Socket, "user N6BDX pass -1 vers apresse 0.01\n"),
     _C = connect_dump_receive_loop(Socket, 0, aprs_is_decode:init_cp(), true),
     ok = gen_tcp:close(Socket).
+
+-spec connect_dump_receive_loop(
+        inet:socket(), non_neg_integer(),
+        {binary:cp(), binary:cp(), binary:cp()},
+         boolean()) -> non_neg_integer().
 
 connect_dump_receive_loop(_, C, _, false) -> C;
 connect_dump_receive_loop(S, C, CP, true) ->
