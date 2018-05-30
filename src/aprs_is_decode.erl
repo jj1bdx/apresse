@@ -6,10 +6,15 @@
         info_dispatch/1
     ]).
 
+-spec init_cp() -> {binary:cp(), binary:cp(), binary:cp()}.
+
 init_cp() ->
     {binary:compile_pattern(<<$>>>),
      binary:compile_pattern(<<$:>>),
      binary:compile_pattern(<<$,>>)}.
+
+-spec decode_header(binary(), {binary:cp(), binary:cp(), binary()}) ->
+    {binary(), binary(), [binary()], binary()}.
 
 decode_header(D, {CPS, CPI, CPR}) ->
     [Header, InfoCRLF] = binary:split(D, CPI),
@@ -17,6 +22,11 @@ decode_header(D, {CPS, CPI, CPR}) ->
     [Destination|Relay] = binary:split(Destrelay, CPR, [global]),
     Info = binary:part(InfoCRLF, 0, erlang:byte_size(InfoCRLF) - 2),
     {Source, Destination, Relay, Info}.
+
+-spec info_dispatch(binary()) ->
+    {atom(), any()} |
+    {position, no_message | message,
+      {compressed | uncompressed, tuple()}}.
 
 info_dispatch(Info) ->
     <<Type:8, Rest/binary>> = Info,

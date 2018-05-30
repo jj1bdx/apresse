@@ -5,8 +5,12 @@
 
 -include_lib("stdlib/include/ms_transform.hrl").
 
+-spec start() -> pid().
+
 start() ->
     spawn_link(?MODULE, init, []).
+
+-spec init() -> none().
 
 init() ->
     ets:new(aprs_positions, [set, protected, named_table]),
@@ -17,8 +21,10 @@ loop() ->
     timer:sleep(timer:seconds(rand:uniform(6) + 4)),
     loop().
 
+-spec connect_dump() -> ok.
+
 connect_dump() ->
-    {ok, Socket} = gen_tcp:connect("fukuoka.aprs2.net", 10152, 
+    {ok, Socket} = gen_tcp:connect("sweden.aprs2.net", 10152, 
         [binary, {active, false}, {packet, line},
             {nodelay, true}, {keepalive, true}
         ]),
