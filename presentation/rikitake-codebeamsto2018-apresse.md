@@ -206,6 +206,14 @@ BA1GM-6>APLM2C,TCPIP*,qAS,BA1GM-6:=3952.10N/11631.65E>↩
 
 ---
 
+# BEAM processes in apresse
+
+![inline, original, fit](beam-process-flow.png)
+
+^ This is the BEAM process design of apresse. The information coming in from the APRS-IS network is processed by the Erlang receiver, and stored into the ETS cache. The Elixir web server reads the cache on demand from the Web browser, and generates the HTML page including the mapped markers for the LeafLet framework.
+
+---
+
 # What Erlang part of apresse does
 
 * Connect to an APRS-IS (Tier-2) server
