@@ -4,7 +4,17 @@ For [Kenji Rikitake's presentation at Code BEAM STO 2018](https://codesync.globa
 
 ## Build tools
 
-This is a rebar3 project.
+This is a rebar3 and mix project.
+
+## How to run
+
+```
+rebar3 compile
+mix deps.get
+mix compile
+iex -S mix
+# then access http://127.0.0.1:8080/
+```
 
 ## Goals
 
